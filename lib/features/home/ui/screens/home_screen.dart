@@ -8,6 +8,7 @@ class HomeScreen extends StatelessWidget {
     return const Scaffold(
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [Text('HOME SCREEN')],
         ),
       ),
