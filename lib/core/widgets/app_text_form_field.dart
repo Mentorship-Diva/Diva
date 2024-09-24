@@ -163,13 +163,15 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
           ),
           errorBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Colors.red,
+              color: AppColors.redColor,
+              width: 2,
             ),
             borderRadius: BorderRadius.circular(widget.radius ?? radius),
           ),
           focusedErrorBorder: OutlineInputBorder(
             borderSide: const BorderSide(
-              color: Colors.red,
+              color: AppColors.redColor,
+              width: 2,
             ),
             borderRadius: BorderRadius.circular(widget.radius ?? radius),
           ),
