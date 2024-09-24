@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mentorship/features/home/ui/screens/home_screen.dart';
 import 'package:mentorship/features/signup/ui/screens/signup_screen.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       splitScreenMode: true,
       child: MaterialApp(
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
           useMaterial3: true,
         ),
         home: const SignupScreen(),

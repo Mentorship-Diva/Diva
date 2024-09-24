@@ -19,7 +19,7 @@ class AuthTitleAndImage extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppTextStyles.font24Libre400,
+          style: AppTextStyles.font24Black400Libre,
         ),
         SizedBox(
           height: 24.h,
