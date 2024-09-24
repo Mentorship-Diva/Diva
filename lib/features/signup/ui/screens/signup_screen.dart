@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/theming/assets.dart';
+import 'package:mentorship/features/signup/ui/widgets/signup_form.dart';
 import '../../../../core/theming/colors.dart';
 import '../widgets/already_have_an_account.dart';
 import '../widgets/auth_title_and_image.dart';
 import '../widgets/or.dart';
+import '../widgets/signup_button.dart';
 import '../widgets/social_accounts.dart';
 
 class SignupScreen extends StatelessWidget {
@@ -20,20 +22,31 @@ class SignupScreen extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 24.w),
           child: Column(
             children: [
-              const AuthTitleAndImage(
-                title: 'Sign Up',
-                image: AppAssets.signupIll,
-              ),
-              const Or(),
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 24.h),
-                child: SocialAccounts(
-                  onGoogleTapped: () {},
-                  onFacebookTapped: () {},
-                  onAppleTapped: () {},
+              Expanded(
+                child: ListView(
+                  children: [
+                    const AuthTitleAndImage(
+                      title: 'Sign Up',
+                      image: AppAssets.signupIll,
+                    ),
+                    const SignupForm(),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 24.h),
+                      child: const SignupButton(),
+                    ),
+                    const Or(),
+                    Padding(
+                      padding: EdgeInsets.symmetric(vertical: 24.h),
+                      child: SocialAccounts(
+                        onGoogleTapped: () {},
+                        onFacebookTapped: () {},
+                        onAppleTapped: () {},
+                      ),
+                    ),
+                    const AlreadyHaveAnAccount(),
+                  ],
                 ),
               ),
-              const AlreadyHaveAnAccount(),
             ],
           ),
         ),

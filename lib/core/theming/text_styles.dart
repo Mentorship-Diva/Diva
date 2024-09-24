@@ -28,4 +28,10 @@ class AppTextStyles {
     fontSize: 18.sp,
     fontWeight: FontWeight.w400,
   );
+
+  static TextStyle font18White400 = TextStyle(
+    color: AppColors.whiteColor,
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w400,
+  );
 }
