@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mentorship/core/routing/routes.dart';
+import 'package:mentorship/features/home/logic/home_cubit.dart';
 import 'package:mentorship/features/home/ui/screens/home_screen.dart';
 
 class AppRouter {
@@ -10,8 +12,12 @@ class AppRouter {
     switch (settings.name) {
       case Routes.homeScreen:
         return MaterialPageRoute(
-          builder: (_) => const HomeScreen(),
+          builder: (_) => BlocProvider(
+            create: (context) => HomeCubit(),
+            child: const HomeScreen(),
+          ),
         );
+
       default:
         return null;
     }

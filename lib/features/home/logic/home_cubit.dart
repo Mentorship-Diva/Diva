@@ -1,8 +1,15 @@
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-part 'home_state.dart';
+class HomeCubit extends Cubit<int> {
+  HomeCubit() : super(-1); // Initialize with no selection (-1)
 
-class HomeCubit extends Cubit<HomeState> {
-  HomeCubit() : super(HomeInitial());
+  //* Update the selected category index
+  void selectCategory(int index) {
+    emit(index);
+  }
+
+  //* Bottom navigation bar switching between screens
+  void changeTab(int index) {
+    emit(index);
+  }
 }
