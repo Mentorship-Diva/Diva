@@ -44,6 +44,7 @@ dependencies:
   google_fonts:
 # Validator package helps you to validate sign in user-entered password with your rules.
   flutter_pw_validator: ^1.6.0
+  firebase_core:
 
 dev_dependencies:
   flutter_test:
