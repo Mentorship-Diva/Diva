@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDiLTdFPLxSFghLbhn9BcsCSWrR8gM43L0</string>
+	<key>GCM_SENDER_ID</key>
+	<string>634795184584</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.mentorship</string>
+	<key>PROJECT_ID</key>
+	<string>diva-a5678</string>
+	<key>STORAGE_BUCKET</key>
+	<string>diva-a5678.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:634795184584:ios:6ce68c13e93d2d4be1f0fd</string>
+</dict>
+</plist>
