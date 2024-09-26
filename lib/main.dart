@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:mentorship/features/home/ui/screens/home_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mentorship/core/theming/colors.dart';
+import 'package:mentorship/features/profile/ui/screens/profile_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,12 +12,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+    return ScreenUtilInit(
+      designSize: const Size(375, 812),
+      minTextAdapt: true,
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primairyColor),
+            useMaterial3: true),
+        home: const ProfileScreen(),
       ),
-      home: const HomeScreen(),
     );
   }
 }
