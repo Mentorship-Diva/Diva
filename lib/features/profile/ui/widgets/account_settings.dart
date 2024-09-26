@@ -18,7 +18,7 @@ class AccountSettings extends StatelessWidget {
             leading: Icons.person_outline),
         const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
         CustomSettingsListTile(
-            onTap: () {}, title: 'Peyment methods', leading: Icons.payment),
+            onTap: () {}, title: 'Payment methods', leading: Icons.payment),
         const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
         CustomSettingsListTile(
             onTap: () {},

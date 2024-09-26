@@ -27,7 +27,7 @@ class PrivacySettings extends StatelessWidget {
           const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
           CustomSettingsListTile(
               onTap: () {},
-              title: 'privacy & cookies policy',
+              title: 'Privacy & Cookies Policy',
               leading: Icons.privacy_tip_outlined),
           const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
           CustomSettingsListTile(
