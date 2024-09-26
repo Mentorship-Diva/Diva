@@ -45,6 +45,7 @@ dependencies:
 # Validator package helps you to validate sign in user-entered password with your rules.
   flutter_pw_validator: ^1.6.0
   firebase_core:
+  firebase_auth:
 
 dev_dependencies:
   flutter_test:

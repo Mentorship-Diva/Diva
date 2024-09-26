@@ -6,7 +6,16 @@ import 'package:mentorship/features/signup/ui/widgets/password_validators.dart';
 import '../../../../core/helpers/text_selection_options.dart';
 
 class SignupForm extends StatefulWidget {
-  const SignupForm({super.key});
+  const SignupForm({
+    super.key,
+    required this.emailController,
+    required this.passwordController,
+    required this.confirmPasswordController,
+  });
+
+  final TextEditingController emailController;
+  final TextEditingController passwordController;
+  final TextEditingController confirmPasswordController;
 
   @override
   State<SignupForm> createState() => _SignupFormState();
@@ -14,10 +23,7 @@ class SignupForm extends StatefulWidget {
 
 class _SignupFormState extends State<SignupForm> {
   final GlobalKey formKey = GlobalKey<FormState>();
-  final TextEditingController emailController = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController =
-      TextEditingController();
+
   bool isPasswordHidden = true;
   bool isConfirmPasswordHidden = true;
   bool isValidationsVisible = false;
@@ -31,7 +37,7 @@ class _SignupFormState extends State<SignupForm> {
           Padding(
             padding: EdgeInsets.only(bottom: 16.h),
             child: AppTextFormField(
-              controller: emailController,
+              controller: widget.emailController,
               hintText: 'E-mail',
               keyboardType: TextInputType.emailAddress,
               textInputAction: TextInputAction.next,
@@ -42,7 +48,7 @@ class _SignupFormState extends State<SignupForm> {
             ),
           ),
           AppTextFormField(
-            controller: passwordController,
+            controller: widget.passwordController,
             hintText: 'Password',
             keyboardType: TextInputType.visiblePassword,
             textInputAction: TextInputAction.next,
@@ -68,13 +74,13 @@ class _SignupFormState extends State<SignupForm> {
             },
           ),
           PasswordValidators(
-            passwordController: passwordController,
+            passwordController: widget.passwordController,
             isValidationsVisible: isValidationsVisible,
           ),
           Padding(
             padding: EdgeInsets.only(top: 16.h),
             child: AppTextFormField(
-              controller: confirmPasswordController,
+              controller: widget.confirmPasswordController,
               hintText: 'Confirm Password',
               keyboardType: TextInputType.visiblePassword,
               textInputAction: TextInputAction.done,

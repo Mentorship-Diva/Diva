@@ -1,6 +1,14 @@
-part of 'signup_cubit.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-@immutable
-sealed class SignupState {}
+part 'signup_state.freezed.dart';
 
-final class SignupInitial extends SignupState {}
+@freezed
+class SignupState<T> with _$SignupState<T> {
+  const factory SignupState.initial() = _Initial;
+
+  const factory SignupState.loading() = Loading;
+
+  const factory SignupState.success() = Success;
+
+  const factory SignupState.fail() = Fail;
+}
