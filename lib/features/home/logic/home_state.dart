@@ -1,5 +1,3 @@
-part of 'home_cubit.dart';
-
-sealed class HomeState {}
+abstract class HomeState {}
 
 final class HomeInitial extends HomeState {}
