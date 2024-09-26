@@ -10,7 +10,7 @@ class TextStyles {
   );
 
   static TextStyle font18PrimaryColorMedium = TextStyle(
-    color: AppColors.primairyColor,
+    color: AppColors.mainPinkColor,
     fontSize: 18.sp,
     fontWeight: FontWeight.w500,
   );
@@ -22,7 +22,7 @@ class TextStyles {
   );
 
   static TextStyle font18PrimaryColorBold = TextStyle(
-    color: AppColors.primairyColor,
+    color: AppColors.mainPinkColor,
     fontSize: 18.sp,
     fontWeight: FontWeight.w700,
   );

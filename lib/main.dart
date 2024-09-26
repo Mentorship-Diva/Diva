@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primairyColor),
+            colorScheme: ColorScheme.fromSeed(seedColor: AppColors.mainPinkColor),
             useMaterial3: true),
         home: const ProfileScreen(),
       ),
