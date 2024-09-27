@@ -44,8 +44,12 @@ dependencies:
   google_fonts:
 # Validator package helps you to validate sign in user-entered password with your rules.
   flutter_pw_validator: ^1.6.0
+#  Firebase setup
   firebase_core:
+#  Firebase Authentication to use signin and signup with firebase
   firebase_auth:
+# View Toast to user
+  fluttertoast:
 
 dev_dependencies:
   flutter_test:

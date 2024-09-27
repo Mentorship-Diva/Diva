@@ -11,20 +11,20 @@ class SignupCubit extends Cubit<SignupState> {
 
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
-  final TextEditingController confirmPasswordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
   final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
   void signup() async {
     emit(const SignupState.loading());
-    signupRepo
-        .signUp(SignupRequestBody(
+    var response = await signupRepo.signUp(SignupRequestBody(
       emailController.text,
       passwordController.text,
-    ))
-        .then((value) {
-      emit(const SignupState.success());
-    }).catchError((onError) {
-      emit(const SignupState.fail());
+    ));
+    response.when(success: (userCredential) {
+      emit(SignupState.success(userCredential));
+    }, fail: (error) {
+      emit(SignupState.fail(error: error.message ?? ''));
     });
   }
 }
