@@ -11,7 +11,8 @@ final class CategorySelected extends HomeState {
 
 final class HomeProdcutsSuccess extends HomeState {
   final List<Product> products;
-  HomeProdcutsSuccess(this.products);
+  final String? selectedCategory;
+  HomeProdcutsSuccess(this.products, this.selectedCategory);
 }
 
 final class HomeProdcutsLoading extends HomeState {}

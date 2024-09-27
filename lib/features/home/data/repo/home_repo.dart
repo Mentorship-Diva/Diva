@@ -14,6 +14,16 @@ class HomeRepo {
     }
   }
 
+  Future<ApiResult<List<Product>>> getCategoryProducts(
+      String categoryName) async {
+    try {
+      final response = await _homeApiService.getCategoryProducts(categoryName);
+      return ApiResult.success(response);
+    } catch (error) {
+      return ApiResult.failure(error.toString());
+    }
+  }
+
   Future<ApiResult<List<String>>> getCategories() async {
     try {
       final response = await _homeApiService.getCategories();

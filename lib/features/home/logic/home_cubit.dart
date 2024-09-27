@@ -38,7 +38,26 @@ class HomeCubit extends Cubit<HomeState> {
 
       response.when(
         success: (productsResponse) {
-          emit(HomeProdcutsSuccess(productsResponse));
+          emit(HomeProdcutsSuccess(productsResponse, 'All'));
+        },
+        failure: (message) {
+          emit(HomeProdcutsError(message));
+        },
+      );
+    } catch (e) {
+      emit(HomeProdcutsError("Failed to load products: ${e.toString()}"));
+    }
+  }
+
+  //* Fetch products of a specific  category and emit states
+  Future<void> loadCategoryProducts(String categoryName) async {
+    emit(HomeProdcutsLoading());
+    try {
+      final response = await _homeRepo.getCategoryProducts(categoryName);
+
+      response.when(
+        success: (productsResponse) {
+          emit(HomeProdcutsSuccess(productsResponse, categoryName));
         },
         failure: (message) {
           emit(HomeProdcutsError(message));

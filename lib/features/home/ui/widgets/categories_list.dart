@@ -26,11 +26,12 @@ class CategoriesList extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              homeCubit.selectCategory(index); // Update the selected category
+              homeCubit.loadCategoryProducts(categories[index]);
             },
             child: BlocBuilder<HomeCubit, HomeState>(
-              builder: (context, selectedIndex) {
-                final isSelected = selectedIndex == index;
+              builder: (context, state) {
+                final isSelected = (state is HomeProdcutsSuccess &&
+                    state.selectedCategory == categories[index]);
                 return Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
