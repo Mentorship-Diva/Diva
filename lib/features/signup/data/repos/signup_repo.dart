@@ -6,6 +6,7 @@ class SignupRepo {
   final FirebaseAuth auth = FirebaseAuth.instance;
 
   SignupRepo(Object object);
+
   Future<void> signUp(SignupRequestBody signupRequestBody) async {
     try {
       UserCredential userCredential = await auth.createUserWithEmailAndPassword(
