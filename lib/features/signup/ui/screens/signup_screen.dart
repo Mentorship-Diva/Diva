@@ -5,7 +5,7 @@ import 'package:mentorship/features/signup/ui/widgets/signup_form.dart';
 import '../../../../core/theming/colors.dart';
 import '../widgets/already_have_an_account.dart';
 import '../widgets/auth_title_and_image.dart';
-import '../widgets/or.dart';
+import '../widgets/or_text_with__horizontal_divider.dart';
 import '../widgets/signup_button.dart';
 import '../widgets/social_accounts.dart';
 
@@ -34,7 +34,7 @@ class SignupScreen extends StatelessWidget {
                       padding: EdgeInsets.symmetric(vertical: 24.h),
                       child: const SignupButton(),
                     ),
-                    const Or(),
+                    const OrTextWithHorizontalDivider(),
                     Padding(
                       padding: EdgeInsets.symmetric(vertical: 24.h),
                       child: SocialAccounts(

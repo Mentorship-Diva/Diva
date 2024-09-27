@@ -4,16 +4,15 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'flutter_pw_validator.dart';
 
-// ignore: must_be_immutable
 class PasswordValidators extends StatelessWidget {
-  PasswordValidators({
+  const PasswordValidators({
     super.key,
     required this.passwordController,
     required this.isValidationsVisible,
   });
 
   final TextEditingController passwordController;
-  bool isValidationsVisible;
+  final bool isValidationsVisible;
 
   @override
   Widget build(BuildContext context) {
@@ -54,7 +53,6 @@ class CustomPasswordValidatorString implements FlutterPwValidatorStrings {
   final String specialCharacters = 'One Special Character';
 
   @override
-  // TODO: implement normalLetters
   String get normalLetters {
     return '';
   }
