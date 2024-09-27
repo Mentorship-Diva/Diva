@@ -8,9 +8,7 @@ List<Widget> navBarScreens() {
   return [
     //! Had to provide the HomeCubit to the HomeScreen that way not in routes .. cuz i'm not navigating. i'm switching
     BlocProvider(
-      create: (context) => getIt<HomeCubit>()
-        ..loadCategories()
-        ..loadProducts(),
+      create: (context) => getIt<HomeCubit>(),
       child: const HomeScreen(),
     ),
     const SizedBox(),
