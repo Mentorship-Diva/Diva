@@ -13,21 +13,23 @@ class SignupButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocListener<SignupCubit, SignupState>(
+      listenWhen: (previous, current) =>
+          current is SignupLoading ||
+          current is SignupSuccess ||
+          current is SignupFail,
       listener: (context, state) {
         state.whenOrNull(
-          loading: () {
+          signupLoading: () {
             loadingDialog(context);
-            debugPrint('LOADING');
           },
-          success: (userCredential) {
+          signupSuccess: (userCredential) {
             context.pop();
-            debugPrint('SUCCESS');
             debugPrint(userCredential.toString());
             showToast(message: 'Signup successfully');
+            // TODO: Navigate to Signin screen
           },
-          fail: (error) {
+          signupFail: (error) {
             context.pop();
-            debugPrint('FAIL');
             debugPrint(error);
             showToast(message: error);
           },

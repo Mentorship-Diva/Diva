@@ -19,50 +19,68 @@ mixin _$SignupState<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(T data) success,
-    required TResult Function(String error) fail,
+    required TResult Function() signupLoading,
+    required TResult Function(T data) signupSuccess,
+    required TResult Function(String error) signupFail,
+    required TResult Function() signupGoogleLoading,
+    required TResult Function(UserModel userModel) signupGoogleSuccess,
+    required TResult Function(String error) signupGoogleFail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(T data)? success,
-    TResult? Function(String error)? fail,
+    TResult? Function()? signupLoading,
+    TResult? Function(T data)? signupSuccess,
+    TResult? Function(String error)? signupFail,
+    TResult? Function()? signupGoogleLoading,
+    TResult? Function(UserModel userModel)? signupGoogleSuccess,
+    TResult? Function(String error)? signupGoogleFail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(T data)? success,
-    TResult Function(String error)? fail,
+    TResult Function()? signupLoading,
+    TResult Function(T data)? signupSuccess,
+    TResult Function(String error)? signupFail,
+    TResult Function()? signupGoogleLoading,
+    TResult Function(UserModel userModel)? signupGoogleSuccess,
+    TResult Function(String error)? signupGoogleFail,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(Loading<T> value) loading,
-    required TResult Function(Success<T> value) success,
-    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SignupLoading<T> value) signupLoading,
+    required TResult Function(SignupSuccess<T> value) signupSuccess,
+    required TResult Function(SignupFail<T> value) signupFail,
+    required TResult Function(SignupGoggleLoading<T> value) signupGoogleLoading,
+    required TResult Function(SignupGoggleSuccess<T> value) signupGoogleSuccess,
+    required TResult Function(SignupGoggleFail<T> value) signupGoogleFail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(Loading<T> value)? loading,
-    TResult? Function(Success<T> value)? success,
-    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SignupLoading<T> value)? signupLoading,
+    TResult? Function(SignupSuccess<T> value)? signupSuccess,
+    TResult? Function(SignupFail<T> value)? signupFail,
+    TResult? Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult? Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult? Function(SignupGoggleFail<T> value)? signupGoogleFail,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Fail<T> value)? fail,
+    TResult Function(SignupLoading<T> value)? signupLoading,
+    TResult Function(SignupSuccess<T> value)? signupSuccess,
+    TResult Function(SignupFail<T> value)? signupFail,
+    TResult Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult Function(SignupGoggleFail<T> value)? signupGoogleFail,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -131,9 +149,12 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(T data) success,
-    required TResult Function(String error) fail,
+    required TResult Function() signupLoading,
+    required TResult Function(T data) signupSuccess,
+    required TResult Function(String error) signupFail,
+    required TResult Function() signupGoogleLoading,
+    required TResult Function(UserModel userModel) signupGoogleSuccess,
+    required TResult Function(String error) signupGoogleFail,
   }) {
     return initial();
   }
@@ -142,9 +163,12 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(T data)? success,
-    TResult? Function(String error)? fail,
+    TResult? Function()? signupLoading,
+    TResult? Function(T data)? signupSuccess,
+    TResult? Function(String error)? signupFail,
+    TResult? Function()? signupGoogleLoading,
+    TResult? Function(UserModel userModel)? signupGoogleSuccess,
+    TResult? Function(String error)? signupGoogleFail,
   }) {
     return initial?.call();
   }
@@ -153,9 +177,12 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(T data)? success,
-    TResult Function(String error)? fail,
+    TResult Function()? signupLoading,
+    TResult Function(T data)? signupSuccess,
+    TResult Function(String error)? signupFail,
+    TResult Function()? signupGoogleLoading,
+    TResult Function(UserModel userModel)? signupGoogleSuccess,
+    TResult Function(String error)? signupGoogleFail,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -168,9 +195,12 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(Loading<T> value) loading,
-    required TResult Function(Success<T> value) success,
-    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SignupLoading<T> value) signupLoading,
+    required TResult Function(SignupSuccess<T> value) signupSuccess,
+    required TResult Function(SignupFail<T> value) signupFail,
+    required TResult Function(SignupGoggleLoading<T> value) signupGoogleLoading,
+    required TResult Function(SignupGoggleSuccess<T> value) signupGoogleSuccess,
+    required TResult Function(SignupGoggleFail<T> value) signupGoogleFail,
   }) {
     return initial(this);
   }
@@ -179,9 +209,12 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(Loading<T> value)? loading,
-    TResult? Function(Success<T> value)? success,
-    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SignupLoading<T> value)? signupLoading,
+    TResult? Function(SignupSuccess<T> value)? signupSuccess,
+    TResult? Function(SignupFail<T> value)? signupFail,
+    TResult? Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult? Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult? Function(SignupGoggleFail<T> value)? signupGoogleFail,
   }) {
     return initial?.call(this);
   }
@@ -190,9 +223,12 @@ class _$InitialImpl<T> implements _Initial<T> {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Fail<T> value)? fail,
+    TResult Function(SignupLoading<T> value)? signupLoading,
+    TResult Function(SignupSuccess<T> value)? signupSuccess,
+    TResult Function(SignupFail<T> value)? signupFail,
+    TResult Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult Function(SignupGoggleFail<T> value)? signupGoogleFail,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -207,18 +243,18 @@ abstract class _Initial<T> implements SignupState<T> {
 }
 
 /// @nodoc
-abstract class _$$LoadingImplCopyWith<T, $Res> {
-  factory _$$LoadingImplCopyWith(
-          _$LoadingImpl<T> value, $Res Function(_$LoadingImpl<T>) then) =
-      __$$LoadingImplCopyWithImpl<T, $Res>;
+abstract class _$$SignupLoadingImplCopyWith<T, $Res> {
+  factory _$$SignupLoadingImplCopyWith(_$SignupLoadingImpl<T> value,
+          $Res Function(_$SignupLoadingImpl<T>) then) =
+      __$$SignupLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$LoadingImplCopyWithImpl<T, $Res>
-    extends _$SignupStateCopyWithImpl<T, $Res, _$LoadingImpl<T>>
-    implements _$$LoadingImplCopyWith<T, $Res> {
-  __$$LoadingImplCopyWithImpl(
-      _$LoadingImpl<T> _value, $Res Function(_$LoadingImpl<T>) _then)
+class __$$SignupLoadingImplCopyWithImpl<T, $Res>
+    extends _$SignupStateCopyWithImpl<T, $Res, _$SignupLoadingImpl<T>>
+    implements _$$SignupLoadingImplCopyWith<T, $Res> {
+  __$$SignupLoadingImplCopyWithImpl(_$SignupLoadingImpl<T> _value,
+      $Res Function(_$SignupLoadingImpl<T>) _then)
       : super(_value, _then);
 
   /// Create a copy of SignupState
@@ -227,18 +263,18 @@ class __$$LoadingImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$LoadingImpl<T> implements Loading<T> {
-  const _$LoadingImpl();
+class _$SignupLoadingImpl<T> implements SignupLoading<T> {
+  const _$SignupLoadingImpl();
 
   @override
   String toString() {
-    return 'SignupState<$T>.loading()';
+    return 'SignupState<$T>.signupLoading()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$LoadingImpl<T>);
+        (other.runtimeType == runtimeType && other is _$SignupLoadingImpl<T>);
   }
 
   @override
@@ -248,35 +284,44 @@ class _$LoadingImpl<T> implements Loading<T> {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(T data) success,
-    required TResult Function(String error) fail,
+    required TResult Function() signupLoading,
+    required TResult Function(T data) signupSuccess,
+    required TResult Function(String error) signupFail,
+    required TResult Function() signupGoogleLoading,
+    required TResult Function(UserModel userModel) signupGoogleSuccess,
+    required TResult Function(String error) signupGoogleFail,
   }) {
-    return loading();
+    return signupLoading();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(T data)? success,
-    TResult? Function(String error)? fail,
+    TResult? Function()? signupLoading,
+    TResult? Function(T data)? signupSuccess,
+    TResult? Function(String error)? signupFail,
+    TResult? Function()? signupGoogleLoading,
+    TResult? Function(UserModel userModel)? signupGoogleSuccess,
+    TResult? Function(String error)? signupGoogleFail,
   }) {
-    return loading?.call();
+    return signupLoading?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(T data)? success,
-    TResult Function(String error)? fail,
+    TResult Function()? signupLoading,
+    TResult Function(T data)? signupSuccess,
+    TResult Function(String error)? signupFail,
+    TResult Function()? signupGoogleLoading,
+    TResult Function(UserModel userModel)? signupGoogleSuccess,
+    TResult Function(String error)? signupGoogleFail,
     required TResult orElse(),
   }) {
-    if (loading != null) {
-      return loading();
+    if (signupLoading != null) {
+      return signupLoading();
     }
     return orElse();
   }
@@ -285,59 +330,68 @@ class _$LoadingImpl<T> implements Loading<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(Loading<T> value) loading,
-    required TResult Function(Success<T> value) success,
-    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SignupLoading<T> value) signupLoading,
+    required TResult Function(SignupSuccess<T> value) signupSuccess,
+    required TResult Function(SignupFail<T> value) signupFail,
+    required TResult Function(SignupGoggleLoading<T> value) signupGoogleLoading,
+    required TResult Function(SignupGoggleSuccess<T> value) signupGoogleSuccess,
+    required TResult Function(SignupGoggleFail<T> value) signupGoogleFail,
   }) {
-    return loading(this);
+    return signupLoading(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(Loading<T> value)? loading,
-    TResult? Function(Success<T> value)? success,
-    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SignupLoading<T> value)? signupLoading,
+    TResult? Function(SignupSuccess<T> value)? signupSuccess,
+    TResult? Function(SignupFail<T> value)? signupFail,
+    TResult? Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult? Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult? Function(SignupGoggleFail<T> value)? signupGoogleFail,
   }) {
-    return loading?.call(this);
+    return signupLoading?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Fail<T> value)? fail,
+    TResult Function(SignupLoading<T> value)? signupLoading,
+    TResult Function(SignupSuccess<T> value)? signupSuccess,
+    TResult Function(SignupFail<T> value)? signupFail,
+    TResult Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult Function(SignupGoggleFail<T> value)? signupGoogleFail,
     required TResult orElse(),
   }) {
-    if (loading != null) {
-      return loading(this);
+    if (signupLoading != null) {
+      return signupLoading(this);
     }
     return orElse();
   }
 }
 
-abstract class Loading<T> implements SignupState<T> {
-  const factory Loading() = _$LoadingImpl<T>;
+abstract class SignupLoading<T> implements SignupState<T> {
+  const factory SignupLoading() = _$SignupLoadingImpl<T>;
 }
 
 /// @nodoc
-abstract class _$$SuccessImplCopyWith<T, $Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl<T> value, $Res Function(_$SuccessImpl<T>) then) =
-      __$$SuccessImplCopyWithImpl<T, $Res>;
+abstract class _$$SignupSuccessImplCopyWith<T, $Res> {
+  factory _$$SignupSuccessImplCopyWith(_$SignupSuccessImpl<T> value,
+          $Res Function(_$SignupSuccessImpl<T>) then) =
+      __$$SignupSuccessImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({T data});
 }
 
 /// @nodoc
-class __$$SuccessImplCopyWithImpl<T, $Res>
-    extends _$SignupStateCopyWithImpl<T, $Res, _$SuccessImpl<T>>
-    implements _$$SuccessImplCopyWith<T, $Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl<T> _value, $Res Function(_$SuccessImpl<T>) _then)
+class __$$SignupSuccessImplCopyWithImpl<T, $Res>
+    extends _$SignupStateCopyWithImpl<T, $Res, _$SignupSuccessImpl<T>>
+    implements _$$SignupSuccessImplCopyWith<T, $Res> {
+  __$$SignupSuccessImplCopyWithImpl(_$SignupSuccessImpl<T> _value,
+      $Res Function(_$SignupSuccessImpl<T>) _then)
       : super(_value, _then);
 
   /// Create a copy of SignupState
@@ -347,7 +401,7 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
   $Res call({
     Object? data = freezed,
   }) {
-    return _then(_$SuccessImpl<T>(
+    return _then(_$SignupSuccessImpl<T>(
       freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
@@ -358,22 +412,22 @@ class __$$SuccessImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$SuccessImpl<T> implements Success<T> {
-  const _$SuccessImpl(this.data);
+class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
+  const _$SignupSuccessImpl(this.data);
 
   @override
   final T data;
 
   @override
   String toString() {
-    return 'SignupState<$T>.success(data: $data)';
+    return 'SignupState<$T>.signupSuccess(data: $data)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl<T> &&
+            other is _$SignupSuccessImpl<T> &&
             const DeepCollectionEquality().equals(other.data, data));
   }
 
@@ -386,42 +440,52 @@ class _$SuccessImpl<T> implements Success<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
-      __$$SuccessImplCopyWithImpl<T, _$SuccessImpl<T>>(this, _$identity);
+  _$$SignupSuccessImplCopyWith<T, _$SignupSuccessImpl<T>> get copyWith =>
+      __$$SignupSuccessImplCopyWithImpl<T, _$SignupSuccessImpl<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(T data) success,
-    required TResult Function(String error) fail,
+    required TResult Function() signupLoading,
+    required TResult Function(T data) signupSuccess,
+    required TResult Function(String error) signupFail,
+    required TResult Function() signupGoogleLoading,
+    required TResult Function(UserModel userModel) signupGoogleSuccess,
+    required TResult Function(String error) signupGoogleFail,
   }) {
-    return success(data);
+    return signupSuccess(data);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(T data)? success,
-    TResult? Function(String error)? fail,
+    TResult? Function()? signupLoading,
+    TResult? Function(T data)? signupSuccess,
+    TResult? Function(String error)? signupFail,
+    TResult? Function()? signupGoogleLoading,
+    TResult? Function(UserModel userModel)? signupGoogleSuccess,
+    TResult? Function(String error)? signupGoogleFail,
   }) {
-    return success?.call(data);
+    return signupSuccess?.call(data);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(T data)? success,
-    TResult Function(String error)? fail,
+    TResult Function()? signupLoading,
+    TResult Function(T data)? signupSuccess,
+    TResult Function(String error)? signupFail,
+    TResult Function()? signupGoogleLoading,
+    TResult Function(UserModel userModel)? signupGoogleSuccess,
+    TResult Function(String error)? signupGoogleFail,
     required TResult orElse(),
   }) {
-    if (success != null) {
-      return success(data);
+    if (signupSuccess != null) {
+      return signupSuccess(data);
     }
     return orElse();
   }
@@ -430,67 +494,76 @@ class _$SuccessImpl<T> implements Success<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(Loading<T> value) loading,
-    required TResult Function(Success<T> value) success,
-    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SignupLoading<T> value) signupLoading,
+    required TResult Function(SignupSuccess<T> value) signupSuccess,
+    required TResult Function(SignupFail<T> value) signupFail,
+    required TResult Function(SignupGoggleLoading<T> value) signupGoogleLoading,
+    required TResult Function(SignupGoggleSuccess<T> value) signupGoogleSuccess,
+    required TResult Function(SignupGoggleFail<T> value) signupGoogleFail,
   }) {
-    return success(this);
+    return signupSuccess(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(Loading<T> value)? loading,
-    TResult? Function(Success<T> value)? success,
-    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SignupLoading<T> value)? signupLoading,
+    TResult? Function(SignupSuccess<T> value)? signupSuccess,
+    TResult? Function(SignupFail<T> value)? signupFail,
+    TResult? Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult? Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult? Function(SignupGoggleFail<T> value)? signupGoogleFail,
   }) {
-    return success?.call(this);
+    return signupSuccess?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Fail<T> value)? fail,
+    TResult Function(SignupLoading<T> value)? signupLoading,
+    TResult Function(SignupSuccess<T> value)? signupSuccess,
+    TResult Function(SignupFail<T> value)? signupFail,
+    TResult Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult Function(SignupGoggleFail<T> value)? signupGoogleFail,
     required TResult orElse(),
   }) {
-    if (success != null) {
-      return success(this);
+    if (signupSuccess != null) {
+      return signupSuccess(this);
     }
     return orElse();
   }
 }
 
-abstract class Success<T> implements SignupState<T> {
-  const factory Success(final T data) = _$SuccessImpl<T>;
+abstract class SignupSuccess<T> implements SignupState<T> {
+  const factory SignupSuccess(final T data) = _$SignupSuccessImpl<T>;
 
   T get data;
 
   /// Create a copy of SignupState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessImplCopyWith<T, _$SuccessImpl<T>> get copyWith =>
+  _$$SignupSuccessImplCopyWith<T, _$SignupSuccessImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$FailImplCopyWith<T, $Res> {
-  factory _$$FailImplCopyWith(
-          _$FailImpl<T> value, $Res Function(_$FailImpl<T>) then) =
-      __$$FailImplCopyWithImpl<T, $Res>;
+abstract class _$$SignupFailImplCopyWith<T, $Res> {
+  factory _$$SignupFailImplCopyWith(
+          _$SignupFailImpl<T> value, $Res Function(_$SignupFailImpl<T>) then) =
+      __$$SignupFailImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({String error});
 }
 
 /// @nodoc
-class __$$FailImplCopyWithImpl<T, $Res>
-    extends _$SignupStateCopyWithImpl<T, $Res, _$FailImpl<T>>
-    implements _$$FailImplCopyWith<T, $Res> {
-  __$$FailImplCopyWithImpl(
-      _$FailImpl<T> _value, $Res Function(_$FailImpl<T>) _then)
+class __$$SignupFailImplCopyWithImpl<T, $Res>
+    extends _$SignupStateCopyWithImpl<T, $Res, _$SignupFailImpl<T>>
+    implements _$$SignupFailImplCopyWith<T, $Res> {
+  __$$SignupFailImplCopyWithImpl(
+      _$SignupFailImpl<T> _value, $Res Function(_$SignupFailImpl<T>) _then)
       : super(_value, _then);
 
   /// Create a copy of SignupState
@@ -500,7 +573,7 @@ class __$$FailImplCopyWithImpl<T, $Res>
   $Res call({
     Object? error = null,
   }) {
-    return _then(_$FailImpl<T>(
+    return _then(_$SignupFailImpl<T>(
       error: null == error
           ? _value.error
           : error // ignore: cast_nullable_to_non_nullable
@@ -511,22 +584,22 @@ class __$$FailImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$FailImpl<T> implements Fail<T> {
-  const _$FailImpl({required this.error});
+class _$SignupFailImpl<T> implements SignupFail<T> {
+  const _$SignupFailImpl({required this.error});
 
   @override
   final String error;
 
   @override
   String toString() {
-    return 'SignupState<$T>.fail(error: $error)';
+    return 'SignupState<$T>.signupFail(error: $error)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FailImpl<T> &&
+            other is _$SignupFailImpl<T> &&
             (identical(other.error, error) || other.error == error));
   }
 
@@ -538,42 +611,51 @@ class _$FailImpl<T> implements Fail<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
-      __$$FailImplCopyWithImpl<T, _$FailImpl<T>>(this, _$identity);
+  _$$SignupFailImplCopyWith<T, _$SignupFailImpl<T>> get copyWith =>
+      __$$SignupFailImplCopyWithImpl<T, _$SignupFailImpl<T>>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(T data) success,
-    required TResult Function(String error) fail,
+    required TResult Function() signupLoading,
+    required TResult Function(T data) signupSuccess,
+    required TResult Function(String error) signupFail,
+    required TResult Function() signupGoogleLoading,
+    required TResult Function(UserModel userModel) signupGoogleSuccess,
+    required TResult Function(String error) signupGoogleFail,
   }) {
-    return fail(error);
+    return signupFail(error);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(T data)? success,
-    TResult? Function(String error)? fail,
+    TResult? Function()? signupLoading,
+    TResult? Function(T data)? signupSuccess,
+    TResult? Function(String error)? signupFail,
+    TResult? Function()? signupGoogleLoading,
+    TResult? Function(UserModel userModel)? signupGoogleSuccess,
+    TResult? Function(String error)? signupGoogleFail,
   }) {
-    return fail?.call(error);
+    return signupFail?.call(error);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(T data)? success,
-    TResult Function(String error)? fail,
+    TResult Function()? signupLoading,
+    TResult Function(T data)? signupSuccess,
+    TResult Function(String error)? signupFail,
+    TResult Function()? signupGoogleLoading,
+    TResult Function(UserModel userModel)? signupGoogleSuccess,
+    TResult Function(String error)? signupGoogleFail,
     required TResult orElse(),
   }) {
-    if (fail != null) {
-      return fail(error);
+    if (signupFail != null) {
+      return signupFail(error);
     }
     return orElse();
   }
@@ -582,48 +664,538 @@ class _$FailImpl<T> implements Fail<T> {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial<T> value) initial,
-    required TResult Function(Loading<T> value) loading,
-    required TResult Function(Success<T> value) success,
-    required TResult Function(Fail<T> value) fail,
+    required TResult Function(SignupLoading<T> value) signupLoading,
+    required TResult Function(SignupSuccess<T> value) signupSuccess,
+    required TResult Function(SignupFail<T> value) signupFail,
+    required TResult Function(SignupGoggleLoading<T> value) signupGoogleLoading,
+    required TResult Function(SignupGoggleSuccess<T> value) signupGoogleSuccess,
+    required TResult Function(SignupGoggleFail<T> value) signupGoogleFail,
   }) {
-    return fail(this);
+    return signupFail(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(Loading<T> value)? loading,
-    TResult? Function(Success<T> value)? success,
-    TResult? Function(Fail<T> value)? fail,
+    TResult? Function(SignupLoading<T> value)? signupLoading,
+    TResult? Function(SignupSuccess<T> value)? signupSuccess,
+    TResult? Function(SignupFail<T> value)? signupFail,
+    TResult? Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult? Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult? Function(SignupGoggleFail<T> value)? signupGoogleFail,
   }) {
-    return fail?.call(this);
+    return signupFail?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial<T> value)? initial,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Fail<T> value)? fail,
+    TResult Function(SignupLoading<T> value)? signupLoading,
+    TResult Function(SignupSuccess<T> value)? signupSuccess,
+    TResult Function(SignupFail<T> value)? signupFail,
+    TResult Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult Function(SignupGoggleFail<T> value)? signupGoogleFail,
     required TResult orElse(),
   }) {
-    if (fail != null) {
-      return fail(this);
+    if (signupFail != null) {
+      return signupFail(this);
     }
     return orElse();
   }
 }
 
-abstract class Fail<T> implements SignupState<T> {
-  const factory Fail({required final String error}) = _$FailImpl<T>;
+abstract class SignupFail<T> implements SignupState<T> {
+  const factory SignupFail({required final String error}) = _$SignupFailImpl<T>;
 
   String get error;
 
   /// Create a copy of SignupState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FailImplCopyWith<T, _$FailImpl<T>> get copyWith =>
+  _$$SignupFailImplCopyWith<T, _$SignupFailImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignupGoggleLoadingImplCopyWith<T, $Res> {
+  factory _$$SignupGoggleLoadingImplCopyWith(_$SignupGoggleLoadingImpl<T> value,
+          $Res Function(_$SignupGoggleLoadingImpl<T>) then) =
+      __$$SignupGoggleLoadingImplCopyWithImpl<T, $Res>;
+}
+
+/// @nodoc
+class __$$SignupGoggleLoadingImplCopyWithImpl<T, $Res>
+    extends _$SignupStateCopyWithImpl<T, $Res, _$SignupGoggleLoadingImpl<T>>
+    implements _$$SignupGoggleLoadingImplCopyWith<T, $Res> {
+  __$$SignupGoggleLoadingImplCopyWithImpl(_$SignupGoggleLoadingImpl<T> _value,
+      $Res Function(_$SignupGoggleLoadingImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SignupGoggleLoadingImpl<T> implements SignupGoggleLoading<T> {
+  const _$SignupGoggleLoadingImpl();
+
+  @override
+  String toString() {
+    return 'SignupState<$T>.signupGoogleLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignupGoggleLoadingImpl<T>);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() signupLoading,
+    required TResult Function(T data) signupSuccess,
+    required TResult Function(String error) signupFail,
+    required TResult Function() signupGoogleLoading,
+    required TResult Function(UserModel userModel) signupGoogleSuccess,
+    required TResult Function(String error) signupGoogleFail,
+  }) {
+    return signupGoogleLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? signupLoading,
+    TResult? Function(T data)? signupSuccess,
+    TResult? Function(String error)? signupFail,
+    TResult? Function()? signupGoogleLoading,
+    TResult? Function(UserModel userModel)? signupGoogleSuccess,
+    TResult? Function(String error)? signupGoogleFail,
+  }) {
+    return signupGoogleLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? signupLoading,
+    TResult Function(T data)? signupSuccess,
+    TResult Function(String error)? signupFail,
+    TResult Function()? signupGoogleLoading,
+    TResult Function(UserModel userModel)? signupGoogleSuccess,
+    TResult Function(String error)? signupGoogleFail,
+    required TResult orElse(),
+  }) {
+    if (signupGoogleLoading != null) {
+      return signupGoogleLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SignupLoading<T> value) signupLoading,
+    required TResult Function(SignupSuccess<T> value) signupSuccess,
+    required TResult Function(SignupFail<T> value) signupFail,
+    required TResult Function(SignupGoggleLoading<T> value) signupGoogleLoading,
+    required TResult Function(SignupGoggleSuccess<T> value) signupGoogleSuccess,
+    required TResult Function(SignupGoggleFail<T> value) signupGoogleFail,
+  }) {
+    return signupGoogleLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SignupLoading<T> value)? signupLoading,
+    TResult? Function(SignupSuccess<T> value)? signupSuccess,
+    TResult? Function(SignupFail<T> value)? signupFail,
+    TResult? Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult? Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult? Function(SignupGoggleFail<T> value)? signupGoogleFail,
+  }) {
+    return signupGoogleLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SignupLoading<T> value)? signupLoading,
+    TResult Function(SignupSuccess<T> value)? signupSuccess,
+    TResult Function(SignupFail<T> value)? signupFail,
+    TResult Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult Function(SignupGoggleFail<T> value)? signupGoogleFail,
+    required TResult orElse(),
+  }) {
+    if (signupGoogleLoading != null) {
+      return signupGoogleLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignupGoggleLoading<T> implements SignupState<T> {
+  const factory SignupGoggleLoading() = _$SignupGoggleLoadingImpl<T>;
+}
+
+/// @nodoc
+abstract class _$$SignupGoggleSuccessImplCopyWith<T, $Res> {
+  factory _$$SignupGoggleSuccessImplCopyWith(_$SignupGoggleSuccessImpl<T> value,
+          $Res Function(_$SignupGoggleSuccessImpl<T>) then) =
+      __$$SignupGoggleSuccessImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({UserModel userModel});
+}
+
+/// @nodoc
+class __$$SignupGoggleSuccessImplCopyWithImpl<T, $Res>
+    extends _$SignupStateCopyWithImpl<T, $Res, _$SignupGoggleSuccessImpl<T>>
+    implements _$$SignupGoggleSuccessImplCopyWith<T, $Res> {
+  __$$SignupGoggleSuccessImplCopyWithImpl(_$SignupGoggleSuccessImpl<T> _value,
+      $Res Function(_$SignupGoggleSuccessImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? userModel = null,
+  }) {
+    return _then(_$SignupGoggleSuccessImpl<T>(
+      null == userModel
+          ? _value.userModel
+          : userModel // ignore: cast_nullable_to_non_nullable
+              as UserModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SignupGoggleSuccessImpl<T> implements SignupGoggleSuccess<T> {
+  const _$SignupGoggleSuccessImpl(this.userModel);
+
+  @override
+  final UserModel userModel;
+
+  @override
+  String toString() {
+    return 'SignupState<$T>.signupGoogleSuccess(userModel: $userModel)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignupGoggleSuccessImpl<T> &&
+            (identical(other.userModel, userModel) ||
+                other.userModel == userModel));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, userModel);
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SignupGoggleSuccessImplCopyWith<T, _$SignupGoggleSuccessImpl<T>>
+      get copyWith => __$$SignupGoggleSuccessImplCopyWithImpl<T,
+          _$SignupGoggleSuccessImpl<T>>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() signupLoading,
+    required TResult Function(T data) signupSuccess,
+    required TResult Function(String error) signupFail,
+    required TResult Function() signupGoogleLoading,
+    required TResult Function(UserModel userModel) signupGoogleSuccess,
+    required TResult Function(String error) signupGoogleFail,
+  }) {
+    return signupGoogleSuccess(userModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? signupLoading,
+    TResult? Function(T data)? signupSuccess,
+    TResult? Function(String error)? signupFail,
+    TResult? Function()? signupGoogleLoading,
+    TResult? Function(UserModel userModel)? signupGoogleSuccess,
+    TResult? Function(String error)? signupGoogleFail,
+  }) {
+    return signupGoogleSuccess?.call(userModel);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? signupLoading,
+    TResult Function(T data)? signupSuccess,
+    TResult Function(String error)? signupFail,
+    TResult Function()? signupGoogleLoading,
+    TResult Function(UserModel userModel)? signupGoogleSuccess,
+    TResult Function(String error)? signupGoogleFail,
+    required TResult orElse(),
+  }) {
+    if (signupGoogleSuccess != null) {
+      return signupGoogleSuccess(userModel);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SignupLoading<T> value) signupLoading,
+    required TResult Function(SignupSuccess<T> value) signupSuccess,
+    required TResult Function(SignupFail<T> value) signupFail,
+    required TResult Function(SignupGoggleLoading<T> value) signupGoogleLoading,
+    required TResult Function(SignupGoggleSuccess<T> value) signupGoogleSuccess,
+    required TResult Function(SignupGoggleFail<T> value) signupGoogleFail,
+  }) {
+    return signupGoogleSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SignupLoading<T> value)? signupLoading,
+    TResult? Function(SignupSuccess<T> value)? signupSuccess,
+    TResult? Function(SignupFail<T> value)? signupFail,
+    TResult? Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult? Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult? Function(SignupGoggleFail<T> value)? signupGoogleFail,
+  }) {
+    return signupGoogleSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SignupLoading<T> value)? signupLoading,
+    TResult Function(SignupSuccess<T> value)? signupSuccess,
+    TResult Function(SignupFail<T> value)? signupFail,
+    TResult Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult Function(SignupGoggleFail<T> value)? signupGoogleFail,
+    required TResult orElse(),
+  }) {
+    if (signupGoogleSuccess != null) {
+      return signupGoogleSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignupGoggleSuccess<T> implements SignupState<T> {
+  const factory SignupGoggleSuccess(final UserModel userModel) =
+      _$SignupGoggleSuccessImpl<T>;
+
+  UserModel get userModel;
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SignupGoggleSuccessImplCopyWith<T, _$SignupGoggleSuccessImpl<T>>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SignupGoggleFailImplCopyWith<T, $Res> {
+  factory _$$SignupGoggleFailImplCopyWith(_$SignupGoggleFailImpl<T> value,
+          $Res Function(_$SignupGoggleFailImpl<T>) then) =
+      __$$SignupGoggleFailImplCopyWithImpl<T, $Res>;
+  @useResult
+  $Res call({String error});
+}
+
+/// @nodoc
+class __$$SignupGoggleFailImplCopyWithImpl<T, $Res>
+    extends _$SignupStateCopyWithImpl<T, $Res, _$SignupGoggleFailImpl<T>>
+    implements _$$SignupGoggleFailImplCopyWith<T, $Res> {
+  __$$SignupGoggleFailImplCopyWithImpl(_$SignupGoggleFailImpl<T> _value,
+      $Res Function(_$SignupGoggleFailImpl<T>) _then)
+      : super(_value, _then);
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? error = null,
+  }) {
+    return _then(_$SignupGoggleFailImpl<T>(
+      error: null == error
+          ? _value.error
+          : error // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SignupGoggleFailImpl<T> implements SignupGoggleFail<T> {
+  const _$SignupGoggleFailImpl({required this.error});
+
+  @override
+  final String error;
+
+  @override
+  String toString() {
+    return 'SignupState<$T>.signupGoogleFail(error: $error)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SignupGoggleFailImpl<T> &&
+            (identical(other.error, error) || other.error == error));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, error);
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SignupGoggleFailImplCopyWith<T, _$SignupGoggleFailImpl<T>> get copyWith =>
+      __$$SignupGoggleFailImplCopyWithImpl<T, _$SignupGoggleFailImpl<T>>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() signupLoading,
+    required TResult Function(T data) signupSuccess,
+    required TResult Function(String error) signupFail,
+    required TResult Function() signupGoogleLoading,
+    required TResult Function(UserModel userModel) signupGoogleSuccess,
+    required TResult Function(String error) signupGoogleFail,
+  }) {
+    return signupGoogleFail(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? signupLoading,
+    TResult? Function(T data)? signupSuccess,
+    TResult? Function(String error)? signupFail,
+    TResult? Function()? signupGoogleLoading,
+    TResult? Function(UserModel userModel)? signupGoogleSuccess,
+    TResult? Function(String error)? signupGoogleFail,
+  }) {
+    return signupGoogleFail?.call(error);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? signupLoading,
+    TResult Function(T data)? signupSuccess,
+    TResult Function(String error)? signupFail,
+    TResult Function()? signupGoogleLoading,
+    TResult Function(UserModel userModel)? signupGoogleSuccess,
+    TResult Function(String error)? signupGoogleFail,
+    required TResult orElse(),
+  }) {
+    if (signupGoogleFail != null) {
+      return signupGoogleFail(error);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial<T> value) initial,
+    required TResult Function(SignupLoading<T> value) signupLoading,
+    required TResult Function(SignupSuccess<T> value) signupSuccess,
+    required TResult Function(SignupFail<T> value) signupFail,
+    required TResult Function(SignupGoggleLoading<T> value) signupGoogleLoading,
+    required TResult Function(SignupGoggleSuccess<T> value) signupGoogleSuccess,
+    required TResult Function(SignupGoggleFail<T> value) signupGoogleFail,
+  }) {
+    return signupGoogleFail(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial<T> value)? initial,
+    TResult? Function(SignupLoading<T> value)? signupLoading,
+    TResult? Function(SignupSuccess<T> value)? signupSuccess,
+    TResult? Function(SignupFail<T> value)? signupFail,
+    TResult? Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult? Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult? Function(SignupGoggleFail<T> value)? signupGoogleFail,
+  }) {
+    return signupGoogleFail?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial<T> value)? initial,
+    TResult Function(SignupLoading<T> value)? signupLoading,
+    TResult Function(SignupSuccess<T> value)? signupSuccess,
+    TResult Function(SignupFail<T> value)? signupFail,
+    TResult Function(SignupGoggleLoading<T> value)? signupGoogleLoading,
+    TResult Function(SignupGoggleSuccess<T> value)? signupGoogleSuccess,
+    TResult Function(SignupGoggleFail<T> value)? signupGoogleFail,
+    required TResult orElse(),
+  }) {
+    if (signupGoogleFail != null) {
+      return signupGoogleFail(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SignupGoggleFail<T> implements SignupState<T> {
+  const factory SignupGoggleFail({required final String error}) =
+      _$SignupGoggleFailImpl<T>;
+
+  String get error;
+
+  /// Create a copy of SignupState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SignupGoggleFailImplCopyWith<T, _$SignupGoggleFailImpl<T>> get copyWith =>
       throw _privateConstructorUsedError;
 }
