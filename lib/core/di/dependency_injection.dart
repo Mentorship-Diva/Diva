@@ -7,6 +7,6 @@ final getIt = GetIt.instance;
 
 Future<void> setupGetIt() async {
   // signup
-  getIt.registerLazySingleton<SignupRepo>(() => SignupRepo(getIt()));
+  getIt.registerLazySingleton<SignupRepo>(() => SignupRepo());
   getIt.registerFactory<SignupCubit>(() => SignupCubit(getIt()));
 }

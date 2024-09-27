@@ -7,7 +7,6 @@ import '../models/signup_request_body.dart';
 class SignupRepo {
   final FirebaseAuth auth = FirebaseAuth.instance;
 
-  SignupRepo(Object object);
 
   Future<FirebaseResult> signUp(SignupRequestBody signupRequestBody) async {
     try {

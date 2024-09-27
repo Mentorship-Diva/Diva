@@ -1,7 +1,8 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mentorship/core/di/dependency_injection.dart';
+import 'package:google_sign_in/google_sign_in.dart';
 import 'package:mentorship/core/theming/assets.dart';
 import 'package:mentorship/features/signup/data/repos/signup_repo.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
@@ -18,7 +19,7 @@ class SignupScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SignupRepo signupRepo = SignupRepo(getIt);
+    SignupRepo signupRepo = SignupRepo();
     return BlocProvider(
       create: (context) => SignupCubit(signupRepo),
       child: Scaffold(
@@ -45,7 +46,15 @@ class SignupScreen extends StatelessWidget {
                       Padding(
                         padding: EdgeInsets.symmetric(vertical: 24.h),
                         child: SocialAccounts(
-                          onGoogleTapped: () {},
+                          onGoogleTapped: () async {
+
+                            User? user = await signUpWithGoogle();
+                            if (user != null) {
+                              debugPrint('Signed in with Google: ${user.displayName}');
+                            } else {
+                              debugPrint('Google sign-in failed');
+                            }
+                          },
                           onFacebookTapped: () {},
                           onAppleTapped: () {},
                         ),
@@ -60,5 +69,26 @@ class SignupScreen extends StatelessWidget {
         )),
       ),
     );
+  }
+
+  Future<User?> signUpWithGoogle() async {
+    final GoogleSignIn googleSignIn = GoogleSignIn();
+
+    final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
+
+    if (googleUser != null) {
+      final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+
+      final OAuthCredential credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
+      );
+
+      UserCredential userCredential = await FirebaseAuth.instance.signInWithCredential(credential);
+
+      return userCredential.user;
+    }
+
+    return null;
   }
 }

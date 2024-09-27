@@ -46,8 +46,9 @@ dependencies:
   flutter_pw_validator: ^1.6.0
 #  Firebase setup
   firebase_core:
-#  Firebase Authentication to use signin and signup with firebase
+#  Firebase Authentication
   firebase_auth:
+  google_sign_in:
 # View Toast to user
   fluttertoast:
 
