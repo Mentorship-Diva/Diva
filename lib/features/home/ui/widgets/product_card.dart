@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
-import 'package:mentorship/features/home/data/models/product.dart';
+import 'package:mentorship/features/home/data/models/product_response_model.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -15,26 +16,48 @@ class ProductCard extends StatelessWidget {
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(15.0),
-                child: Image.asset(
-                  product.imageUrl,
-                  fit: BoxFit.cover,
-                  width: double.infinity,
-                ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(15.0),
+              child: Image.network(
+                product.image,
+                fit: BoxFit.cover,
+                width: double.infinity,
+                height: 200.h,
               ),
             ),
             const SizedBox(height: 5),
             // Product Name
             Text(
-              product.name,
+              product.title,
               style: AppTextStyles.font14Weight400Grey,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
             ),
-            // Product Price
-            Text(
-              '\$${product.price.toStringAsFixed(2)}',
-              style: AppTextStyles.font14WeightBoldBlack,
+            SizedBox(
+              height: 10.h,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  '\$${product.price.toStringAsFixed(2)}',
+                  style: AppTextStyles.font14WeightBoldBlack,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+                Row(
+                  children: [
+                    Icon(Icons.star, color: Colors.amber, size: 15.sp),
+                    SizedBox(width: 3.w),
+                    Text(
+                      product.rating.rate.toString(),
+                      style: AppTextStyles.font14Weight400FadedBlack,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
+              ],
             ),
           ],
         ),
@@ -55,7 +78,7 @@ class ProductCard extends StatelessWidget {
         ),
         // Add to Cart Icon (bottom-right)
         Positioned(
-          bottom: 60,
+          bottom: 73.h,
           right: 10,
           child: CircleAvatar(
             backgroundColor: Colors.white.withOpacity(0.8),

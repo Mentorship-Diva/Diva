@@ -3,18 +3,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/features/home/logic/home_cubit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mentorship/features/home/logic/home_state.dart';
 
 class CategoriesList extends StatelessWidget {
-  // List of categories
-  final List<String> categories = [
-    "All",
-    "Clothes",
-    "Electronics",
-    "Popular",
-    "Category 5",
-  ];
   final HomeCubit homeCubit;
-  CategoriesList({super.key, required this.homeCubit});
+  final List<String> categories;
+
+  const CategoriesList({
+    super.key,
+    required this.homeCubit,
+    required this.categories,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,31 +26,27 @@ class CategoriesList extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              context
-                  .read<HomeCubit>()
-                  .selectCategory(index); // Update the selected category
+              homeCubit.selectCategory(index); // Update the selected category
             },
-            child: BlocBuilder<HomeCubit, int>(
+            child: BlocBuilder<HomeCubit, HomeState>(
               builder: (context, selectedIndex) {
-                bool isSelected = selectedIndex == index;
-
+                final isSelected = selectedIndex == index;
                 return Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
                   margin: const EdgeInsets.only(right: 10),
                   decoration: BoxDecoration(
-                    color: isSelected
-                        ? Colors.pink
-                        : Colors.pink.shade50, // Background color
-                    borderRadius: BorderRadius.circular(30), // Rounded corners
+                    color: isSelected ? Colors.pink : Colors.pink.shade50,
+                    borderRadius: BorderRadius.circular(30),
                   ),
                   child: Center(
-                    child: Text(categories[index],
-                        style: AppTextStyles.font14Weight400Black.copyWith(
-                            color: isSelected
-                                ? Colors.white
-                                : Colors.pink, // Text color
-                            fontWeight: FontWeight.bold)),
+                    child: Text(
+                      categories[index],
+                      style: AppTextStyles.font14Weight400Black.copyWith(
+                        color: isSelected ? Colors.white : Colors.pink,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ),
                 );
               },
