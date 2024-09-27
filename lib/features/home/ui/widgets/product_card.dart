@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/features/home/data/models/product_response_model.dart';
@@ -12,14 +13,13 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        // Product Image with rounded corners
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(15.0),
-              child: Image.network(
-                product.image,
+              child: CachedNetworkImage(
+                imageUrl: product.image,
                 fit: BoxFit.cover,
                 width: double.infinity,
                 height: 200.h,
