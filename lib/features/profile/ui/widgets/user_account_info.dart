@@ -18,7 +18,7 @@ class UserAccountInfo extends StatelessWidget {
           leading: CircleAvatar(
               radius: 20.r,
               backgroundColor: AppColors.lightPinkColor,
-              child: Text("DM", style: TextStyles.font18PrimaryColorMedium)),
+              child: Text("DM", style: AppTextStyles.font18PrimaryColorMedium)),
           title: const Text('Hello, Dmitry Mikhailov'),
           subtitle: const Text('5MlTf@example.com'),
           trailing: Container(
@@ -28,7 +28,7 @@ class UserAccountInfo extends StatelessWidget {
                 color: AppColors.mainPinkColor,
                 borderRadius: BorderRadius.all(Radius.circular(13))),
             child: Center(
-                child: Text('Edit', style: TextStyles.font14WhiteSemiBold)),
+                child: Text('Edit', style: AppTextStyles.font14WhiteSemiBold)),
           )),
     );
   }

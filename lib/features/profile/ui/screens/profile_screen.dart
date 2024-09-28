@@ -19,11 +19,13 @@ class ProfileScreen extends StatelessWidget {
           const UserAccountInfo(),
           Padding(
               padding: EdgeInsets.symmetric(vertical: 10.h),
-              child: Text("Account", style: TextStyles.font18PrimaryColorBold)),
+              child:
+                  Text("Account", style: AppTextStyles.font18PrimaryColorBold)),
           const AccountSettings(),
           Padding(
               padding: EdgeInsets.symmetric(vertical: 10.h),
-              child: Text("Privacy", style: TextStyles.font18PrimaryColorBold)),
+              child:
+                  Text("Privacy", style: AppTextStyles.font18PrimaryColorBold)),
           const PrivacySettings(),
         ]),
       ),

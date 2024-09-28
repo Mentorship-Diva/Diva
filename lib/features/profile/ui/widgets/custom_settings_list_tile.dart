@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 
-
 class CustomSettingsListTile extends StatelessWidget {
- const CustomSettingsListTile({
+  const CustomSettingsListTile({
     super.key,
     required this.onTap,
     required this.title,
@@ -20,7 +19,7 @@ class CustomSettingsListTile extends StatelessWidget {
       onTap: onTap,
       title: Text(
         title,
-        style: TextStyles.font16BlackSemiBold,
+        style: AppTextStyles.font16BlackSemiBold,
       ),
       leading: Icon(
         leading,

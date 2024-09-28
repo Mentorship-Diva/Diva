@@ -33,6 +33,7 @@ class AppTextStyles {
     color: Colors.black,
     fontSize: 16.sp,
     fontWeight: FontWeight.w600,
+  );
   static TextStyle font24Black400Libre = GoogleFonts.libreBaskerville(
     color: AppColors.blackColor,
     fontSize: 24.sp,
