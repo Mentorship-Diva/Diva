@@ -3,18 +3,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/features/home/logic/home_cubit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mentorship/features/home/logic/home_state.dart';
+import 'package:mentorship/features/home/ui/widgets/category.dart';
 
 class CategoriesList extends StatelessWidget {
-  // List of categories
-  final List<String> categories = [
-    "All",
-    "Clothes",
-    "Electronics",
-    "Popular",
-    "Category 5",
-  ];
   final HomeCubit homeCubit;
-  CategoriesList({super.key, required this.homeCubit});
+  final List<String> categories;
+
+  const CategoriesList({
+    super.key,
+    required this.homeCubit,
+    required this.categories,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -27,33 +27,14 @@ class CategoriesList extends StatelessWidget {
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
-              context
-                  .read<HomeCubit>()
-                  .selectCategory(index); // Update the selected category
+              homeCubit.loadCategoryProducts(categories[index]);
             },
-            child: BlocBuilder<HomeCubit, int>(
-              builder: (context, selectedIndex) {
-                bool isSelected = selectedIndex == index;
-
-                return Container(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  margin: const EdgeInsets.only(right: 10),
-                  decoration: BoxDecoration(
-                    color: isSelected
-                        ? Colors.pink
-                        : Colors.pink.shade50, // Background color
-                    borderRadius: BorderRadius.circular(30), // Rounded corners
-                  ),
-                  child: Center(
-                    child: Text(categories[index],
-                        style: AppTextStyles.font14Weight400Black.copyWith(
-                            color: isSelected
-                                ? Colors.white
-                                : Colors.pink, // Text color
-                            fontWeight: FontWeight.bold)),
-                  ),
-                );
+            child: BlocBuilder<HomeCubit, HomeState>(
+              builder: (context, state) {
+                final isSelected = (state is HomeProdcutsSuccess &&
+                    state.selectedCategory == categories[index]);
+                return Category(
+                    isSelected: isSelected, category: categories[index]);
               },
             ),
           );
