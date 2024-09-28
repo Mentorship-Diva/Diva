@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "634795184584",
+    "project_id": "diva-a5678",
+    "storage_bucket": "diva-a5678.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:634795184584:android:8529fd863a2f8cfbe1f0fd",
+        "android_client_info": {
+          "package_name": "com.example.mentorship"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWxz6eIsOoM7V2zZva919cAqsAqkznb-E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
