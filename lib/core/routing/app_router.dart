@@ -27,11 +27,7 @@ class AppRouter {
 
       case Routes.signupScreen:
         return MaterialPageRoute(
-          builder: (_) =>
-              BlocProvider(
-                create: (context) => getIt<SignupCubit>(),
-                child: SignupScreen(),
-              ),
+          builder: (_) => const SignupScreen(),
         );
       default:
         return null;

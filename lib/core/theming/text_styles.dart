@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mentorship/core/theming/colors.dart';
 
 class AppTextStyles {
-   // font - size - color - weight - style if exist
+  // font - size - color - weight - style if exist
   static TextStyle font24Black400Libre = GoogleFonts.libreBaskerville(
     color: AppColors.blackColor,
     fontSize: 24.sp,
@@ -38,7 +39,7 @@ class AppTextStyles {
     color: AppColors.blackColor,
     fontSize: 14.sp,
     fontWeight: FontWeight.w400,
-    );
+  );
   static TextStyle font14Weight400Black = GoogleFonts.inter(
     fontSize: 14,
     fontWeight: FontWeight.w400,
@@ -58,5 +59,5 @@ class AppTextStyles {
     fontSize: 14,
     fontWeight: FontWeight.bold,
     color: Colors.black,
-);
+  );
 }
