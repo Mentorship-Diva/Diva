@@ -1,6 +1,3 @@
-part of 'home_cubit.dart';
-
-@immutable
-sealed class HomeState {}
+abstract class HomeState {}
 
 final class HomeInitial extends HomeState {}

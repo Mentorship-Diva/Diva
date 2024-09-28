@@ -1,8 +1,9 @@
-import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-part 'home_state.dart';
-
-class HomeCubit extends Cubit<HomeState> {
-  HomeCubit() : super(HomeInitial());
+class HomeCubit extends Cubit<int> {
+  HomeCubit() : super(-1);
+  //* Update the selected category index
+  void selectCategory(int index) {
+    emit(index);
+  }
 }
