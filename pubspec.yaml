@@ -42,8 +42,6 @@ dependencies:
   flutter_secure_storage: ^9.2.2
 # Provide Google fonts
   google_fonts:
-# Validator package helps you to validate sign in user-entered password with your rules.
-  flutter_pw_validator: ^1.6.0
 #  Firebase setup
   firebase_core:
 #  Firebase Authentication
