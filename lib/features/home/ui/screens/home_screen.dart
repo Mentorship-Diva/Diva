@@ -25,17 +25,20 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            SizedBox(height: 20),
-            HomeHeader(),
-            SearchBarWithFilter(),
-            BannersSection(),
-            BuildCategoriesList(),
-            BuildProductsGridView()
-          ],
+      body: SafeArea(
+        bottom: false,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              // SizedBox(height: 20),
+              HomeHeader(),
+              SearchBarWithFilter(),
+              BannersSection(),
+              BuildCategoriesList(),
+              BuildProductsGridView()
+            ],
+          ),
         ),
       ),
     );

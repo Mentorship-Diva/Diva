@@ -5,20 +5,20 @@ PODS:
   - AppAuth/Core (1.7.5)
   - AppAuth/ExternalUserAgent (1.7.5):
     - AppAuth/Core
-  - Firebase/Auth (11.0.0):
+  - Firebase/Auth (11.2.0):
     - Firebase/CoreOnly
-    - FirebaseAuth (~> 11.0.0)
-  - Firebase/CoreOnly (11.0.0):
-    - FirebaseCore (= 11.0.0)
-  - firebase_auth (5.3.0):
-    - Firebase/Auth (= 11.0.0)
+    - FirebaseAuth (~> 11.2.0)
+  - Firebase/CoreOnly (11.2.0):
+    - FirebaseCore (= 11.2.0)
+  - firebase_auth (5.3.1):
+    - Firebase/Auth (= 11.2.0)
     - firebase_core
     - Flutter
-  - firebase_core (3.5.0):
-    - Firebase/CoreOnly (= 11.0.0)
+  - firebase_core (3.6.0):
+    - Firebase/CoreOnly (= 11.2.0)
     - Flutter
   - FirebaseAppCheckInterop (11.2.0)
-  - FirebaseAuth (11.0.0):
+  - FirebaseAuth (11.2.0):
     - FirebaseAppCheckInterop (~> 11.0)
     - FirebaseAuthInterop (~> 11.0)
     - FirebaseCore (~> 11.0)
@@ -28,7 +28,7 @@ PODS:
     - GTMSessionFetcher/Core (~> 3.4)
     - RecaptchaInterop (~> 100.0)
   - FirebaseAuthInterop (11.2.0)
-  - FirebaseCore (11.0.0):
+  - FirebaseCore (11.2.0):
     - FirebaseCoreInternal (~> 11.0)
     - GoogleUtilities/Environment (~> 8.0)
     - GoogleUtilities/Logger (~> 8.0)
@@ -90,6 +90,9 @@ PODS:
   - shared_preferences_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
+  - sqflite (0.0.3):
+    - Flutter
+    - FlutterMacOS
   - Toast (4.1.1)
 
 DEPENDENCIES:
@@ -102,6 +105,7 @@ DEPENDENCIES:
   - google_sign_in_ios (from `.symlinks/plugins/google_sign_in_ios/darwin`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - shared_preferences_foundation (from `.symlinks/plugins/shared_preferences_foundation/darwin`)
+  - sqflite (from `.symlinks/plugins/sqflite/darwin`)
 
 SPEC REPOS:
   trunk:
@@ -139,16 +143,18 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/path_provider_foundation/darwin"
   shared_preferences_foundation:
     :path: ".symlinks/plugins/shared_preferences_foundation/darwin"
+  sqflite:
+    :path: ".symlinks/plugins/sqflite/darwin"
 
 SPEC CHECKSUMS:
   AppAuth: 501c04eda8a8d11f179dbe8637b7a91bb7e5d2fa
-  Firebase: 9f574c08c2396885b5e7e100ed4293d956218af9
-  firebase_auth: f27287630c4d9e2c3c63e64d9240822ad6b07e5b
-  firebase_core: 2ec6b789859c7c24766344ec71fdf78639402d56
+  Firebase: 98e6bf5278170668a7983e12971a66b2cd57fc8c
+  firebase_auth: 0c77e299a8f2d1c74d1b1f6b78b3d4d802c19f47
+  firebase_core: 2bedc3136ec7c7b8561c6123ed0239387b53f2af
   FirebaseAppCheckInterop: ea21450529cf0ebd132788dd8916a0269abc684f
-  FirebaseAuth: d5cf28be74d7e82257f6a3f717509eff70d3cf4a
+  FirebaseAuth: 2a198b8cdbbbd457f08d74df7040feb0a0e7777a
   FirebaseAuthInterop: 47c09558af5d1b31f16fb352387c72d4804f4a24
-  FirebaseCore: 3cf438f431f18c12cdf2aaf64434648b63f7e383
+  FirebaseCore: a282032ae9295c795714ded2ec9c522fc237f8da
   FirebaseCoreExtension: cda74ddfb001224bd8fd1d6e74698b4ed07803de
   FirebaseCoreInternal: 0c569513412da9f3b31bd0b340013bbee8f295c5
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
@@ -163,6 +169,7 @@ SPEC CHECKSUMS:
   path_provider_foundation: 2b6b4c569c0fb62ec74538f866245ac84301af46
   RecaptchaInterop: 7d1a4a01a6b2cb1610a47ef3f85f0c411434cb21
   shared_preferences_foundation: fcdcbc04712aee1108ac7fda236f363274528f78
+  sqflite: 673a0e54cc04b7d6dba8d24fb8095b31c3a99eec
   Toast: 1f5ea13423a1e6674c4abdac5be53587ae481c4e
 
 PODFILE CHECKSUM: a57f30d18f102dd3ce366b1d62a55ecbef2158e5
