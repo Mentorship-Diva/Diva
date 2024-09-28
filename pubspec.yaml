@@ -40,6 +40,15 @@ dependencies:
   shared_preferences: ^2.2.3
 # provides API to store data in secure storage.
   flutter_secure_storage: ^9.2.2
+# Provide Google fonts
+  google_fonts:
+#  Firebase setup
+  firebase_core:
+#  Firebase Authentication
+  firebase_auth:
+  google_sign_in:
+# View Toast to user
+  fluttertoast:
 
 dev_dependencies:
   flutter_test:
