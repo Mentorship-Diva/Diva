@@ -15,6 +15,7 @@ class AppTextFormField extends StatefulWidget {
   final Function()? onTap;
   final FocusNode? focus;
   final Function(String?)? onChanged;
+  final Function()? onEditingComplete;
   final List<TextInputFormatter>? inputFormatter;
   final Widget Function(BuildContext, EditableTextState)? contextMenuBuilder;
 
@@ -30,6 +31,7 @@ class AppTextFormField extends StatefulWidget {
     this.suffixIcon,
     this.focus,
     this.onChanged,
+    this.onEditingComplete,
     this.inputFormatter,
     this.onTap,
     this.contextMenuBuilder,
@@ -58,7 +60,9 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
       textInputAction: widget.textInputAction ?? TextInputAction.done,
       onChanged: (value) {
         widget.onChanged != null ? widget.onChanged!(value) : null;
-        setState(() {});
+      },
+      onEditingComplete: () {
+        widget.onEditingComplete != null ? widget.onEditingComplete!() : null;
       },
       style: const TextStyle(
         color: AppColors.blackColor,
