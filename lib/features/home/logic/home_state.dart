@@ -1,35 +1,32 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mentorship/features/home/data/models/product_response_model.dart';
+part 'home_state.freezed.dart';
 
-abstract class HomeState {}
+@Freezed()
+class HomeState with _$HomeState {
+  // Initial state
+  const factory HomeState.initial() = HomeInitial;
 
-final class HomeInitial extends HomeState {}
+  // Category selected state
+  const factory HomeState.categorySelected(int index) = CategorySelected;
 
-final class CategorySelected extends HomeState {
-  final int index;
-  CategorySelected(this.index);
-}
+  // Products loading state
+  const factory HomeState.productsLoading() = HomeProductsLoading;
 
-final class HomeProdcutsSuccess extends HomeState {
-  final List<Product> products;
-  final String? selectedCategory;
-  HomeProdcutsSuccess(this.products, this.selectedCategory);
-}
+  // Products success state
+  const factory HomeState.productsSuccess(
+      List<Product> products, String? selectedCategory) = HomeProductsSuccess;
 
-final class HomeProdcutsLoading extends HomeState {}
+  // Products error state
+  const factory HomeState.productsError(String message) = HomeProductsError;
 
-final class HomeProdcutsError extends HomeState {
-  final String message;
-  HomeProdcutsError(this.message);
-}
+  // Categories loading state
+  const factory HomeState.categoriesLoading() = HomeCategoriesLoading;
 
-final class HomeCategoriesSuccess extends HomeState {
-  final List<String> categories;
-  HomeCategoriesSuccess(this.categories);
-}
+  // Categories success state
+  const factory HomeState.categoriesSuccess(List<String> categories) =
+      HomeCategoriesSuccess;
 
-final class HomeCategoriesLoading extends HomeState {}
-
-final class HomeCategoriesError extends HomeState {
-  final String message;
-  HomeCategoriesError(this.message);
+  // Categories error state
+  const factory HomeState.categoriesError(String message) = HomeCategoriesError;
 }

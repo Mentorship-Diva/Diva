@@ -15,23 +15,28 @@ class BuildCategoriesList extends StatelessWidget {
 
     return BlocBuilder<HomeCubit, HomeState>(
       buildWhen: (previous, current) =>
-          current is HomeCategoriesSuccess ||
+          current is HomeCategoriesLoading ||
           current is HomeCategoriesError ||
-          current is HomeCategoriesLoading,
+          current is HomeCategoriesSuccess,
       builder: (context, state) {
-        if (state is HomeCategoriesLoading) {
-          return const ShimmerCategoriesList();
-        } else if (state is HomeCategoriesError) {
-          return Center(child: Text(state.message));
-        } else if (state is HomeCategoriesSuccess) {
-          final categories = state.categories;
-          return CategoriesList(
-            categories: categories,
-            homeCubit: homeCubit,
-          );
-        } else {
-          return const SizedBox();
-        }
+        return state.whenOrNull(
+              // Loading state
+              categoriesLoading: () {
+                return const ShimmerCategoriesList();
+              },
+              // Error state
+              categoriesError: (message) {
+                return Center(child: Text(message));
+              },
+              // Success state
+              categoriesSuccess: (categories) {
+                return CategoriesList(
+                  categories: categories,
+                  homeCubit: homeCubit,
+                );
+              },
+            ) ??
+            const SizedBox();
       },
     );
   }

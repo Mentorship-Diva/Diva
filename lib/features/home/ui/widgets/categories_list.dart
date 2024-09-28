@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/features/home/logic/home_cubit.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/features/home/logic/home_state.dart';
@@ -31,7 +30,7 @@ class CategoriesList extends StatelessWidget {
             },
             child: BlocBuilder<HomeCubit, HomeState>(
               builder: (context, state) {
-                final isSelected = (state is HomeProdcutsSuccess &&
+                final isSelected = (state is HomeProductsSuccess &&
                     state.selectedCategory == categories[index]);
                 return Category(
                     isSelected: isSelected, category: categories[index]);

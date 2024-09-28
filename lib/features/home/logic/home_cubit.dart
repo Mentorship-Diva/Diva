@@ -32,39 +32,39 @@ class HomeCubit extends Cubit<HomeState> {
 
   //* Fetch products and emit states
   Future<void> loadProducts() async {
-    emit(HomeProdcutsLoading());
+    emit(HomeState.productsLoading());
     try {
       final response = await _homeRepo.getProducts();
 
       response.when(
         success: (productsResponse) {
-          emit(HomeProdcutsSuccess(productsResponse, 'All'));
+          emit(HomeState.productsSuccess(productsResponse, 'All'));
         },
         failure: (message) {
-          emit(HomeProdcutsError(message));
+          emit(HomeState.productsError(message));
         },
       );
     } catch (e) {
-      emit(HomeProdcutsError("Failed to load products: ${e.toString()}"));
+      emit(HomeState.productsError("Failed to load products: ${e.toString()}"));
     }
   }
 
   //* Fetch products of a specific  category and emit states
   Future<void> loadCategoryProducts(String categoryName) async {
-    emit(HomeProdcutsLoading());
+    emit(HomeState.productsLoading());
     try {
       final response = await _homeRepo.getCategoryProducts(categoryName);
 
       response.when(
         success: (productsResponse) {
-          emit(HomeProdcutsSuccess(productsResponse, categoryName));
+          emit(HomeState.productsSuccess(productsResponse, categoryName));
         },
         failure: (message) {
-          emit(HomeProdcutsError(message));
+          emit(HomeState.productsError(message));
         },
       );
     } catch (e) {
-      emit(HomeProdcutsError("Failed to load products: ${e.toString()}"));
+      emit(HomeState.productsError("Failed to load products: ${e.toString()}"));
     }
   }
 }

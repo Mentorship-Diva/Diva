@@ -12,22 +12,25 @@ class BuildProductsGridView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       buildWhen: (previous, current) =>
-          current is HomeProdcutsSuccess ||
-          current is HomeProdcutsError ||
-          current is HomeProdcutsLoading,
+          current is HomeProductsLoading ||
+          current is HomeProductsError ||
+          current is HomeProductsSuccess,
       builder: (context, state) {
-        if (state is HomeProdcutsLoading) {
-          return const ShimmerProductsGridView();
-        } else if (state is HomeProdcutsError) {
-          return Center(child: Text(state.message));
-        } else if (state is HomeProdcutsSuccess) {
-          final products = state.products;
-          return ProductsGridView(
-            products: products,
-          );
-        } else {
-          return const SizedBox();
-        }
+        return state.whenOrNull(
+              // Loading state
+              productsLoading: () {
+                return const ShimmerProductsGridView();
+              },
+              // Error state
+              productsError: (message) {
+                return Center(child: Text(message));
+              },
+              // Success state
+              productsSuccess: (products, selectedCategory) {
+                return ProductsGridView(products: products);
+              },
+            ) ??
+            const SizedBox();
       },
     );
   }
