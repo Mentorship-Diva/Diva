@@ -68,7 +68,7 @@ class SignupCubit extends Cubit<SignupState> {
 
   void VerifyPhoneNumber({required String otp}) async {
     emit(const SignupState.verifyPhoneNumberLoading());
-    var response = await signupWithPhoneNumberRepo.verifyPhonenumber(otp);
+    var response = await signupWithPhoneNumberRepo.verifyPhoneNumber(otp);
     response.when(
       success: (data) {
         emit(SignupState.verifyPhoneNumberSuccess(data));

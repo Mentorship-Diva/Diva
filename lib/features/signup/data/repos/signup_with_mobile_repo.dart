@@ -5,62 +5,42 @@ class SignupWithPhoneNumberRepo {
   final FirebaseAuth auth = FirebaseAuth.instance;
   String? verificationId;
 
-
-
   Future<ApiResult> sendOtp(String phoneNumber) async {
     await auth.verifyPhoneNumber(
       phoneNumber: phoneNumber,
       verificationCompleted: (PhoneAuthCredential credential) async {
         await auth.signInWithCredential(credential);
+        print('credential');
+        print(credential);
       },
       verificationFailed: (FirebaseAuthException e) {
-        // Handle error
         print("Verification failed: ${e.message}");
-        // ScaffoldMessenger.of(context).showSnackBar(
-        //   SnackBar(content: Text("Verification failed: ${e.message}")),
-        // );
       },
       codeSent: (String verificationId, int? resendToken) {
-        // Store the verification ID for use when the OTP is entered
-        // setState(() {
-          this.verificationId = verificationId;
-        // });
-        // ScaffoldMessenger.of(context).showSnackBar(
-        //   SnackBar(content: Text("OTP has been sent")),
-        // );
+        print('verificationId');
+        print(verificationId);
+        this.verificationId = verificationId;
       },
       codeAutoRetrievalTimeout: (String verificationId) {
-        // Auto-retrieval timeout
-        // setState(() {
-          this.verificationId = verificationId;
-        // });
+        print('TIME OUT');
+        this.verificationId = verificationId;
       },
     );
     return ApiResult.success('');
   }
 
-
-  Future<ApiResult> verifyPhonenumber(String otp) async {
+  Future<ApiResult> verifyPhoneNumber(String otp) async {
     if (verificationId != null) {
       PhoneAuthCredential credential = PhoneAuthProvider.credential(
-        verificationId: verificationId!,
-        smsCode: otp,
-      );
-
+          verificationId: verificationId!, smsCode: otp);
       try {
-        // Attempt to sign in
         await auth.signInWithCredential(credential);
-        // ScaffoldMessenger.of(context).showSnackBar(
-        //   SnackBar(content: Text("Sign-in successful!")),
-        // );
+        print('credential');
+        print(credential);
       } catch (e) {
         print("Error during OTP sign-in: $e");
-        // ScaffoldMessenger.of(context).showSnackBar(
-        //   SnackBar(content: Text("Error during sign-in: $e")),
-        // );
       }
     }
     return ApiResult.success('');
   }
-
 }
