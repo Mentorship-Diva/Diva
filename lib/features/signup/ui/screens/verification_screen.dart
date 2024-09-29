@@ -6,9 +6,9 @@ import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/theming/colors.dart';
 import '../widgets/auth_title_and_image.dart';
 import 'package:mentorship/core/theming/assets.dart';
-
 import '../widgets/verification/code_will_be_sent_to_number.dart';
 import '../widgets/verification/pin_code_form.dart';
+import '../widgets/verification/resend_code.dart';
 
 class VerificationScreen extends StatelessWidget {
   const VerificationScreen({super.key});
@@ -37,6 +37,7 @@ class VerificationScreen extends StatelessWidget {
                           height: 8.h,
                         ),
                         const PicCodeForm(),
+                        const ResendCode(),
                       ],
                     ),
                   ),

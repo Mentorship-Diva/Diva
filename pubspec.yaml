@@ -42,6 +42,7 @@ dependencies:
 # View Toast to user
   fluttertoast:
   pin_code_fields:
+  flutter_timer_countdown:
 
 dev_dependencies:
 

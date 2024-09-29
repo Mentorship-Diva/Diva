@@ -8,7 +8,6 @@ class CodeWillBeSentToNumber extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    print(context.read<SignupCubit>().phoneNumberController.text);
     return Row(
       children: [
         Text(
