@@ -1,8 +1,10 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
+import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
 import 'package:mentorship/features/signup/ui/widgets/signup_with_email_form.dart';
 import 'package:mentorship/features/signup/ui/widgets/signup_with_number_form.dart';
 
@@ -15,7 +17,6 @@ class SignupForm extends StatefulWidget {
 
 class _SignupFormState extends State<SignupForm>
     with SingleTickerProviderStateMixin {
-  bool showEmailForm = true;
   late AnimationController controller;
   late Animation<double> animation;
 
@@ -30,7 +31,7 @@ class _SignupFormState extends State<SignupForm>
   }
 
   void flip() {
-    if (!showEmailForm) {
+    if (!context.read<SignupCubit>().isEmailForm) {
       controller.forward();
     } else {
       controller.reverse();
@@ -47,14 +48,14 @@ class _SignupFormState extends State<SignupForm>
             GestureDetector(
               onTap: () {
                 setState(() {
-                  showEmailForm = true;
+                  context.read<SignupCubit>().isEmailForm = true;
                 });
                 flip();
               },
               child: Text(
                 'E-mail',
                 style: AppTextStyles.font14Black400.copyWith(
-                  color: showEmailForm
+                  color: context.read<SignupCubit>().isEmailForm
                       ? AppColors.mainColor
                       : AppColors.lightGreyColor,
                 ),
@@ -69,14 +70,14 @@ class _SignupFormState extends State<SignupForm>
             GestureDetector(
               onTap: () {
                 setState(() {
-                  showEmailForm = false;
+                  context.read<SignupCubit>().isEmailForm = false;
                 });
                 flip();
               },
               child: Text(
                 'Mobile',
                 style: AppTextStyles.font14Black400.copyWith(
-                  color: !showEmailForm
+                  color: !context.read<SignupCubit>().isEmailForm
                       ? AppColors.mainColor
                       : AppColors.lightGreyColor,
                 ),

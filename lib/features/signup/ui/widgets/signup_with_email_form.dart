@@ -34,7 +34,7 @@ class _SignupWithEmailFormState extends State<SignupWithEmailForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: context.read<SignupCubit>().formKey,
+      key: context.read<SignupCubit>().emailFormKey,
       child: Column(
         children: [
           Padding(

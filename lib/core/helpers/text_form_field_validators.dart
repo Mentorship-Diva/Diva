@@ -20,4 +20,13 @@ class TextFormFieldValidators {
     }
     return null;
   }
+
+  static phoneNumberValidator(value, context) {
+    if (value!.isEmpty) {
+      return 'Phone number is required';
+    } else if (!AppRegex.isPhoneNumberValid(value)) {
+      return 'Phone number is not valid';
+    }
+    return null;
+  }
 }

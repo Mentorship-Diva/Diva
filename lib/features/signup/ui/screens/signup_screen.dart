@@ -8,6 +8,7 @@ import 'package:mentorship/features/signup/data/repos/signup_with_google_repo.da
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
 import 'package:mentorship/features/signup/ui/widgets/signup_form.dart';
 import '../../../../core/theming/colors.dart';
+import '../../data/repos/signup_with_mobile_repo.dart';
 import '../widgets/already_have_an_account.dart';
 import '../widgets/auth_title_and_image.dart';
 import '../widgets/or_text_with_horizontal_divider.dart';
@@ -20,7 +21,7 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => SignupCubit(getIt<SignupRepo>(), getIt<SignupWithGoogleRepo>(),),
+      create: (context) => SignupCubit(getIt<SignupRepo>(), getIt<SignupWithGoogleRepo>(), getIt<SignupWithPhoneNumberRepo>()),
       child: Scaffold(
         backgroundColor: AppColors.backgroundColor,
         body: SafeArea(
@@ -39,7 +40,7 @@ class SignupScreen extends StatelessWidget {
                         const SignupForm(),
                         Padding(
                           padding: EdgeInsets.symmetric(vertical: 24.h),
-                          child: const SignupButton(),
+                          child: SignupButton(),
                         ),
                         const OrTextWithHorizontalDivider(),
                         Padding(

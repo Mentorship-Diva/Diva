@@ -20,4 +20,19 @@ class SignupState<T> with _$SignupState<T> {
 
   const factory SignupState.signupGoogleFail({required String error}) =
       SignupGoggleFail;
+
+  const factory SignupState.sendOtpLoading() = SendOtpLoading;
+
+  const factory SignupState.sendOtpSuccess(T data) = SendOtpSuccess<T>;
+
+  const factory SignupState.sendOtpFail({required String error}) = SendOtpFail;
+
+  const factory SignupState.verifyPhoneNumberLoading() =
+      VerifyPhoneNumberLoading;
+
+  const factory SignupState.verifyPhoneNumberSuccess(T data) =
+      VerifyPhoneNumberSuccess<T>;
+
+  const factory SignupState.verifyPhoneNumberFail({required String error}) =
+      VerifyPhoneNumberFail;
 }
