@@ -41,6 +41,7 @@ dependencies:
   google_sign_in:
 # View Toast to user
   fluttertoast:
+  pin_code_fields:
 
 dev_dependencies:
 

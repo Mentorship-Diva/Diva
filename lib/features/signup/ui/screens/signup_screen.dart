@@ -21,7 +21,8 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => SignupCubit(getIt<SignupRepo>(), getIt<SignupWithGoogleRepo>(), getIt<SignupWithPhoneNumberRepo>()),
+      // create: (context) => SignupCubit(getIt<SignupRepo>(), getIt<SignupWithGoogleRepo>(), getIt<SignupWithPhoneNumberRepo>()),
+      create: (context) => getIt<SignupCubit>(),
       child: Scaffold(
         backgroundColor: AppColors.backgroundColor,
         body: SafeArea(

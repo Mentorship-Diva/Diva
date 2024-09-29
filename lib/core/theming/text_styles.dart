@@ -89,4 +89,10 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
     color: Colors.black,
   );
+
+  static TextStyle font14Pink400 = TextStyle(
+    color: AppColors.mainColor,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+  );
 }

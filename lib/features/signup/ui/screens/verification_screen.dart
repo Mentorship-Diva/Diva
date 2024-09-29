@@ -1,34 +1,47 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
+import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/theming/colors.dart';
 import '../widgets/auth_title_and_image.dart';
 import 'package:mentorship/core/theming/assets.dart';
 
+import '../widgets/verification/code_will_be_sent_to_number.dart';
+import '../widgets/verification/pin_code_form.dart';
 
 class VerificationScreen extends StatelessWidget {
   const VerificationScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
-      body: SafeArea(
-        child: Center(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.w),
-            child: Column(
-              children: [
-                Expanded(
-                  child: ListView(
-                    children: [
-                      const AuthTitleAndImage(
-                        title: 'Verification Code',
-                        image: AppAssets.verificationIll,
-                      ),
-                    ],
+    return BlocProvider.value(
+      value: getIt<SignupCubit>(),
+      child: Scaffold(
+        backgroundColor: AppColors.backgroundColor,
+        body: SafeArea(
+          child: Center(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.w),
+              child: Column(
+                children: [
+                  Expanded(
+                    child: ListView(
+                      children: [
+                        const AuthTitleAndImage(
+                          title: 'Verification Code',
+                          image: AppAssets.verificationIll,
+                        ),
+                        const CodeWillBeSentToNumber(),
+                        SizedBox(
+                          height: 8.h,
+                        ),
+                        const PicCodeForm(),
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),

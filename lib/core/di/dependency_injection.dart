@@ -24,7 +24,7 @@ Future<void> setupGetIt() async {
       () => SignupWithGoogleRepo());
   getIt.registerLazySingleton<SignupWithPhoneNumberRepo>(
       () => SignupWithPhoneNumberRepo());
-  getIt.registerFactory<SignupCubit>(
+  getIt.registerLazySingleton<SignupCubit>(
     () => SignupCubit(
       getIt<SignupRepo>(),
       getIt<SignupWithGoogleRepo>(),

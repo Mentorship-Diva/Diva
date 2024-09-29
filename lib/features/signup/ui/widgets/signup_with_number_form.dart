@@ -11,7 +11,7 @@ class SignupWithNumberForm extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Form(
+    return Form(
       key: context.read<SignupCubit>().phoneFormKey,
       child: Column(
         children: [
@@ -20,9 +20,10 @@ class SignupWithNumberForm extends StatelessWidget {
             hintText: 'Mobile Number',
             textInputAction: TextInputAction.done,
             keyboardType: TextInputType.phone,
-            contextMenuBuilder:
-            TextSelectionOptions.emailTextSelectionOptions, //  Same as email selections
-            validator: (value) => TextFormFieldValidators.phoneNumberValidator(value, context),
+            contextMenuBuilder: TextSelectionOptions.emailTextSelectionOptions,
+            //  Same as email selections
+            validator: (value) =>
+                TextFormFieldValidators.phoneNumberValidator(value, context),
           ),
         ],
       ),

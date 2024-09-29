@@ -27,6 +27,7 @@ class SignupCubit extends Cubit<SignupState> {
   final GlobalKey<FormState> phoneFormKey = GlobalKey<FormState>();
   bool isEmailForm = true;
 
+
   void signup() async {
     emit(const SignupState.signupLoading());
     var response = await signupRepo.signUp(SignupRequestBody(
@@ -66,7 +67,7 @@ class SignupCubit extends Cubit<SignupState> {
     );
   }
 
-  void VerifyPhoneNumber({required String otp}) async {
+  void verifyPhoneNumber({required String otp}) async {
     emit(const SignupState.verifyPhoneNumberLoading());
     var response = await signupWithPhoneNumberRepo.verifyPhoneNumber(otp);
     response.when(
