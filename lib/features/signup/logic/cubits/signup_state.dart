@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mentorship/features/signup/data/models/user_model.dart';
 
@@ -30,8 +31,8 @@ class SignupState<T> with _$SignupState<T> {
   const factory SignupState.verifyPhoneNumberLoading() =
       VerifyPhoneNumberLoading;
 
-  const factory SignupState.verifyPhoneNumberSuccess(T data) =
-      VerifyPhoneNumberSuccess<T>;
+  const factory SignupState.verifyPhoneNumberSuccess(User user) =
+      VerifyPhoneNumberSuccess;
 
   const factory SignupState.verifyPhoneNumberFail({required String error}) =
       VerifyPhoneNumberFail;

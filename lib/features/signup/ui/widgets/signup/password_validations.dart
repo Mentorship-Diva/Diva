@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mentorship/features/signup/ui/widgets/password_validator_item.dart';
+import 'package:mentorship/features/signup/ui/widgets/signup/password_validator_item.dart';
 
 class PasswordValidations extends StatelessWidget {
   const PasswordValidations({

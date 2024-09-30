@@ -29,7 +29,7 @@ mixin _$SignupState<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) =>
       throw _privateConstructorUsedError;
@@ -46,7 +46,7 @@ mixin _$SignupState<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) =>
       throw _privateConstructorUsedError;
@@ -63,7 +63,7 @@ mixin _$SignupState<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) =>
@@ -202,7 +202,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
     return initial();
@@ -222,7 +222,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
     return initial?.call();
@@ -242,7 +242,7 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {
@@ -380,7 +380,7 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
     return signupLoading();
@@ -400,7 +400,7 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
     return signupLoading?.call();
@@ -420,7 +420,7 @@ class _$SignupLoadingImpl<T> implements SignupLoading<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {
@@ -587,7 +587,7 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
     return signupSuccess(data);
@@ -607,7 +607,7 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
     return signupSuccess?.call(data);
@@ -627,7 +627,7 @@ class _$SignupSuccessImpl<T> implements SignupSuccess<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {
@@ -800,7 +800,7 @@ class _$SignupFailImpl<T> implements SignupFail<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
     return signupFail(error);
@@ -820,7 +820,7 @@ class _$SignupFailImpl<T> implements SignupFail<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
     return signupFail?.call(error);
@@ -840,7 +840,7 @@ class _$SignupFailImpl<T> implements SignupFail<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {
@@ -987,7 +987,7 @@ class _$SignupGoggleLoadingImpl<T> implements SignupGoggleLoading<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
     return signupGoogleLoading();
@@ -1007,7 +1007,7 @@ class _$SignupGoggleLoadingImpl<T> implements SignupGoggleLoading<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
     return signupGoogleLoading?.call();
@@ -1027,7 +1027,7 @@ class _$SignupGoggleLoadingImpl<T> implements SignupGoggleLoading<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {
@@ -1194,7 +1194,7 @@ class _$SignupGoggleSuccessImpl<T> implements SignupGoggleSuccess<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
     return signupGoogleSuccess(userModel);
@@ -1214,7 +1214,7 @@ class _$SignupGoggleSuccessImpl<T> implements SignupGoggleSuccess<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
     return signupGoogleSuccess?.call(userModel);
@@ -1234,7 +1234,7 @@ class _$SignupGoggleSuccessImpl<T> implements SignupGoggleSuccess<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {
@@ -1409,7 +1409,7 @@ class _$SignupGoggleFailImpl<T> implements SignupGoggleFail<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
     return signupGoogleFail(error);
@@ -1429,7 +1429,7 @@ class _$SignupGoggleFailImpl<T> implements SignupGoggleFail<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
     return signupGoogleFail?.call(error);
@@ -1449,7 +1449,7 @@ class _$SignupGoggleFailImpl<T> implements SignupGoggleFail<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {
@@ -1596,7 +1596,7 @@ class _$SendOtpLoadingImpl<T> implements SendOtpLoading<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
     return sendOtpLoading();
@@ -1616,7 +1616,7 @@ class _$SendOtpLoadingImpl<T> implements SendOtpLoading<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
     return sendOtpLoading?.call();
@@ -1636,7 +1636,7 @@ class _$SendOtpLoadingImpl<T> implements SendOtpLoading<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {
@@ -1803,7 +1803,7 @@ class _$SendOtpSuccessImpl<T> implements SendOtpSuccess<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
     return sendOtpSuccess(data);
@@ -1823,7 +1823,7 @@ class _$SendOtpSuccessImpl<T> implements SendOtpSuccess<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
     return sendOtpSuccess?.call(data);
@@ -1843,7 +1843,7 @@ class _$SendOtpSuccessImpl<T> implements SendOtpSuccess<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {
@@ -2017,7 +2017,7 @@ class _$SendOtpFailImpl<T> implements SendOtpFail<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
     return sendOtpFail(error);
@@ -2037,7 +2037,7 @@ class _$SendOtpFailImpl<T> implements SendOtpFail<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
     return sendOtpFail?.call(error);
@@ -2057,7 +2057,7 @@ class _$SendOtpFailImpl<T> implements SendOtpFail<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {
@@ -2208,7 +2208,7 @@ class _$VerifyPhoneNumberLoadingImpl<T> implements VerifyPhoneNumberLoading<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
     return verifyPhoneNumberLoading();
@@ -2228,7 +2228,7 @@ class _$VerifyPhoneNumberLoadingImpl<T> implements VerifyPhoneNumberLoading<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
     return verifyPhoneNumberLoading?.call();
@@ -2248,7 +2248,7 @@ class _$VerifyPhoneNumberLoadingImpl<T> implements VerifyPhoneNumberLoading<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {
@@ -2341,7 +2341,7 @@ abstract class _$$VerifyPhoneNumberSuccessImplCopyWith<T, $Res> {
           $Res Function(_$VerifyPhoneNumberSuccessImpl<T>) then) =
       __$$VerifyPhoneNumberSuccessImplCopyWithImpl<T, $Res>;
   @useResult
-  $Res call({T data});
+  $Res call({User user});
 }
 
 /// @nodoc
@@ -2359,13 +2359,13 @@ class __$$VerifyPhoneNumberSuccessImplCopyWithImpl<T, $Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? user = null,
   }) {
     return _then(_$VerifyPhoneNumberSuccessImpl<T>(
-      freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as T,
+      null == user
+          ? _value.user
+          : user // ignore: cast_nullable_to_non_nullable
+              as User,
     ));
   }
 }
@@ -2373,14 +2373,14 @@ class __$$VerifyPhoneNumberSuccessImplCopyWithImpl<T, $Res>
 /// @nodoc
 
 class _$VerifyPhoneNumberSuccessImpl<T> implements VerifyPhoneNumberSuccess<T> {
-  const _$VerifyPhoneNumberSuccessImpl(this.data);
+  const _$VerifyPhoneNumberSuccessImpl(this.user);
 
   @override
-  final T data;
+  final User user;
 
   @override
   String toString() {
-    return 'SignupState<$T>.verifyPhoneNumberSuccess(data: $data)';
+    return 'SignupState<$T>.verifyPhoneNumberSuccess(user: $user)';
   }
 
   @override
@@ -2388,12 +2388,11 @@ class _$VerifyPhoneNumberSuccessImpl<T> implements VerifyPhoneNumberSuccess<T> {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$VerifyPhoneNumberSuccessImpl<T> &&
-            const DeepCollectionEquality().equals(other.data, data));
+            (identical(other.user, user) || other.user == user));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+  int get hashCode => Object.hash(runtimeType, user);
 
   /// Create a copy of SignupState
   /// with the given fields replaced by the non-null parameter values.
@@ -2418,10 +2417,10 @@ class _$VerifyPhoneNumberSuccessImpl<T> implements VerifyPhoneNumberSuccess<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
-    return verifyPhoneNumberSuccess(data);
+    return verifyPhoneNumberSuccess(user);
   }
 
   @override
@@ -2438,10 +2437,10 @@ class _$VerifyPhoneNumberSuccessImpl<T> implements VerifyPhoneNumberSuccess<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
-    return verifyPhoneNumberSuccess?.call(data);
+    return verifyPhoneNumberSuccess?.call(user);
   }
 
   @override
@@ -2458,12 +2457,12 @@ class _$VerifyPhoneNumberSuccessImpl<T> implements VerifyPhoneNumberSuccess<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {
     if (verifyPhoneNumberSuccess != null) {
-      return verifyPhoneNumberSuccess(data);
+      return verifyPhoneNumberSuccess(user);
     }
     return orElse();
   }
@@ -2541,10 +2540,10 @@ class _$VerifyPhoneNumberSuccessImpl<T> implements VerifyPhoneNumberSuccess<T> {
 }
 
 abstract class VerifyPhoneNumberSuccess<T> implements SignupState<T> {
-  const factory VerifyPhoneNumberSuccess(final T data) =
+  const factory VerifyPhoneNumberSuccess(final User user) =
       _$VerifyPhoneNumberSuccessImpl<T>;
 
-  T get data;
+  User get user;
 
   /// Create a copy of SignupState
   /// with the given fields replaced by the non-null parameter values.
@@ -2635,7 +2634,7 @@ class _$VerifyPhoneNumberFailImpl<T> implements VerifyPhoneNumberFail<T> {
     required TResult Function(T data) sendOtpSuccess,
     required TResult Function(String error) sendOtpFail,
     required TResult Function() verifyPhoneNumberLoading,
-    required TResult Function(T data) verifyPhoneNumberSuccess,
+    required TResult Function(User user) verifyPhoneNumberSuccess,
     required TResult Function(String error) verifyPhoneNumberFail,
   }) {
     return verifyPhoneNumberFail(error);
@@ -2655,7 +2654,7 @@ class _$VerifyPhoneNumberFailImpl<T> implements VerifyPhoneNumberFail<T> {
     TResult? Function(T data)? sendOtpSuccess,
     TResult? Function(String error)? sendOtpFail,
     TResult? Function()? verifyPhoneNumberLoading,
-    TResult? Function(T data)? verifyPhoneNumberSuccess,
+    TResult? Function(User user)? verifyPhoneNumberSuccess,
     TResult? Function(String error)? verifyPhoneNumberFail,
   }) {
     return verifyPhoneNumberFail?.call(error);
@@ -2675,7 +2674,7 @@ class _$VerifyPhoneNumberFailImpl<T> implements VerifyPhoneNumberFail<T> {
     TResult Function(T data)? sendOtpSuccess,
     TResult Function(String error)? sendOtpFail,
     TResult Function()? verifyPhoneNumberLoading,
-    TResult Function(T data)? verifyPhoneNumberSuccess,
+    TResult Function(User user)? verifyPhoneNumberSuccess,
     TResult Function(String error)? verifyPhoneNumberFail,
     required TResult orElse(),
   }) {

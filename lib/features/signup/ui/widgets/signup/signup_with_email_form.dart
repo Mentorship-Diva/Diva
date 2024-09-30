@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mentorship/features/signup/ui/widgets/password_validations.dart';
-
-import '../../../../core/helpers/app_regex.dart';
-import '../../../../core/helpers/text_form_field_validators.dart';
-import '../../../../core/helpers/text_selection_options.dart';
-import '../../../../core/widgets/app_text_form_field.dart';
-import '../../logic/cubits/signup_cubit.dart';
+import 'package:mentorship/features/signup/ui/widgets/signup/password_validations.dart';
+import '../../../../../core/helpers/app_regex.dart';
+import '../../../../../core/helpers/text_form_field_validators.dart';
+import '../../../../../core/helpers/text_selection_options.dart';
+import '../../../../../core/widgets/app_text_form_field.dart';
+import '../../../logic/cubits/signup_cubit.dart';
 
 class SignupWithEmailForm extends StatefulWidget {
   const SignupWithEmailForm({super.key});

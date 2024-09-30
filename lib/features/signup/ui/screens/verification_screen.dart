@@ -4,8 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
 import '../../../../core/di/dependency_injection.dart';
 import '../../../../core/theming/colors.dart';
-import '../widgets/auth_title_and_image.dart';
 import 'package:mentorship/core/theming/assets.dart';
+import '../widgets/signup/auth_title_and_image.dart';
 import '../widgets/verification/code_will_be_sent_to_number.dart';
 import '../widgets/verification/pin_code_form.dart';
 import '../widgets/verification/resend_code.dart';
@@ -36,7 +36,7 @@ class VerificationScreen extends StatelessWidget {
                         SizedBox(
                           height: 8.h,
                         ),
-                        const PicCodeForm(),
+                         PicCodeForm(),
                         const ResendCode(),
                       ],
                     ),

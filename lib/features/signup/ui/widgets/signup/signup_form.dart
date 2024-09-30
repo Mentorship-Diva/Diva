@@ -5,8 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
-import 'package:mentorship/features/signup/ui/widgets/signup_with_email_form.dart';
-import 'package:mentorship/features/signup/ui/widgets/signup_with_number_form.dart';
+import 'package:mentorship/features/signup/ui/widgets/signup/signup_with_email_form.dart';
+import 'package:mentorship/features/signup/ui/widgets/signup/signup_with_number_form.dart';
 
 class SignupForm extends StatefulWidget {
   const SignupForm({super.key});

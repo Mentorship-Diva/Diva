@@ -5,8 +5,8 @@ import 'package:mentorship/core/widgets/loading_dialog.dart';
 import 'package:mentorship/core/widgets/toast.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_state.dart';
-import '../../../../core/routing/routes.dart';
-import '../../../../core/widgets/app_main_button.dart';
+import '../../../../../core/routing/routes.dart';
+import '../../../../../core/widgets/app_main_button.dart';
 
 class SignupButton extends StatefulWidget {
   SignupButton({super.key});
@@ -35,7 +35,6 @@ class _SignupButtonState extends State<SignupButton> {
               context.pop();
               debugPrint(userCredential.toString());
               showToast(message: 'Signup successfully');
-              // TODO: Navigate to Signin screen
             },
             signupFail: (error) {
               context.pop();

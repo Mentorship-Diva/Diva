@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:mentorship/core/networking/api_result.dart';
 
+
 class SignupWithPhoneNumberRepo {
   final FirebaseAuth auth = FirebaseAuth.instance;
   String? verificationId;
@@ -29,18 +30,46 @@ class SignupWithPhoneNumberRepo {
     return ApiResult.success('');
   }
 
-  Future<ApiResult> verifyPhoneNumber(String otp) async {
+  // Future<ApiResult> verifyPhoneNumber(String otp) async {
+  //   if (verificationId != null) {
+  //     PhoneAuthCredential credential = PhoneAuthProvider.credential(
+  //         verificationId: verificationId!, smsCode: otp);
+  //     try {
+  //
+  //
+  //       print(auth.currentUser);
+  //       // User? result =  await auth.currentUser; //signInWithCredential(authCredential);
+  //
+  //
+  //
+  //       // await auth.signInWithCredential(credential);
+  //       // return ApiResult.success(credential);
+  //     } catch (e) {
+  //       print("Error during OTP sign-in: $e");
+  //       return ApiResult.failure(e.toString());
+  //     }
+  //   }
+  //   return ApiResult.failure('Verification ID is null');
+  // }
+
+  Future<ApiResult<User?>> verifyPhoneNumber(String otp) async {
     if (verificationId != null) {
       PhoneAuthCredential credential = PhoneAuthProvider.credential(
           verificationId: verificationId!, smsCode: otp);
       try {
-        await auth.signInWithCredential(credential);
-        print('credential');
-        print(credential);
+        // Use signInWithCredential to sign in the user
+        UserCredential userCredential = await auth.signInWithCredential(credential);
+        print('User signed in: ${userCredential.user?.uid}');
+        print('User signed in: ${userCredential.user?.uid}');
+        return ApiResult.success(userCredential.user);
       } catch (e) {
         print("Error during OTP sign-in: $e");
+        return ApiResult.failure(e.toString());
       }
     }
-    return ApiResult.success('');
+    return ApiResult.failure('Verification ID is null');
   }
+
+
+
 }

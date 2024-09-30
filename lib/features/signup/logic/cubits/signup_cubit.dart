@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:mentorship/features/signup/data/models/signup_request_body.dart';
 import 'package:mentorship/features/signup/data/repos/signup_repo.dart';
@@ -71,8 +72,9 @@ class SignupCubit extends Cubit<SignupState> {
     emit(const SignupState.verifyPhoneNumberLoading());
     var response = await signupWithPhoneNumberRepo.verifyPhoneNumber(otp);
     response.when(
-      success: (data) {
-        emit(SignupState.verifyPhoneNumberSuccess(data));
+      success: (User? user) {
+        print("Success user: ${user!.uid}");
+        emit(SignupState.verifyPhoneNumberSuccess(user));
       },
       failure: (error) {
         emit(SignupState.verifyPhoneNumberFail(error: error.toString()));
