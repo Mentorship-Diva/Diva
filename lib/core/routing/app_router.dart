@@ -4,6 +4,7 @@ import 'package:mentorship/core/routing/routes.dart';
 import 'package:mentorship/features/home/ui/screens/home_screen.dart';
 import 'package:mentorship/features/main/logic/cubit/main_cubit.dart';
 import 'package:mentorship/features/main/ui/screens/main_screen.dart';
+import 'package:mentorship/features/signin/ui/screens/signin_screen.dart';
 import 'package:mentorship/features/signup/ui/screens/signup_screen.dart';
 
 class AppRouter {
@@ -28,6 +29,12 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => const SignupScreen(),
         );
+
+        case Routes.signinScreen:
+        return MaterialPageRoute(
+          builder: (_) => const SigninScreen(),
+        );
+
       default:
         return null;
     }

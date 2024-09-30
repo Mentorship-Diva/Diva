@@ -5,6 +5,12 @@ import 'package:google_fonts/google_fonts.dart';
 
 class AppTextStyles {
   // font - size - color - weight - style if exist
+  static TextStyle font14PinkRegular = TextStyle(
+    color: AppColors.mainPinkColor,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+  );
+  
   static TextStyle font24BlackSemiBold = TextStyle(
     color: Colors.black,
     fontSize: 24.sp,
