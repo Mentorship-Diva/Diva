@@ -7,6 +7,9 @@ import 'package:mentorship/features/main/ui/screens/main_screen.dart';
 import 'package:mentorship/features/signup/ui/screens/signup_screen.dart';
 import 'package:mentorship/features/signup/ui/screens/verification_screen.dart';
 
+import '../../features/signup/logic/cubits/signup_cubit.dart';
+import '../di/dependency_injection.dart';
+
 class AppRouter {
   Route? generateRoute(RouteSettings settings) {
     // This arguments to be passed in any screen like this ( arguments as ClassName )
@@ -27,11 +30,17 @@ class AppRouter {
 
       case Routes.signupScreen:
         return MaterialPageRoute(
-          builder: (_) => const SignupScreen(),
+          builder: (_) => BlocProvider.value(
+            value: getIt<SignupCubit>(),
+            child: const SignupScreen(),
+          ),
         );
       case Routes.verificationScreen:
         return MaterialPageRoute(
-          builder: (_) => const VerificationScreen(),
+          builder: (_) => BlocProvider.value(
+            value: getIt<SignupCubit>(),
+            child: const VerificationScreen(),
+          ),
         );
       default:
         return null;

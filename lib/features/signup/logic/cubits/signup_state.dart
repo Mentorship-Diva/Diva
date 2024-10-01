@@ -28,6 +28,12 @@ class SignupState<T> with _$SignupState<T> {
 
   const factory SignupState.sendOtpFail({required String error}) = SendOtpFail;
 
+  const factory SignupState.resendOtpLoading() = ResendOtpLoading;
+
+  const factory SignupState.resendOtpSuccess(T data) = ResendOtpSuccess<T>;
+
+  const factory SignupState.resendOtpFail({required String error}) = ResendOtpFail;
+
   const factory SignupState.verifyPhoneNumberLoading() =
       VerifyPhoneNumberLoading;
 

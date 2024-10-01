@@ -24,6 +24,7 @@ class SignupCubit extends Cubit<SignupState> {
   final TextEditingController confirmPasswordController =
       TextEditingController();
   final TextEditingController phoneNumberController = TextEditingController();
+  TextEditingController otpController = TextEditingController();
   final GlobalKey<FormState> emailFormKey = GlobalKey<FormState>();
   final GlobalKey<FormState> phoneFormKey = GlobalKey<FormState>();
   bool isEmailForm = true;
@@ -68,17 +69,30 @@ class SignupCubit extends Cubit<SignupState> {
     );
   }
 
+  void resendOtp({required String phoneNumber}) async {
+    emit(const SignupState.resendOtpLoading());
+    var response = await signupWithPhoneNumberRepo.sendOtp(phoneNumber);
+    response.when(
+      success: (data) {
+        emit(SignupState.resendOtpSuccess(data));
+      },
+      failure: (error) {
+        emit(SignupState.resendOtpFail(error: error.toString()));
+      },
+    );
+  }
+
   void verifyPhoneNumber({required String otp}) async {
     emit(const SignupState.verifyPhoneNumberLoading());
     var response = await signupWithPhoneNumberRepo.verifyPhoneNumber(otp);
+
     response.when(
-      success: (User? user) {
-        print("Success user: ${user!.uid}");
+      success: (user){
         emit(SignupState.verifyPhoneNumberSuccess(user));
       },
-      failure: (error) {
-        emit(SignupState.verifyPhoneNumberFail(error: error.toString()));
-      },
+        fail: (error){
+          emit(SignupState.verifyPhoneNumberFail(error: error.code ?? ''));
+        },
     );
   }
 }
