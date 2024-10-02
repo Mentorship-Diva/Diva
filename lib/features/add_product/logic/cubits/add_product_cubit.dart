@@ -8,4 +8,14 @@ class AddProductCubit extends Cubit<AddProductState> {
 
   late TextEditingController productNameController;
   late TextEditingController productDescriptionController;
+
+  final List<String> sizes = [
+    'XS',
+    'S',
+    'M',
+    'L',
+    'XL',
+    'XXL',
+  ];
+  List selectedSizes = [];
 }
