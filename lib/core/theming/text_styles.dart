@@ -89,4 +89,10 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
     color: Colors.black,
   );
+
+  static TextStyle font12DarkGrey400 = TextStyle(
+    color: AppColors.darkGreyColor,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+  );
 }
