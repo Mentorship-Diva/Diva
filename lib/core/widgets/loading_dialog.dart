@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../theming/colors.dart';
 
-Future loadingDialog(context) {
+loadingDialog(context) {
   return showDialog(
     context: context,
     builder: (context) {

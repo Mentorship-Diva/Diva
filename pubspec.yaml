@@ -41,6 +41,9 @@ dependencies:
   google_sign_in:
 # View Toast to user
   fluttertoast:
+  pin_code_fields:
+  flutter_timer_countdown:
+  flutter_shakemywidget:
 
 dev_dependencies:
 
