@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mentorship/core/di/dependency_injection.dart';
+import 'package:mentorship/features/home/logic/home_cubit.dart';
 import 'package:mentorship/features/main/logic/cubit/main_cubit.dart';
 import 'package:mentorship/features/main/ui/widgets/nav_bar_items.dart';
 import 'package:mentorship/features/main/ui/widgets/nav_bar_screens.dart';
@@ -13,8 +15,15 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) => MainCubit(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider<MainCubit>(
+          create: (context) => MainCubit(),
+        ),
+        BlocProvider<HomeCubit>(
+          create: (context) => getIt<HomeCubit>(),
+        ),
+      ],
       child: BlocBuilder<MainCubit, int>(
         builder: (context, currentIndex) {
           return PersistentTabView(
@@ -26,7 +35,8 @@ class MainScreen extends StatelessWidget {
             backgroundColor: Colors.white, // Default background color
             handleAndroidBackButtonPress: true, // Back button handling
             resizeToAvoidBottomInset: true,
-            navBarStyle: NavBarStyle.style7, // Choose the style you like
+            navBarStyle: NavBarStyle.style7,
+
             onItemSelected: (index) {
               context.read<MainCubit>().changeTab(index);
               _controller.index = index;

@@ -42,4 +42,13 @@ class HomeRepo {
       return ApiResult.failure(error.toString());
     }
   }
+
+  Future<ApiResult<List<Product>>> getRandomProducts(int limitNumber) async {
+    try {
+      final response = await _homeApiService.getRandomProducts(limitNumber);
+      return ApiResult.success(response);
+    } catch (error) {
+      return ApiResult.failure(error.toString());
+    }
+  }
 }

@@ -1,9 +1,10 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:mentorship/core/routing/routes.dart';
+import 'package:mentorship/core/di/dependency_injection.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/features/home/data/models/product_response_model.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mentorship/features/home/logic/home_cubit.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
@@ -14,11 +15,7 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.of(context, rootNavigator: true).pushNamed(
-          Routes.productDetailsScreen,
-          arguments: product
-              .id, // Ensure this matches your route's expected argument type
-        );
+        getIt<HomeCubit>().navigateToProductDetails(product.id);
       },
       child: Stack(
         children: [

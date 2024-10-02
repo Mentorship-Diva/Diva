@@ -11,15 +11,22 @@ dependencies:
   cupertino_icons: ^1.0.8
   dio: ^5.3.3
   easy_localization: ^3.0.3
+  firebase_auth: null
+  firebase_core: null
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.3
+  flutter_launcher_icons: ^0.14.1
   flutter_native_splash: ^2.3.5
   flutter_screenutil: ^5.9.3
+  flutter_secure_storage: ^9.2.2
   flutter_svg: null
+  fluttertoast: null
   freezed: ^2.4.5
   freezed_annotation: ^2.4.1
   get_it: ^7.6.4
+  google_fonts: null
+  google_sign_in: null
   intl: ^0.19.0
   json_annotation: ^4.8.1
   json_serializable: ^6.7.1
@@ -27,22 +34,11 @@ dependencies:
   pretty_dio_logger: ^1.3.1
   retrofit: ^4.0.3
   retrofit_generator: ^8.0.4
+  share_plus: ^10.0.2
   shared_preferences: ^2.2.3
-  flutter_launcher_icons: "^0.14.1"
   shimmer: ^3.0.0
-# provides API to store data in secure storage.
-  flutter_secure_storage: ^9.2.2
-# Provide Google fonts
-  google_fonts:
-#  Firebase setup
-  firebase_core:
-#  Firebase Authentication
-  firebase_auth:
-  google_sign_in:
-# View Toast to user
-  fluttertoast:
 
-dev_dependencies:
+dev_dependencies: null
 
 flutter_launcher_icons:
   android: "launcher_icon"
@@ -51,8 +47,6 @@ flutter_launcher_icons:
   adaptive_icon_background: "#FFFFFF"
   adaptive_icon_foreground: "assets/images/launcher_icon.png"
   min_sdk_android: 21
-  
-
 
   flutter_lints: ^4.0.0
   flutter_test:

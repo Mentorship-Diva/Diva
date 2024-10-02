@@ -40,4 +40,16 @@ class HomeState with _$HomeState {
   // Product Details error state
   const factory HomeState.productDetailsError(String message) =
       HomeProductDetailsError;
+  // Random Products loading state
+  const factory HomeState.randomProductsLoading() = RandomProcutsLoading;
+
+  // Random Products success state
+  const factory HomeState.randomProductsSuccess(List<Product> products) =
+      RandomProcutsSuccess;
+
+  // Random Products error state
+  const factory HomeState.randomProductsError(String message) =
+      RandomProcutsError;
+  const factory HomeState.navigateToProductDetails(int productId) =
+      NavigateToProductDetails;
 }

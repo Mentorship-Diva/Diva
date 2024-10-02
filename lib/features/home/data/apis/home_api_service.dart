@@ -12,11 +12,17 @@ abstract class HomeApiService {
   factory HomeApiService(Dio dio) = _HomeApiService;
   @GET(HomeApiConstants.productsEP)
   Future<List<Product>> getProducts();
+
   @GET(HomeApiConstants.categoriesEP)
   Future<List<String>> getCategories();
+
   @GET(HomeApiConstants.categoryProductsEP)
   Future<List<Product>> getCategoryProducts(
       @Path("categoryName") String categoryName);
+
   @GET(HomeApiConstants.productDetailsEP)
   Future<ProductDetailsModel> getProductDetails(@Path("id") String id);
+
+  @GET(HomeApiConstants.randomProductEP)
+  Future<List<Product>> getRandomProducts(@Path("limitNumber") int limitNumber);
 }
