@@ -5,4 +5,6 @@ class AppAssets {
   static const String facebook = 'assets/svgs/facebook.svg';
   static const String apple = 'assets/svgs/apple.svg';
   static const String addImage = 'assets/svgs/add_image.svg';
+  static const String verificationIll = 'assets/images/verification_ill.png';
+  static const String checkCircle = 'assets/svgs/check_circle.svg';
 }
