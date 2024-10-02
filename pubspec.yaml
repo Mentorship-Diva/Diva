@@ -41,6 +41,7 @@ dependencies:
   google_sign_in:
 # View Toast to user
   fluttertoast:
+  flex_color_picker:
 
 dev_dependencies:
 

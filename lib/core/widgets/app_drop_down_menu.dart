@@ -23,14 +23,14 @@ class AppDropDownMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       color: Colors.transparent,
-      borderRadius: BorderRadius.circular(8),
+      borderRadius: BorderRadius.circular(16),
       textStyle: const TextStyle(
         fontSize: 16,
       ),
       child: DropdownButtonFormField(
         menuMaxHeight: context.screenHeight / 2,
         icon: Icon(
-          Icons.arrow_drop_down_rounded,
+          Icons.arrow_drop_down,
           color: AppColors.mainColor,
         ),
         value: initValue,
@@ -39,12 +39,12 @@ class AppDropDownMenu extends StatelessWidget {
               borderSide: const BorderSide(
                 color: AppColors.lightGreyColor,
               ),
-              borderRadius: BorderRadius.circular(8)),
+              borderRadius: BorderRadius.circular(16)),
           enabledBorder: OutlineInputBorder(
               borderSide: const BorderSide(
                 color: AppColors.lightGreyColor,
               ),
-              borderRadius: BorderRadius.circular(8)),
+              borderRadius: BorderRadius.circular(16)),
           filled: true,
           fillColor: Colors.transparent,
           hintText: hintText,

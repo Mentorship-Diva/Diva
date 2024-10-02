@@ -19,7 +19,6 @@ class AddProductScreen extends StatefulWidget {
 }
 
 class _AddProductScreenState extends State<AddProductScreen> {
-
   @override
   void initState() {
     super.initState();
@@ -31,7 +30,10 @@ class _AddProductScreenState extends State<AddProductScreen> {
         TextEditingController();
     context.read<AddProductCubit>().productStockController =
         TextEditingController();
+    context.read<AddProductCubit>().productColorController =
+        TextEditingController();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

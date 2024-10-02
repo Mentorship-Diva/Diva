@@ -10,6 +10,7 @@ class AddProductCubit extends Cubit<AddProductState> {
   late TextEditingController productDescriptionController;
   late TextEditingController productPriceController;
   late TextEditingController productStockController;
+  late TextEditingController productColorController;
 
   final List<String> sizes = [
     'XS',

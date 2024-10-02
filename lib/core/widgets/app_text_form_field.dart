@@ -21,6 +21,8 @@ class AppTextFormField extends StatefulWidget {
   final double? borderRadius;
   final int? minLines;
   final int? maxLines;
+  final bool? enabled;
+  final bool? readOnly;
 
   const AppTextFormField({
     super.key,
@@ -40,7 +42,9 @@ class AppTextFormField extends StatefulWidget {
     this.contextMenuBuilder,
     this.borderRadius,
     this.minLines,
-    this.maxLines
+    this.maxLines,
+    this.enabled,
+    this.readOnly,
   });
 
   @override
@@ -53,6 +57,8 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      readOnly: widget.readOnly ?? false,
+      enabled: widget.enabled ?? true,
       minLines: widget.minLines ?? 1,
       maxLines: widget.maxLines ?? 1,
       contextMenuBuilder: widget.contextMenuBuilder,
