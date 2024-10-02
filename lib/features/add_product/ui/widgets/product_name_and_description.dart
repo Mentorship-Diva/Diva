@@ -14,14 +14,6 @@ class ProductNameAndDescription extends StatefulWidget {
 }
 
 class _ProductNameAndDescriptionState extends State<ProductNameAndDescription> {
-  @override
-  void initState() {
-    super.initState();
-    context.read<AddProductCubit>().productNameController =
-        TextEditingController();
-    context.read<AddProductCubit>().productDescriptionController =
-        TextEditingController();
-  }
 
   @override
   Widget build(BuildContext context) {
