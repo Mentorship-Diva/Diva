@@ -27,6 +27,10 @@ mixin _$HomeState {
     required TResult Function() categoriesLoading,
     required TResult Function(List<String> categories) categoriesSuccess,
     required TResult Function(String message) categoriesError,
+    required TResult Function() productDetailsLoading,
+    required TResult Function(ProductDetailsModel product)
+        productDetailsSuccess,
+    required TResult Function(String message) productDetailsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -40,6 +44,9 @@ mixin _$HomeState {
     TResult? Function()? categoriesLoading,
     TResult? Function(List<String> categories)? categoriesSuccess,
     TResult? Function(String message)? categoriesError,
+    TResult? Function()? productDetailsLoading,
+    TResult? Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult? Function(String message)? productDetailsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -53,6 +60,9 @@ mixin _$HomeState {
     TResult Function()? categoriesLoading,
     TResult Function(List<String> categories)? categoriesSuccess,
     TResult Function(String message)? categoriesError,
+    TResult Function()? productDetailsLoading,
+    TResult Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult Function(String message)? productDetailsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -66,6 +76,12 @@ mixin _$HomeState {
     required TResult Function(HomeCategoriesLoading value) categoriesLoading,
     required TResult Function(HomeCategoriesSuccess value) categoriesSuccess,
     required TResult Function(HomeCategoriesError value) categoriesError,
+    required TResult Function(HomeProductDetailsLoading value)
+        productDetailsLoading,
+    required TResult Function(HomeProductDetailsSuccess value)
+        productDetailsSuccess,
+    required TResult Function(HomeProductDetailsError value)
+        productDetailsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -78,6 +94,9 @@ mixin _$HomeState {
     TResult? Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult? Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult? Function(HomeCategoriesError value)? categoriesError,
+    TResult? Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult? Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult? Function(HomeProductDetailsError value)? productDetailsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -90,6 +109,9 @@ mixin _$HomeState {
     TResult Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult Function(HomeCategoriesError value)? categoriesError,
+    TResult Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult Function(HomeProductDetailsError value)? productDetailsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -165,6 +187,10 @@ class _$HomeInitialImpl implements HomeInitial {
     required TResult Function() categoriesLoading,
     required TResult Function(List<String> categories) categoriesSuccess,
     required TResult Function(String message) categoriesError,
+    required TResult Function() productDetailsLoading,
+    required TResult Function(ProductDetailsModel product)
+        productDetailsSuccess,
+    required TResult Function(String message) productDetailsError,
   }) {
     return initial();
   }
@@ -181,6 +207,9 @@ class _$HomeInitialImpl implements HomeInitial {
     TResult? Function()? categoriesLoading,
     TResult? Function(List<String> categories)? categoriesSuccess,
     TResult? Function(String message)? categoriesError,
+    TResult? Function()? productDetailsLoading,
+    TResult? Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult? Function(String message)? productDetailsError,
   }) {
     return initial?.call();
   }
@@ -197,6 +226,9 @@ class _$HomeInitialImpl implements HomeInitial {
     TResult Function()? categoriesLoading,
     TResult Function(List<String> categories)? categoriesSuccess,
     TResult Function(String message)? categoriesError,
+    TResult Function()? productDetailsLoading,
+    TResult Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult Function(String message)? productDetailsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -216,6 +248,12 @@ class _$HomeInitialImpl implements HomeInitial {
     required TResult Function(HomeCategoriesLoading value) categoriesLoading,
     required TResult Function(HomeCategoriesSuccess value) categoriesSuccess,
     required TResult Function(HomeCategoriesError value) categoriesError,
+    required TResult Function(HomeProductDetailsLoading value)
+        productDetailsLoading,
+    required TResult Function(HomeProductDetailsSuccess value)
+        productDetailsSuccess,
+    required TResult Function(HomeProductDetailsError value)
+        productDetailsError,
   }) {
     return initial(this);
   }
@@ -231,6 +269,9 @@ class _$HomeInitialImpl implements HomeInitial {
     TResult? Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult? Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult? Function(HomeCategoriesError value)? categoriesError,
+    TResult? Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult? Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult? Function(HomeProductDetailsError value)? productDetailsError,
   }) {
     return initial?.call(this);
   }
@@ -246,6 +287,9 @@ class _$HomeInitialImpl implements HomeInitial {
     TResult Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult Function(HomeCategoriesError value)? categoriesError,
+    TResult Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult Function(HomeProductDetailsError value)? productDetailsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -337,6 +381,10 @@ class _$CategorySelectedImpl implements CategorySelected {
     required TResult Function() categoriesLoading,
     required TResult Function(List<String> categories) categoriesSuccess,
     required TResult Function(String message) categoriesError,
+    required TResult Function() productDetailsLoading,
+    required TResult Function(ProductDetailsModel product)
+        productDetailsSuccess,
+    required TResult Function(String message) productDetailsError,
   }) {
     return categorySelected(index);
   }
@@ -353,6 +401,9 @@ class _$CategorySelectedImpl implements CategorySelected {
     TResult? Function()? categoriesLoading,
     TResult? Function(List<String> categories)? categoriesSuccess,
     TResult? Function(String message)? categoriesError,
+    TResult? Function()? productDetailsLoading,
+    TResult? Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult? Function(String message)? productDetailsError,
   }) {
     return categorySelected?.call(index);
   }
@@ -369,6 +420,9 @@ class _$CategorySelectedImpl implements CategorySelected {
     TResult Function()? categoriesLoading,
     TResult Function(List<String> categories)? categoriesSuccess,
     TResult Function(String message)? categoriesError,
+    TResult Function()? productDetailsLoading,
+    TResult Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult Function(String message)? productDetailsError,
     required TResult orElse(),
   }) {
     if (categorySelected != null) {
@@ -388,6 +442,12 @@ class _$CategorySelectedImpl implements CategorySelected {
     required TResult Function(HomeCategoriesLoading value) categoriesLoading,
     required TResult Function(HomeCategoriesSuccess value) categoriesSuccess,
     required TResult Function(HomeCategoriesError value) categoriesError,
+    required TResult Function(HomeProductDetailsLoading value)
+        productDetailsLoading,
+    required TResult Function(HomeProductDetailsSuccess value)
+        productDetailsSuccess,
+    required TResult Function(HomeProductDetailsError value)
+        productDetailsError,
   }) {
     return categorySelected(this);
   }
@@ -403,6 +463,9 @@ class _$CategorySelectedImpl implements CategorySelected {
     TResult? Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult? Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult? Function(HomeCategoriesError value)? categoriesError,
+    TResult? Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult? Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult? Function(HomeProductDetailsError value)? productDetailsError,
   }) {
     return categorySelected?.call(this);
   }
@@ -418,6 +481,9 @@ class _$CategorySelectedImpl implements CategorySelected {
     TResult Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult Function(HomeCategoriesError value)? categoriesError,
+    TResult Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult Function(HomeProductDetailsError value)? productDetailsError,
     required TResult orElse(),
   }) {
     if (categorySelected != null) {
@@ -490,6 +556,10 @@ class _$HomeProductsLoadingImpl implements HomeProductsLoading {
     required TResult Function() categoriesLoading,
     required TResult Function(List<String> categories) categoriesSuccess,
     required TResult Function(String message) categoriesError,
+    required TResult Function() productDetailsLoading,
+    required TResult Function(ProductDetailsModel product)
+        productDetailsSuccess,
+    required TResult Function(String message) productDetailsError,
   }) {
     return productsLoading();
   }
@@ -506,6 +576,9 @@ class _$HomeProductsLoadingImpl implements HomeProductsLoading {
     TResult? Function()? categoriesLoading,
     TResult? Function(List<String> categories)? categoriesSuccess,
     TResult? Function(String message)? categoriesError,
+    TResult? Function()? productDetailsLoading,
+    TResult? Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult? Function(String message)? productDetailsError,
   }) {
     return productsLoading?.call();
   }
@@ -522,6 +595,9 @@ class _$HomeProductsLoadingImpl implements HomeProductsLoading {
     TResult Function()? categoriesLoading,
     TResult Function(List<String> categories)? categoriesSuccess,
     TResult Function(String message)? categoriesError,
+    TResult Function()? productDetailsLoading,
+    TResult Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult Function(String message)? productDetailsError,
     required TResult orElse(),
   }) {
     if (productsLoading != null) {
@@ -541,6 +617,12 @@ class _$HomeProductsLoadingImpl implements HomeProductsLoading {
     required TResult Function(HomeCategoriesLoading value) categoriesLoading,
     required TResult Function(HomeCategoriesSuccess value) categoriesSuccess,
     required TResult Function(HomeCategoriesError value) categoriesError,
+    required TResult Function(HomeProductDetailsLoading value)
+        productDetailsLoading,
+    required TResult Function(HomeProductDetailsSuccess value)
+        productDetailsSuccess,
+    required TResult Function(HomeProductDetailsError value)
+        productDetailsError,
   }) {
     return productsLoading(this);
   }
@@ -556,6 +638,9 @@ class _$HomeProductsLoadingImpl implements HomeProductsLoading {
     TResult? Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult? Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult? Function(HomeCategoriesError value)? categoriesError,
+    TResult? Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult? Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult? Function(HomeProductDetailsError value)? productDetailsError,
   }) {
     return productsLoading?.call(this);
   }
@@ -571,6 +656,9 @@ class _$HomeProductsLoadingImpl implements HomeProductsLoading {
     TResult Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult Function(HomeCategoriesError value)? categoriesError,
+    TResult Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult Function(HomeProductDetailsError value)? productDetailsError,
     required TResult orElse(),
   }) {
     if (productsLoading != null) {
@@ -680,6 +768,10 @@ class _$HomeProductsSuccessImpl implements HomeProductsSuccess {
     required TResult Function() categoriesLoading,
     required TResult Function(List<String> categories) categoriesSuccess,
     required TResult Function(String message) categoriesError,
+    required TResult Function() productDetailsLoading,
+    required TResult Function(ProductDetailsModel product)
+        productDetailsSuccess,
+    required TResult Function(String message) productDetailsError,
   }) {
     return productsSuccess(products, selectedCategory);
   }
@@ -696,6 +788,9 @@ class _$HomeProductsSuccessImpl implements HomeProductsSuccess {
     TResult? Function()? categoriesLoading,
     TResult? Function(List<String> categories)? categoriesSuccess,
     TResult? Function(String message)? categoriesError,
+    TResult? Function()? productDetailsLoading,
+    TResult? Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult? Function(String message)? productDetailsError,
   }) {
     return productsSuccess?.call(products, selectedCategory);
   }
@@ -712,6 +807,9 @@ class _$HomeProductsSuccessImpl implements HomeProductsSuccess {
     TResult Function()? categoriesLoading,
     TResult Function(List<String> categories)? categoriesSuccess,
     TResult Function(String message)? categoriesError,
+    TResult Function()? productDetailsLoading,
+    TResult Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult Function(String message)? productDetailsError,
     required TResult orElse(),
   }) {
     if (productsSuccess != null) {
@@ -731,6 +829,12 @@ class _$HomeProductsSuccessImpl implements HomeProductsSuccess {
     required TResult Function(HomeCategoriesLoading value) categoriesLoading,
     required TResult Function(HomeCategoriesSuccess value) categoriesSuccess,
     required TResult Function(HomeCategoriesError value) categoriesError,
+    required TResult Function(HomeProductDetailsLoading value)
+        productDetailsLoading,
+    required TResult Function(HomeProductDetailsSuccess value)
+        productDetailsSuccess,
+    required TResult Function(HomeProductDetailsError value)
+        productDetailsError,
   }) {
     return productsSuccess(this);
   }
@@ -746,6 +850,9 @@ class _$HomeProductsSuccessImpl implements HomeProductsSuccess {
     TResult? Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult? Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult? Function(HomeCategoriesError value)? categoriesError,
+    TResult? Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult? Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult? Function(HomeProductDetailsError value)? productDetailsError,
   }) {
     return productsSuccess?.call(this);
   }
@@ -761,6 +868,9 @@ class _$HomeProductsSuccessImpl implements HomeProductsSuccess {
     TResult Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult Function(HomeCategoriesError value)? categoriesError,
+    TResult Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult Function(HomeProductDetailsError value)? productDetailsError,
     required TResult orElse(),
   }) {
     if (productsSuccess != null) {
@@ -863,6 +973,10 @@ class _$HomeProductsErrorImpl implements HomeProductsError {
     required TResult Function() categoriesLoading,
     required TResult Function(List<String> categories) categoriesSuccess,
     required TResult Function(String message) categoriesError,
+    required TResult Function() productDetailsLoading,
+    required TResult Function(ProductDetailsModel product)
+        productDetailsSuccess,
+    required TResult Function(String message) productDetailsError,
   }) {
     return productsError(message);
   }
@@ -879,6 +993,9 @@ class _$HomeProductsErrorImpl implements HomeProductsError {
     TResult? Function()? categoriesLoading,
     TResult? Function(List<String> categories)? categoriesSuccess,
     TResult? Function(String message)? categoriesError,
+    TResult? Function()? productDetailsLoading,
+    TResult? Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult? Function(String message)? productDetailsError,
   }) {
     return productsError?.call(message);
   }
@@ -895,6 +1012,9 @@ class _$HomeProductsErrorImpl implements HomeProductsError {
     TResult Function()? categoriesLoading,
     TResult Function(List<String> categories)? categoriesSuccess,
     TResult Function(String message)? categoriesError,
+    TResult Function()? productDetailsLoading,
+    TResult Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult Function(String message)? productDetailsError,
     required TResult orElse(),
   }) {
     if (productsError != null) {
@@ -914,6 +1034,12 @@ class _$HomeProductsErrorImpl implements HomeProductsError {
     required TResult Function(HomeCategoriesLoading value) categoriesLoading,
     required TResult Function(HomeCategoriesSuccess value) categoriesSuccess,
     required TResult Function(HomeCategoriesError value) categoriesError,
+    required TResult Function(HomeProductDetailsLoading value)
+        productDetailsLoading,
+    required TResult Function(HomeProductDetailsSuccess value)
+        productDetailsSuccess,
+    required TResult Function(HomeProductDetailsError value)
+        productDetailsError,
   }) {
     return productsError(this);
   }
@@ -929,6 +1055,9 @@ class _$HomeProductsErrorImpl implements HomeProductsError {
     TResult? Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult? Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult? Function(HomeCategoriesError value)? categoriesError,
+    TResult? Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult? Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult? Function(HomeProductDetailsError value)? productDetailsError,
   }) {
     return productsError?.call(this);
   }
@@ -944,6 +1073,9 @@ class _$HomeProductsErrorImpl implements HomeProductsError {
     TResult Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult Function(HomeCategoriesError value)? categoriesError,
+    TResult Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult Function(HomeProductDetailsError value)? productDetailsError,
     required TResult orElse(),
   }) {
     if (productsError != null) {
@@ -1018,6 +1150,10 @@ class _$HomeCategoriesLoadingImpl implements HomeCategoriesLoading {
     required TResult Function() categoriesLoading,
     required TResult Function(List<String> categories) categoriesSuccess,
     required TResult Function(String message) categoriesError,
+    required TResult Function() productDetailsLoading,
+    required TResult Function(ProductDetailsModel product)
+        productDetailsSuccess,
+    required TResult Function(String message) productDetailsError,
   }) {
     return categoriesLoading();
   }
@@ -1034,6 +1170,9 @@ class _$HomeCategoriesLoadingImpl implements HomeCategoriesLoading {
     TResult? Function()? categoriesLoading,
     TResult? Function(List<String> categories)? categoriesSuccess,
     TResult? Function(String message)? categoriesError,
+    TResult? Function()? productDetailsLoading,
+    TResult? Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult? Function(String message)? productDetailsError,
   }) {
     return categoriesLoading?.call();
   }
@@ -1050,6 +1189,9 @@ class _$HomeCategoriesLoadingImpl implements HomeCategoriesLoading {
     TResult Function()? categoriesLoading,
     TResult Function(List<String> categories)? categoriesSuccess,
     TResult Function(String message)? categoriesError,
+    TResult Function()? productDetailsLoading,
+    TResult Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult Function(String message)? productDetailsError,
     required TResult orElse(),
   }) {
     if (categoriesLoading != null) {
@@ -1069,6 +1211,12 @@ class _$HomeCategoriesLoadingImpl implements HomeCategoriesLoading {
     required TResult Function(HomeCategoriesLoading value) categoriesLoading,
     required TResult Function(HomeCategoriesSuccess value) categoriesSuccess,
     required TResult Function(HomeCategoriesError value) categoriesError,
+    required TResult Function(HomeProductDetailsLoading value)
+        productDetailsLoading,
+    required TResult Function(HomeProductDetailsSuccess value)
+        productDetailsSuccess,
+    required TResult Function(HomeProductDetailsError value)
+        productDetailsError,
   }) {
     return categoriesLoading(this);
   }
@@ -1084,6 +1232,9 @@ class _$HomeCategoriesLoadingImpl implements HomeCategoriesLoading {
     TResult? Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult? Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult? Function(HomeCategoriesError value)? categoriesError,
+    TResult? Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult? Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult? Function(HomeProductDetailsError value)? productDetailsError,
   }) {
     return categoriesLoading?.call(this);
   }
@@ -1099,6 +1250,9 @@ class _$HomeCategoriesLoadingImpl implements HomeCategoriesLoading {
     TResult Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult Function(HomeCategoriesError value)? categoriesError,
+    TResult Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult Function(HomeProductDetailsError value)? productDetailsError,
     required TResult orElse(),
   }) {
     if (categoriesLoading != null) {
@@ -1199,6 +1353,10 @@ class _$HomeCategoriesSuccessImpl implements HomeCategoriesSuccess {
     required TResult Function() categoriesLoading,
     required TResult Function(List<String> categories) categoriesSuccess,
     required TResult Function(String message) categoriesError,
+    required TResult Function() productDetailsLoading,
+    required TResult Function(ProductDetailsModel product)
+        productDetailsSuccess,
+    required TResult Function(String message) productDetailsError,
   }) {
     return categoriesSuccess(categories);
   }
@@ -1215,6 +1373,9 @@ class _$HomeCategoriesSuccessImpl implements HomeCategoriesSuccess {
     TResult? Function()? categoriesLoading,
     TResult? Function(List<String> categories)? categoriesSuccess,
     TResult? Function(String message)? categoriesError,
+    TResult? Function()? productDetailsLoading,
+    TResult? Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult? Function(String message)? productDetailsError,
   }) {
     return categoriesSuccess?.call(categories);
   }
@@ -1231,6 +1392,9 @@ class _$HomeCategoriesSuccessImpl implements HomeCategoriesSuccess {
     TResult Function()? categoriesLoading,
     TResult Function(List<String> categories)? categoriesSuccess,
     TResult Function(String message)? categoriesError,
+    TResult Function()? productDetailsLoading,
+    TResult Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult Function(String message)? productDetailsError,
     required TResult orElse(),
   }) {
     if (categoriesSuccess != null) {
@@ -1250,6 +1414,12 @@ class _$HomeCategoriesSuccessImpl implements HomeCategoriesSuccess {
     required TResult Function(HomeCategoriesLoading value) categoriesLoading,
     required TResult Function(HomeCategoriesSuccess value) categoriesSuccess,
     required TResult Function(HomeCategoriesError value) categoriesError,
+    required TResult Function(HomeProductDetailsLoading value)
+        productDetailsLoading,
+    required TResult Function(HomeProductDetailsSuccess value)
+        productDetailsSuccess,
+    required TResult Function(HomeProductDetailsError value)
+        productDetailsError,
   }) {
     return categoriesSuccess(this);
   }
@@ -1265,6 +1435,9 @@ class _$HomeCategoriesSuccessImpl implements HomeCategoriesSuccess {
     TResult? Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult? Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult? Function(HomeCategoriesError value)? categoriesError,
+    TResult? Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult? Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult? Function(HomeProductDetailsError value)? productDetailsError,
   }) {
     return categoriesSuccess?.call(this);
   }
@@ -1280,6 +1453,9 @@ class _$HomeCategoriesSuccessImpl implements HomeCategoriesSuccess {
     TResult Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult Function(HomeCategoriesError value)? categoriesError,
+    TResult Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult Function(HomeProductDetailsError value)? productDetailsError,
     required TResult orElse(),
   }) {
     if (categoriesSuccess != null) {
@@ -1380,6 +1556,10 @@ class _$HomeCategoriesErrorImpl implements HomeCategoriesError {
     required TResult Function() categoriesLoading,
     required TResult Function(List<String> categories) categoriesSuccess,
     required TResult Function(String message) categoriesError,
+    required TResult Function() productDetailsLoading,
+    required TResult Function(ProductDetailsModel product)
+        productDetailsSuccess,
+    required TResult Function(String message) productDetailsError,
   }) {
     return categoriesError(message);
   }
@@ -1396,6 +1576,9 @@ class _$HomeCategoriesErrorImpl implements HomeCategoriesError {
     TResult? Function()? categoriesLoading,
     TResult? Function(List<String> categories)? categoriesSuccess,
     TResult? Function(String message)? categoriesError,
+    TResult? Function()? productDetailsLoading,
+    TResult? Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult? Function(String message)? productDetailsError,
   }) {
     return categoriesError?.call(message);
   }
@@ -1412,6 +1595,9 @@ class _$HomeCategoriesErrorImpl implements HomeCategoriesError {
     TResult Function()? categoriesLoading,
     TResult Function(List<String> categories)? categoriesSuccess,
     TResult Function(String message)? categoriesError,
+    TResult Function()? productDetailsLoading,
+    TResult Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult Function(String message)? productDetailsError,
     required TResult orElse(),
   }) {
     if (categoriesError != null) {
@@ -1431,6 +1617,12 @@ class _$HomeCategoriesErrorImpl implements HomeCategoriesError {
     required TResult Function(HomeCategoriesLoading value) categoriesLoading,
     required TResult Function(HomeCategoriesSuccess value) categoriesSuccess,
     required TResult Function(HomeCategoriesError value) categoriesError,
+    required TResult Function(HomeProductDetailsLoading value)
+        productDetailsLoading,
+    required TResult Function(HomeProductDetailsSuccess value)
+        productDetailsSuccess,
+    required TResult Function(HomeProductDetailsError value)
+        productDetailsError,
   }) {
     return categoriesError(this);
   }
@@ -1446,6 +1638,9 @@ class _$HomeCategoriesErrorImpl implements HomeCategoriesError {
     TResult? Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult? Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult? Function(HomeCategoriesError value)? categoriesError,
+    TResult? Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult? Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult? Function(HomeProductDetailsError value)? productDetailsError,
   }) {
     return categoriesError?.call(this);
   }
@@ -1461,6 +1656,9 @@ class _$HomeCategoriesErrorImpl implements HomeCategoriesError {
     TResult Function(HomeCategoriesLoading value)? categoriesLoading,
     TResult Function(HomeCategoriesSuccess value)? categoriesSuccess,
     TResult Function(HomeCategoriesError value)? categoriesError,
+    TResult Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult Function(HomeProductDetailsError value)? productDetailsError,
     required TResult orElse(),
   }) {
     if (categoriesError != null) {
@@ -1481,4 +1679,583 @@ abstract class HomeCategoriesError implements HomeState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$HomeCategoriesErrorImplCopyWith<_$HomeCategoriesErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$HomeProductDetailsLoadingImplCopyWith<$Res> {
+  factory _$$HomeProductDetailsLoadingImplCopyWith(
+          _$HomeProductDetailsLoadingImpl value,
+          $Res Function(_$HomeProductDetailsLoadingImpl) then) =
+      __$$HomeProductDetailsLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$HomeProductDetailsLoadingImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$HomeProductDetailsLoadingImpl>
+    implements _$$HomeProductDetailsLoadingImplCopyWith<$Res> {
+  __$$HomeProductDetailsLoadingImplCopyWithImpl(
+      _$HomeProductDetailsLoadingImpl _value,
+      $Res Function(_$HomeProductDetailsLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$HomeProductDetailsLoadingImpl implements HomeProductDetailsLoading {
+  const _$HomeProductDetailsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'HomeState.productDetailsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeProductDetailsLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) categorySelected,
+    required TResult Function() productsLoading,
+    required TResult Function(List<Product> products, String? selectedCategory)
+        productsSuccess,
+    required TResult Function(String message) productsError,
+    required TResult Function() categoriesLoading,
+    required TResult Function(List<String> categories) categoriesSuccess,
+    required TResult Function(String message) categoriesError,
+    required TResult Function() productDetailsLoading,
+    required TResult Function(ProductDetailsModel product)
+        productDetailsSuccess,
+    required TResult Function(String message) productDetailsError,
+  }) {
+    return productDetailsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? categorySelected,
+    TResult? Function()? productsLoading,
+    TResult? Function(List<Product> products, String? selectedCategory)?
+        productsSuccess,
+    TResult? Function(String message)? productsError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(List<String> categories)? categoriesSuccess,
+    TResult? Function(String message)? categoriesError,
+    TResult? Function()? productDetailsLoading,
+    TResult? Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult? Function(String message)? productDetailsError,
+  }) {
+    return productDetailsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? categorySelected,
+    TResult Function()? productsLoading,
+    TResult Function(List<Product> products, String? selectedCategory)?
+        productsSuccess,
+    TResult Function(String message)? productsError,
+    TResult Function()? categoriesLoading,
+    TResult Function(List<String> categories)? categoriesSuccess,
+    TResult Function(String message)? categoriesError,
+    TResult Function()? productDetailsLoading,
+    TResult Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult Function(String message)? productDetailsError,
+    required TResult orElse(),
+  }) {
+    if (productDetailsLoading != null) {
+      return productDetailsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeInitial value) initial,
+    required TResult Function(CategorySelected value) categorySelected,
+    required TResult Function(HomeProductsLoading value) productsLoading,
+    required TResult Function(HomeProductsSuccess value) productsSuccess,
+    required TResult Function(HomeProductsError value) productsError,
+    required TResult Function(HomeCategoriesLoading value) categoriesLoading,
+    required TResult Function(HomeCategoriesSuccess value) categoriesSuccess,
+    required TResult Function(HomeCategoriesError value) categoriesError,
+    required TResult Function(HomeProductDetailsLoading value)
+        productDetailsLoading,
+    required TResult Function(HomeProductDetailsSuccess value)
+        productDetailsSuccess,
+    required TResult Function(HomeProductDetailsError value)
+        productDetailsError,
+  }) {
+    return productDetailsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomeInitial value)? initial,
+    TResult? Function(CategorySelected value)? categorySelected,
+    TResult? Function(HomeProductsLoading value)? productsLoading,
+    TResult? Function(HomeProductsSuccess value)? productsSuccess,
+    TResult? Function(HomeProductsError value)? productsError,
+    TResult? Function(HomeCategoriesLoading value)? categoriesLoading,
+    TResult? Function(HomeCategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(HomeCategoriesError value)? categoriesError,
+    TResult? Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult? Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult? Function(HomeProductDetailsError value)? productDetailsError,
+  }) {
+    return productDetailsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeInitial value)? initial,
+    TResult Function(CategorySelected value)? categorySelected,
+    TResult Function(HomeProductsLoading value)? productsLoading,
+    TResult Function(HomeProductsSuccess value)? productsSuccess,
+    TResult Function(HomeProductsError value)? productsError,
+    TResult Function(HomeCategoriesLoading value)? categoriesLoading,
+    TResult Function(HomeCategoriesSuccess value)? categoriesSuccess,
+    TResult Function(HomeCategoriesError value)? categoriesError,
+    TResult Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult Function(HomeProductDetailsError value)? productDetailsError,
+    required TResult orElse(),
+  }) {
+    if (productDetailsLoading != null) {
+      return productDetailsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeProductDetailsLoading implements HomeState {
+  const factory HomeProductDetailsLoading() = _$HomeProductDetailsLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$HomeProductDetailsSuccessImplCopyWith<$Res> {
+  factory _$$HomeProductDetailsSuccessImplCopyWith(
+          _$HomeProductDetailsSuccessImpl value,
+          $Res Function(_$HomeProductDetailsSuccessImpl) then) =
+      __$$HomeProductDetailsSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ProductDetailsModel product});
+}
+
+/// @nodoc
+class __$$HomeProductDetailsSuccessImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$HomeProductDetailsSuccessImpl>
+    implements _$$HomeProductDetailsSuccessImplCopyWith<$Res> {
+  __$$HomeProductDetailsSuccessImplCopyWithImpl(
+      _$HomeProductDetailsSuccessImpl _value,
+      $Res Function(_$HomeProductDetailsSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? product = null,
+  }) {
+    return _then(_$HomeProductDetailsSuccessImpl(
+      null == product
+          ? _value.product
+          : product // ignore: cast_nullable_to_non_nullable
+              as ProductDetailsModel,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$HomeProductDetailsSuccessImpl implements HomeProductDetailsSuccess {
+  const _$HomeProductDetailsSuccessImpl(this.product);
+
+  @override
+  final ProductDetailsModel product;
+
+  @override
+  String toString() {
+    return 'HomeState.productDetailsSuccess(product: $product)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeProductDetailsSuccessImpl &&
+            (identical(other.product, product) || other.product == product));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, product);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HomeProductDetailsSuccessImplCopyWith<_$HomeProductDetailsSuccessImpl>
+      get copyWith => __$$HomeProductDetailsSuccessImplCopyWithImpl<
+          _$HomeProductDetailsSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) categorySelected,
+    required TResult Function() productsLoading,
+    required TResult Function(List<Product> products, String? selectedCategory)
+        productsSuccess,
+    required TResult Function(String message) productsError,
+    required TResult Function() categoriesLoading,
+    required TResult Function(List<String> categories) categoriesSuccess,
+    required TResult Function(String message) categoriesError,
+    required TResult Function() productDetailsLoading,
+    required TResult Function(ProductDetailsModel product)
+        productDetailsSuccess,
+    required TResult Function(String message) productDetailsError,
+  }) {
+    return productDetailsSuccess(product);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? categorySelected,
+    TResult? Function()? productsLoading,
+    TResult? Function(List<Product> products, String? selectedCategory)?
+        productsSuccess,
+    TResult? Function(String message)? productsError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(List<String> categories)? categoriesSuccess,
+    TResult? Function(String message)? categoriesError,
+    TResult? Function()? productDetailsLoading,
+    TResult? Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult? Function(String message)? productDetailsError,
+  }) {
+    return productDetailsSuccess?.call(product);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? categorySelected,
+    TResult Function()? productsLoading,
+    TResult Function(List<Product> products, String? selectedCategory)?
+        productsSuccess,
+    TResult Function(String message)? productsError,
+    TResult Function()? categoriesLoading,
+    TResult Function(List<String> categories)? categoriesSuccess,
+    TResult Function(String message)? categoriesError,
+    TResult Function()? productDetailsLoading,
+    TResult Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult Function(String message)? productDetailsError,
+    required TResult orElse(),
+  }) {
+    if (productDetailsSuccess != null) {
+      return productDetailsSuccess(product);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeInitial value) initial,
+    required TResult Function(CategorySelected value) categorySelected,
+    required TResult Function(HomeProductsLoading value) productsLoading,
+    required TResult Function(HomeProductsSuccess value) productsSuccess,
+    required TResult Function(HomeProductsError value) productsError,
+    required TResult Function(HomeCategoriesLoading value) categoriesLoading,
+    required TResult Function(HomeCategoriesSuccess value) categoriesSuccess,
+    required TResult Function(HomeCategoriesError value) categoriesError,
+    required TResult Function(HomeProductDetailsLoading value)
+        productDetailsLoading,
+    required TResult Function(HomeProductDetailsSuccess value)
+        productDetailsSuccess,
+    required TResult Function(HomeProductDetailsError value)
+        productDetailsError,
+  }) {
+    return productDetailsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomeInitial value)? initial,
+    TResult? Function(CategorySelected value)? categorySelected,
+    TResult? Function(HomeProductsLoading value)? productsLoading,
+    TResult? Function(HomeProductsSuccess value)? productsSuccess,
+    TResult? Function(HomeProductsError value)? productsError,
+    TResult? Function(HomeCategoriesLoading value)? categoriesLoading,
+    TResult? Function(HomeCategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(HomeCategoriesError value)? categoriesError,
+    TResult? Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult? Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult? Function(HomeProductDetailsError value)? productDetailsError,
+  }) {
+    return productDetailsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeInitial value)? initial,
+    TResult Function(CategorySelected value)? categorySelected,
+    TResult Function(HomeProductsLoading value)? productsLoading,
+    TResult Function(HomeProductsSuccess value)? productsSuccess,
+    TResult Function(HomeProductsError value)? productsError,
+    TResult Function(HomeCategoriesLoading value)? categoriesLoading,
+    TResult Function(HomeCategoriesSuccess value)? categoriesSuccess,
+    TResult Function(HomeCategoriesError value)? categoriesError,
+    TResult Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult Function(HomeProductDetailsError value)? productDetailsError,
+    required TResult orElse(),
+  }) {
+    if (productDetailsSuccess != null) {
+      return productDetailsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeProductDetailsSuccess implements HomeState {
+  const factory HomeProductDetailsSuccess(final ProductDetailsModel product) =
+      _$HomeProductDetailsSuccessImpl;
+
+  ProductDetailsModel get product;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$HomeProductDetailsSuccessImplCopyWith<_$HomeProductDetailsSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$HomeProductDetailsErrorImplCopyWith<$Res> {
+  factory _$$HomeProductDetailsErrorImplCopyWith(
+          _$HomeProductDetailsErrorImpl value,
+          $Res Function(_$HomeProductDetailsErrorImpl) then) =
+      __$$HomeProductDetailsErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$HomeProductDetailsErrorImplCopyWithImpl<$Res>
+    extends _$HomeStateCopyWithImpl<$Res, _$HomeProductDetailsErrorImpl>
+    implements _$$HomeProductDetailsErrorImplCopyWith<$Res> {
+  __$$HomeProductDetailsErrorImplCopyWithImpl(
+      _$HomeProductDetailsErrorImpl _value,
+      $Res Function(_$HomeProductDetailsErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$HomeProductDetailsErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$HomeProductDetailsErrorImpl implements HomeProductDetailsError {
+  const _$HomeProductDetailsErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'HomeState.productDetailsError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$HomeProductDetailsErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$HomeProductDetailsErrorImplCopyWith<_$HomeProductDetailsErrorImpl>
+      get copyWith => __$$HomeProductDetailsErrorImplCopyWithImpl<
+          _$HomeProductDetailsErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function(int index) categorySelected,
+    required TResult Function() productsLoading,
+    required TResult Function(List<Product> products, String? selectedCategory)
+        productsSuccess,
+    required TResult Function(String message) productsError,
+    required TResult Function() categoriesLoading,
+    required TResult Function(List<String> categories) categoriesSuccess,
+    required TResult Function(String message) categoriesError,
+    required TResult Function() productDetailsLoading,
+    required TResult Function(ProductDetailsModel product)
+        productDetailsSuccess,
+    required TResult Function(String message) productDetailsError,
+  }) {
+    return productDetailsError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function(int index)? categorySelected,
+    TResult? Function()? productsLoading,
+    TResult? Function(List<Product> products, String? selectedCategory)?
+        productsSuccess,
+    TResult? Function(String message)? productsError,
+    TResult? Function()? categoriesLoading,
+    TResult? Function(List<String> categories)? categoriesSuccess,
+    TResult? Function(String message)? categoriesError,
+    TResult? Function()? productDetailsLoading,
+    TResult? Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult? Function(String message)? productDetailsError,
+  }) {
+    return productDetailsError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function(int index)? categorySelected,
+    TResult Function()? productsLoading,
+    TResult Function(List<Product> products, String? selectedCategory)?
+        productsSuccess,
+    TResult Function(String message)? productsError,
+    TResult Function()? categoriesLoading,
+    TResult Function(List<String> categories)? categoriesSuccess,
+    TResult Function(String message)? categoriesError,
+    TResult Function()? productDetailsLoading,
+    TResult Function(ProductDetailsModel product)? productDetailsSuccess,
+    TResult Function(String message)? productDetailsError,
+    required TResult orElse(),
+  }) {
+    if (productDetailsError != null) {
+      return productDetailsError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(HomeInitial value) initial,
+    required TResult Function(CategorySelected value) categorySelected,
+    required TResult Function(HomeProductsLoading value) productsLoading,
+    required TResult Function(HomeProductsSuccess value) productsSuccess,
+    required TResult Function(HomeProductsError value) productsError,
+    required TResult Function(HomeCategoriesLoading value) categoriesLoading,
+    required TResult Function(HomeCategoriesSuccess value) categoriesSuccess,
+    required TResult Function(HomeCategoriesError value) categoriesError,
+    required TResult Function(HomeProductDetailsLoading value)
+        productDetailsLoading,
+    required TResult Function(HomeProductDetailsSuccess value)
+        productDetailsSuccess,
+    required TResult Function(HomeProductDetailsError value)
+        productDetailsError,
+  }) {
+    return productDetailsError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(HomeInitial value)? initial,
+    TResult? Function(CategorySelected value)? categorySelected,
+    TResult? Function(HomeProductsLoading value)? productsLoading,
+    TResult? Function(HomeProductsSuccess value)? productsSuccess,
+    TResult? Function(HomeProductsError value)? productsError,
+    TResult? Function(HomeCategoriesLoading value)? categoriesLoading,
+    TResult? Function(HomeCategoriesSuccess value)? categoriesSuccess,
+    TResult? Function(HomeCategoriesError value)? categoriesError,
+    TResult? Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult? Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult? Function(HomeProductDetailsError value)? productDetailsError,
+  }) {
+    return productDetailsError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(HomeInitial value)? initial,
+    TResult Function(CategorySelected value)? categorySelected,
+    TResult Function(HomeProductsLoading value)? productsLoading,
+    TResult Function(HomeProductsSuccess value)? productsSuccess,
+    TResult Function(HomeProductsError value)? productsError,
+    TResult Function(HomeCategoriesLoading value)? categoriesLoading,
+    TResult Function(HomeCategoriesSuccess value)? categoriesSuccess,
+    TResult Function(HomeCategoriesError value)? categoriesError,
+    TResult Function(HomeProductDetailsLoading value)? productDetailsLoading,
+    TResult Function(HomeProductDetailsSuccess value)? productDetailsSuccess,
+    TResult Function(HomeProductDetailsError value)? productDetailsError,
+    required TResult orElse(),
+  }) {
+    if (productDetailsError != null) {
+      return productDetailsError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class HomeProductDetailsError implements HomeState {
+  const factory HomeProductDetailsError(final String message) =
+      _$HomeProductDetailsErrorImpl;
+
+  String get message;
+
+  /// Create a copy of HomeState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$HomeProductDetailsErrorImplCopyWith<_$HomeProductDetailsErrorImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }

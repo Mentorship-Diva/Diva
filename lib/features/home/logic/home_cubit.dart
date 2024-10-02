@@ -67,4 +67,24 @@ class HomeCubit extends Cubit<HomeState> {
       emit(HomeState.productsError("Failed to load products: ${e.toString()}"));
     }
   }
+
+  //* Fetch products of a specific  category and emit states
+  Future<void> loadProductDetails(String productId) async {
+    emit(HomeState.productsLoading());
+    try {
+      final response = await _homeRepo.getProductDetails(productId);
+
+      response.when(
+        success: (productDetailsResponse) {
+          emit(HomeState.productDetailsSuccess(productDetailsResponse));
+        },
+        failure: (message) {
+          emit(HomeState.productDetailsError(message));
+        },
+      );
+    } catch (e) {
+      emit(HomeState.productDetailsError(
+          "Failed to load product details: ${e.toString()}"));
+    }
+  }
 }

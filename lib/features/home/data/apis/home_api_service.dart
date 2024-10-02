@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:mentorship/core/networking/api_constants.dart';
 import 'package:mentorship/features/home/data/apis/home_api_constants.dart';
+import 'package:mentorship/features/home/data/models/product_details_model.dart';
 import 'package:mentorship/features/home/data/models/product_response_model.dart';
 import 'package:retrofit/retrofit.dart';
 
@@ -16,4 +17,6 @@ abstract class HomeApiService {
   @GET(HomeApiConstants.categoryProductsEP)
   Future<List<Product>> getCategoryProducts(
       @Path("categoryName") String categoryName);
+  @GET(HomeApiConstants.productDetailsEP)
+  Future<ProductDetailsModel> getProductDetails(@Path("id") String id);
 }
