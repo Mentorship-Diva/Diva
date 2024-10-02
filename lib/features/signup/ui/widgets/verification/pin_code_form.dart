@@ -33,7 +33,7 @@ class _PicCodeFormState extends State<PicCodeForm> {
           },
           verifyPhoneNumberSuccess: (data) {
             context.pop();
-            successfulBottomSheet(context);
+            showSuccessfulBottomSheet(context);
           },
           verifyPhoneNumberFail: (error) {
             context.pop();

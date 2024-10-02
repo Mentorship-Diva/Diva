@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:mentorship/core/helpers/extensions.dart';
 import '../theming/assets.dart';
 
-Future successfulBottomSheet(context) async {
+Future showSuccessfulBottomSheet(context) async {
   return await showModalBottomSheet(
     context: context,
     shape: const RoundedRectangleBorder(
