@@ -111,4 +111,16 @@ class AppTextStyles {
     decoration: TextDecoration.underline,
     decorationColor: AppColors.blueColor,
   );
+
+  static TextStyle font20White500 = TextStyle(
+    color: AppColors.whiteColor,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+  );
+
+  static TextStyle font16Pink400 = TextStyle(
+    color: AppColors.mainColor,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w400,
+  );
 }

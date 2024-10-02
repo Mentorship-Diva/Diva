@@ -87,9 +87,9 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
         suffixIcon: widget.suffixIcon,
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         hintStyle: TextStyle(
-          fontSize: 16.sp,
-          fontWeight: FontWeight.w400,
-          color: AppColors.lightGreyColor,
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w300,
+          color: AppColors.darkGreyColor,
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(widget.borderRadius ?? radius),

@@ -32,6 +32,7 @@ class AppDropDownMenu extends StatelessWidget {
         icon: Icon(
           Icons.arrow_drop_down,
           color: AppColors.mainColor,
+          size: 12,
         ),
         value: initValue,
         decoration: InputDecoration(
@@ -45,28 +46,28 @@ class AppDropDownMenu extends StatelessWidget {
                 color: AppColors.lightGreyColor,
               ),
               borderRadius: BorderRadius.circular(16)),
-          filled: true,
-          fillColor: Colors.transparent,
           hintText: hintText,
           hintStyle: const TextStyle(
             fontSize: 16,
           ),
-        ).copyWith(
-          contentPadding: const EdgeInsetsDirectional.symmetric(
-            // vertical: 10,
+          contentPadding: EdgeInsets.symmetric(
             horizontal: 12,
           ),
         ),
         onChanged: onChanged,
-        items: List.generate(values.length, (index) {
-          return DropdownMenuItem(
-            value: index,
-            child: Text(
-              values[index],
-              style: AppTextStyles.font12DarkGrey400,
-            ),
-          );
-        }),
+        items: List.generate(
+          values.length,
+          (index) {
+            return DropdownMenuItem(
+              value: index,
+              child: Text(
+                values[index],
+                style: AppTextStyles.font12DarkGrey400,
+              ),
+            );
+          },
+        ),
+        isExpanded: true,
       ),
     );
   }

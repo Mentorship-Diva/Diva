@@ -1,5 +1,8 @@
+import 'dart:io';
+
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:image_picker/image_picker.dart';
 
 part 'add_product_state.dart';
 
@@ -32,4 +35,7 @@ class AddProductCubit extends Cubit<AddProductState> {
     'Hijab',
   ];
   String selectedCategory = '';
+
+  final ImagePicker picker = ImagePicker();
+  List<File?> selectedImages = [null, null, null];
 }

@@ -43,6 +43,7 @@ dependencies:
   fluttertoast:
   flex_color_picker:
   dotted_border:
+  image_picker:
 
 dev_dependencies:
 

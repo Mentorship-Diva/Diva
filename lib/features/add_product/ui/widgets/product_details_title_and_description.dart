@@ -27,7 +27,7 @@ class ProductDetailsTitleAndDescription extends StatelessWidget {
           style: AppTextStyles.font12DarkGrey400,
         ),
         SizedBox(
-          height: 2.h,
+          height: 6.h,
         ),
       ],
     );
