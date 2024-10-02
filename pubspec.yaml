@@ -42,6 +42,7 @@ dependencies:
 # View Toast to user
   fluttertoast:
   flex_color_picker:
+  dotted_border:
 
 dev_dependencies:
 

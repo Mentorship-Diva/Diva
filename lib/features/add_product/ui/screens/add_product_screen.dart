@@ -39,6 +39,9 @@ class _AddProductScreenState extends State<AddProductScreen> {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
+        // To avoid tinted color when screen scrolls.
+        backgroundColor: AppColors.backgroundColor,
+        surfaceTintColor: AppColors.backgroundColor,
         leading: IconButton(
           onPressed: () {
             context.pop();

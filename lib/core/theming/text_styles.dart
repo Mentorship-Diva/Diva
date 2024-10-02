@@ -103,4 +103,12 @@ class AppTextStyles {
     decoration: TextDecoration.underline,
     decorationColor: AppColors.mainColor,
   );
+
+  static TextStyle font12Blue400UnderLine = TextStyle(
+    color: AppColors.blueColor,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w300,
+    decoration: TextDecoration.underline,
+    decorationColor: AppColors.blueColor,
+  );
 }
