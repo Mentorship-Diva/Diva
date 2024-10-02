@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/text_styles.dart';
 
@@ -24,6 +25,9 @@ class ProductDetailsTitleAndDescription extends StatelessWidget {
         Text(
           description,
           style: AppTextStyles.font12DarkGrey400,
+        ),
+        SizedBox(
+          height: 2.h,
         ),
       ],
     );

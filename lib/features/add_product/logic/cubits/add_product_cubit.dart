@@ -18,4 +18,15 @@ class AddProductCubit extends Cubit<AddProductState> {
     'XXL',
   ];
   List selectedSizes = [];
+  final List<String> categories = [
+    'Dress',
+    'Jacket',
+    'T-Shirt',
+    'Pants',
+    'Pajama',
+    'Shoes',
+    'Accessories',
+    'Hijab',
+  ];
+  String selectedCategory = '';
 }
