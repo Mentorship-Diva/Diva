@@ -58,8 +58,8 @@ class _AddProductScreenState extends State<AddProductScreen> {
               child: ListView(
                 shrinkWrap: true,
                 children: [
-                  // ProductImagesSection(),
-                  // ProductGeneralInfo(),
+                  ProductImagesSection(),
+                  ProductGeneralInfo(),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 16.h),
                     child: ProductPricingAndStock(),
