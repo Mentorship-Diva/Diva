@@ -9,10 +9,23 @@
       "client_info": {
         "mobilesdk_app_id": "1:634795184584:android:8529fd863a2f8cfbe1f0fd",
         "android_client_info": {
-          "package_name": "com.example.mentorship"
+          "package_name": "com.diva.app"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "634795184584-si5dq35q1abltuigf30o765teoijooh5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.diva.app",
+            "certificate_hash": "c2c79e0494dce872a6b4fa3114fa72cb3f5fd717"
+          }
+        },
+        {
+          "client_id": "634795184584-koplktsftgakpu6nv8h0poet0plifdj4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyDWxz6eIsOoM7V2zZva919cAqsAqkznb-E"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "634795184584-koplktsftgakpu6nv8h0poet0plifdj4.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "634795184584-bhm94pemrme0fcaorcqm29078hod8b75.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mentorship"
+              }
+            }
+          ]
         }
       }
     }

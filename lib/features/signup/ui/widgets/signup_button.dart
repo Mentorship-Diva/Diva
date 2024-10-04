@@ -26,7 +26,7 @@ class SignupButton extends StatelessWidget {
             context.pop();
             debugPrint(userCredential.toString());
             showToast(message: 'Signup successfully');
-            // TODO: Navigate to Signin screen
+            context.pop();
           },
           signupFail: (error) {
             context.pop();

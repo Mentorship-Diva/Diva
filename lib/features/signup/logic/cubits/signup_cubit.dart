@@ -1,15 +1,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:mentorship/features/signup/data/models/signup_request_body.dart';
+import 'package:mentorship/features/signup/data/repos/auth_with_google_repo.dart';
 import 'package:mentorship/features/signup/data/repos/signup_repo.dart';
-import 'package:mentorship/features/signup/data/repos/signup_with_google_repo.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_state.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class SignupCubit extends Cubit<SignupState> {
   final SignupRepo signupRepo;
-  final SignupWithGoogleRepo signupWithGoogleRepo;
+  final AuthWithGoogleRepo authWithGoogleRepo;
 
-  SignupCubit(this.signupRepo, this.signupWithGoogleRepo)
+  SignupCubit(this.signupRepo, this.authWithGoogleRepo)
       : super(const SignupState.initial());
 
   final TextEditingController emailController = TextEditingController();
@@ -33,12 +33,13 @@ class SignupCubit extends Cubit<SignupState> {
 
   void signupWithGoogle() async {
     emit(const SignupState.signupGoogleLoading());
-    var response = await signupWithGoogleRepo.signUpWithGoogle();
+    var response = await authWithGoogleRepo.authWithGoogle();
     response.when(
       success: (userModel) {
         emit(SignupState.signupGoogleSuccess(userModel));
       },
       failure: (error) {
+        debugPrint(error.toString());
         emit(SignupState.signupGoogleFail(error: error.toString()));
       },
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mentorship/core/helpers/shared_prefrances_helper.dart';
 import 'package:mentorship/core/routing/app_router.dart';
 import 'package:mentorship/core/routing/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,6 +14,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await SharedPreferencesHelper.init();
   runApp(const MyApp());
 }
 
