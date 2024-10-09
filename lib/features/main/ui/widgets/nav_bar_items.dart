@@ -7,17 +7,18 @@ import 'package:persistent_bottom_nav_bar/persistent_bottom_nav_bar.dart';
 List<PersistentBottomNavBarItem> navBarItems(int index) {
   return [
     PersistentBottomNavBarItem(
-        icon: SvgPicture.asset(
-          'assets/svgs/home.svg',
-          colorFilter: ColorFilter.mode(
-            index == 0 ? AppColors.pinkColor : Colors.black,
-            BlendMode.srcIn,
-          ),
+      icon: SvgPicture.asset(
+        'assets/svgs/home.svg',
+        colorFilter: ColorFilter.mode(
+          index == 0 ? AppColors.pinkColor : Colors.black,
+          BlendMode.srcIn,
         ),
-        title: "Home",
-        activeColorPrimary: AppColors.pinkColor.withOpacity(0.1),
-        inactiveColorPrimary: Colors.black,
-        activeColorSecondary: AppColors.pinkColor),
+      ),
+      title: "Home",
+      activeColorPrimary: AppColors.pinkColor.withOpacity(0.1),
+      inactiveColorPrimary: Colors.black,
+      activeColorSecondary: AppColors.pinkColor,
+    ),
     PersistentBottomNavBarItem(
         icon: SvgPicture.asset(
           'assets/svgs/list.svg',
