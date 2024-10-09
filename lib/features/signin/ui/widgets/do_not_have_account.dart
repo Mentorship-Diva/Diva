@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mentorship/core/helpers/extensions.dart';
+import 'package:mentorship/core/routing/routes.dart';
+import 'package:mentorship/core/theming/text_styles.dart';
 
-import '../../../../core/theming/text_styles.dart';
-
-class AlreadyHaveAnAccount extends StatelessWidget {
-  const AlreadyHaveAnAccount({super.key});
+class DoNotHaveAccount extends StatelessWidget {
+  const DoNotHaveAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,15 +12,15 @@ class AlreadyHaveAnAccount extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Already have an account? ',
+          'Don\'t have an account? ',
           style: AppTextStyles.font18Black400,
         ),
         GestureDetector(
           onTap: () {
-            context.pop();
+            context.pushNamed(Routes.signupScreen);
           },
           child: Text(
-            'Sign In',
+            'Sign up',
             style: AppTextStyles.font18Pink400,
           ),
         ),

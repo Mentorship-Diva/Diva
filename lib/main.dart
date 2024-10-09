@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mentorship/core/helpers/shared_prefrances_helper.dart';
 import 'package:mentorship/core/routing/app_router.dart';
 import 'package:mentorship/core/routing/routes.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,7 +15,6 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  FirebaseAuth.instance.setSettings(appVerificationDisabledForTesting: true);
   runApp(const MyApp());
 }
 
@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
           useMaterial3: true,
         ),
-        initialRoute: Routes.addProductScreen,
+        initialRoute: Routes.mainScreen,
         onGenerateRoute: AppRouter().generateRoute,
       ),
     );
