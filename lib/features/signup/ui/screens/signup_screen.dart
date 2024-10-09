@@ -3,8 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/di/dependency_injection.dart';
 import 'package:mentorship/core/theming/assets.dart';
-import 'package:mentorship/features/signup/data/repos/signup_repo.dart';
-import 'package:mentorship/features/signup/data/repos/signup_with_google_repo.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
 import '../../../../core/theming/colors.dart';
 import '../widgets/signup/already_have_an_account.dart';
@@ -20,7 +18,7 @@ class SignupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => SignupCubit(getIt<SignupRepo>(), getIt<SignupWithGoogleRepo>(),),
+      create: (context) => getIt<SignupCubit>(),
       child: Scaffold(
         backgroundColor: AppColors.backgroundColor,
         body: SafeArea(
