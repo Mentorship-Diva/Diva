@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:mentorship/features/signup/data/models/user_model.dart';
 
@@ -20,4 +21,25 @@ class SignupState<T> with _$SignupState<T> {
 
   const factory SignupState.signupGoogleFail({required String error}) =
       SignupGoggleFail;
+
+  const factory SignupState.sendOtpLoading() = SendOtpLoading;
+
+  const factory SignupState.sendOtpSuccess(T data) = SendOtpSuccess<T>;
+
+  const factory SignupState.sendOtpFail({required String error}) = SendOtpFail;
+
+  const factory SignupState.resendOtpLoading() = ResendOtpLoading;
+
+  const factory SignupState.resendOtpSuccess(T data) = ResendOtpSuccess<T>;
+
+  const factory SignupState.resendOtpFail({required String error}) = ResendOtpFail;
+
+  const factory SignupState.verifyPhoneNumberLoading() =
+      VerifyPhoneNumberLoading;
+
+  const factory SignupState.verifyPhoneNumberSuccess(User user) =
+      VerifyPhoneNumberSuccess;
+
+  const factory SignupState.verifyPhoneNumberFail({required String error}) =
+      VerifyPhoneNumberFail;
 }

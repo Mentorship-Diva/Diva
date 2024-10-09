@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_state.dart';
-import '../../../../core/theming/assets.dart';
-import '../../../../core/widgets/toast.dart';
+import '../../../../../core/theming/assets.dart';
+import '../../../../../core/widgets/toast.dart';
 
 class SocialAccounts extends StatelessWidget {
   const SocialAccounts({super.key});

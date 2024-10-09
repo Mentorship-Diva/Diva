@@ -5,6 +5,7 @@ import 'package:mentorship/features/home/data/apis/home_api_service.dart';
 import 'package:mentorship/features/home/data/repo/home_repo.dart';
 import 'package:mentorship/features/home/logic/home_cubit.dart';
 import 'package:mentorship/features/signup/data/repos/signup_with_google_repo.dart';
+import 'package:mentorship/features/signup/data/repos/signup_with_mobile_repo.dart';
 import '../../features/signup/data/repos/signup_repo.dart';
 import '../../features/signup/logic/cubits/signup_cubit.dart';
 
@@ -16,14 +17,18 @@ Future<void> setupGetIt() async {
   getIt
       .registerLazySingleton<HomeRepo>(() => HomeRepo(getIt<HomeApiService>()));
   getIt.registerLazySingleton<HomeCubit>(() => HomeCubit(getIt<HomeRepo>()));
+
   // signup
   getIt.registerLazySingleton<SignupRepo>(() => SignupRepo());
   getIt.registerLazySingleton<SignupWithGoogleRepo>(
       () => SignupWithGoogleRepo());
-  getIt.registerFactory<SignupCubit>(
+  getIt.registerLazySingleton<SignupWithPhoneNumberRepo>(
+      () => SignupWithPhoneNumberRepo());
+  getIt.registerLazySingleton<SignupCubit>(
     () => SignupCubit(
       getIt<SignupRepo>(),
       getIt<SignupWithGoogleRepo>(),
+      getIt<SignupWithPhoneNumberRepo>(),
     ),
   );
 }

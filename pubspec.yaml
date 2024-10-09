@@ -37,6 +37,20 @@ dependencies:
   share_plus: ^10.0.2
   shared_preferences: ^2.2.3
   shimmer: ^3.0.0
+# provides API to store data in secure storage.
+  flutter_secure_storage: ^9.2.2
+# Provide Google fonts
+  google_fonts:
+#  Firebase setup
+  firebase_core:
+#  Firebase Authentication
+  firebase_auth:
+  google_sign_in:
+# View Toast to user
+  fluttertoast:
+  pin_code_fields:
+  flutter_timer_countdown:
+  flutter_shakemywidget:
 
 dev_dependencies: null
 
