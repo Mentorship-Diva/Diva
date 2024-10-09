@@ -48,6 +48,9 @@ dependencies:
   google_sign_in:
 # View Toast to user
   fluttertoast:
+  flex_color_picker:
+  dotted_border:
+  image_picker:
   pin_code_fields:
   flutter_timer_countdown:
   flutter_shakemywidget:

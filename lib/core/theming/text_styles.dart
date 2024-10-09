@@ -100,6 +100,38 @@ class AppTextStyles {
     color: Colors.black,
   );
 
+  static TextStyle font12DarkGrey400 = TextStyle(
+    color: AppColors.darkGreyColor,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+  );
+
+  static TextStyle font14Pink400UnderLine = TextStyle(
+    color: AppColors.mainColor,
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w400,
+    decoration: TextDecoration.underline,
+    decorationColor: AppColors.mainColor,
+  );
+
+  static TextStyle font12Blue400UnderLine = TextStyle(
+    color: AppColors.blueColor,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w300,
+    decoration: TextDecoration.underline,
+    decorationColor: AppColors.blueColor,
+  );
+
+  static TextStyle font20White500 = TextStyle(
+    color: AppColors.whiteColor,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+  );
+
+  static TextStyle font16Pink400 = TextStyle(
+    color: AppColors.mainColor,
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w400,
   static TextStyle font14Pink400 = TextStyle(
     color: AppColors.mainColor,
     fontSize: 14.sp,
