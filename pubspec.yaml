@@ -39,11 +39,7 @@ dependencies:
 
 # Provide Google fonts
   google_fonts:
-#  Firebase setup
-  firebase_core:
-#  Firebase Authentication
-  firebase_auth:
-  google_sign_in:
+
 # View Toast to user
   flex_color_picker:
   dotted_border:

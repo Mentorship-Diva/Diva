@@ -132,6 +132,7 @@ class AppTextStyles {
     color: AppColors.mainColor,
     fontSize: 16.sp,
     fontWeight: FontWeight.w400,
+  );
   static TextStyle font14Pink400 = TextStyle(
     color: AppColors.mainColor,
     fontSize: 14.sp,
@@ -139,15 +140,14 @@ class AppTextStyles {
   );
 
   static TextStyle font14Blue400UnderLine = TextStyle(
-    color: AppColors.blueColor,
-    fontSize: 14.sp,
-    fontWeight: FontWeight.w400,
-    decoration: TextDecoration.underline
-  );
+      color: AppColors.blueColor,
+      fontSize: 14.sp,
+      fontWeight: FontWeight.w400,
+      decoration: TextDecoration.underline);
 
   static TextStyle font12Grey400 = TextStyle(
-      color: AppColors.blackColor,
-      fontSize: 12.sp,
-      fontWeight: FontWeight.w400,
+    color: AppColors.blackColor,
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
   );
 }
