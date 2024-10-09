@@ -1,4 +1,4 @@
-package com.example.mentorship
+package com.diva.app
 
 import io.flutter.embedding.android.FlutterActivity
 

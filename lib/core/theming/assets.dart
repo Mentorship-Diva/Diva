@@ -7,4 +7,5 @@ class AppAssets {
   static const String addImage = 'assets/svgs/add_image.svg';
   static const String verificationIll = 'assets/images/verification_ill.png';
   static const String checkCircle = 'assets/svgs/check_circle.svg';
+  static const String signinIll = 'assets/images/signin_ill.png';
 }
