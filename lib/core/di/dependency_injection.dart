@@ -31,5 +31,5 @@ Future<void> setupGetIt() async {
   // signin
   getIt.registerLazySingleton<SignInRepo>(() => SignInRepo());
   getIt.registerFactory<SigninCubit>(
-      () => SigninCubit(getIt<SignInRepo>(), getIt<AuthWithGoogleRepo>()));
+      () => SigninCubit(getIt<SignInRepo>(), getIt<AuthWithGoogleRepo>())); 
 }
