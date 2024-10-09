@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:mentorship/features/home/data/models/product_details_model.dart';
 import 'package:mentorship/features/home/data/models/product_response_model.dart';
 part 'home_state.freezed.dart';
 
@@ -29,4 +30,26 @@ class HomeState with _$HomeState {
 
   // Categories error state
   const factory HomeState.categoriesError(String message) = HomeCategoriesError;
+  // Product Details loading state
+  const factory HomeState.productDetailsLoading() = HomeProductDetailsLoading;
+
+  // Product Details success state
+  const factory HomeState.productDetailsSuccess(ProductDetailsModel product) =
+      HomeProductDetailsSuccess;
+
+  // Product Details error state
+  const factory HomeState.productDetailsError(String message) =
+      HomeProductDetailsError;
+  // Random Products loading state
+  const factory HomeState.randomProductsLoading() = RandomProcutsLoading;
+
+  // Random Products success state
+  const factory HomeState.randomProductsSuccess(List<Product> products) =
+      RandomProcutsSuccess;
+
+  // Random Products error state
+  const factory HomeState.randomProductsError(String message) =
+      RandomProcutsError;
+  const factory HomeState.navigateToProductDetails(int productId) =
+      NavigateToProductDetails;
 }

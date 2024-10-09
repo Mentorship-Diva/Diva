@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mentorship/core/helpers/extensions.dart';
+
 import '../../../../core/theming/text_styles.dart';
 
 class AlreadyHaveAnAccount extends StatelessWidget {

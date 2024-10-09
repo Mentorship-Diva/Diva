@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../theming/colors.dart';
 
 class AppTextFormField extends StatefulWidget {
@@ -18,6 +18,10 @@ class AppTextFormField extends StatefulWidget {
   final Function()? onEditingComplete;
   final List<TextInputFormatter>? inputFormatter;
   final Widget Function(BuildContext, EditableTextState)? contextMenuBuilder;
+  final double? borderRadius;
+  final int? minLines;
+  final int? maxLines;
+  final bool? readOnly;
 
   const AppTextFormField({
     super.key,
@@ -35,6 +39,10 @@ class AppTextFormField extends StatefulWidget {
     this.inputFormatter,
     this.onTap,
     this.contextMenuBuilder,
+    this.borderRadius,
+    this.minLines,
+    this.maxLines,
+    this.readOnly,
   });
 
   @override
@@ -47,6 +55,9 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      readOnly: widget.readOnly ?? false,
+      minLines: widget.minLines ?? 1,
+      maxLines: widget.maxLines ?? 1,
       contextMenuBuilder: widget.contextMenuBuilder,
       onTapOutside: (event) {
         FocusManager.instance.primaryFocus?.unfocus();
@@ -76,12 +87,12 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
         suffixIcon: widget.suffixIcon,
         floatingLabelBehavior: FloatingLabelBehavior.auto,
         hintStyle: TextStyle(
-          fontSize: 14,
-          fontWeight: FontWeight.w400,
-          color: AppColors.lightGreyColor,
+          fontSize: 14.sp,
+          fontWeight: FontWeight.w300,
+          color: AppColors.darkGreyColor,
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(radius),
+          borderRadius: BorderRadius.circular(widget.borderRadius ?? radius),
           borderSide: BorderSide(
             color: AppColors.lightGreyColor,
           ),
@@ -91,7 +102,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
           horizontal: 20,
         ),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(radius),
+          borderRadius: BorderRadius.circular(widget.borderRadius ?? radius),
           borderSide: BorderSide(
             color: AppColors.lightGreyColor,
           ),
@@ -101,14 +112,14 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
             color: AppColors.redColor,
             width: 2,
           ),
-          borderRadius: BorderRadius.circular(radius),
+          borderRadius: BorderRadius.circular(widget.borderRadius ?? radius),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderSide: const BorderSide(
             color: AppColors.redColor,
             width: 2,
           ),
-          borderRadius: BorderRadius.circular(radius),
+          borderRadius: BorderRadius.circular(widget.borderRadius ?? radius),
         ),
       ),
       obscureText: widget.isPassword!,
