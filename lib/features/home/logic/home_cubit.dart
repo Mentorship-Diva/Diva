@@ -13,6 +13,7 @@ class HomeCubit extends Cubit<HomeState> {
 
   //* Fetch categories and emit states
   Future<void> loadCategories() async {
+    if (isClosed) return;
     emit(HomeCategoriesLoading());
     try {
       final response = await _homeRepo.getCategories();
@@ -32,16 +33,21 @@ class HomeCubit extends Cubit<HomeState> {
 
   //* Fetch products and emit states
   Future<void> loadProducts() async {
+    if (isClosed) return;
     emit(HomeState.productsLoading());
     try {
       final response = await _homeRepo.getProducts();
 
       response.when(
         success: (productsResponse) {
-          emit(HomeState.productsSuccess(productsResponse, 'All'));
+          if (!isClosed) {
+            emit(HomeState.productsSuccess(productsResponse, null));
+          }
         },
         failure: (message) {
-          emit(HomeState.productsError(message));
+          if (!isClosed) {
+            emit(HomeState.productsError(message));
+          }
         },
       );
     } catch (e) {
@@ -51,6 +57,7 @@ class HomeCubit extends Cubit<HomeState> {
 
   //* Fetch products of a specific  category and emit states
   Future<void> loadCategoryProducts(String categoryName) async {
+    if (isClosed) return;
     emit(HomeState.productsLoading());
     try {
       final response = await _homeRepo.getCategoryProducts(categoryName);
@@ -66,5 +73,51 @@ class HomeCubit extends Cubit<HomeState> {
     } catch (e) {
       emit(HomeState.productsError("Failed to load products: ${e.toString()}"));
     }
+  }
+
+  //* Fetch products of a specific  category and emit states
+  Future<void> loadProductDetails(String productId) async {
+    emit(HomeState.productsLoading());
+    try {
+      final response = await _homeRepo.getProductDetails(productId);
+
+      response.when(
+        success: (productDetailsResponse) {
+          emit(HomeState.productDetailsSuccess(productDetailsResponse));
+        },
+        failure: (message) {
+          emit(HomeState.productDetailsError(message));
+        },
+      );
+    } catch (e) {
+      emit(HomeState.productDetailsError(
+          "Failed to load product details: ${e.toString()}"));
+    }
+  }
+
+  //* Fetch products of a specific  category and emit states
+  Future<void> loadRandomProducts(int limitNumber) async {
+    emit(HomeState.randomProductsLoading());
+    try {
+      final response = await _homeRepo.getRandomProducts(limitNumber);
+
+      response.when(
+        success: (products) {
+          emit(HomeState.randomProductsSuccess(products));
+        },
+        failure: (message) {
+          emit(HomeState.randomProductsError(message));
+        },
+      );
+    } catch (e) {
+      emit(HomeState.randomProductsError(
+          "Failed to load random items: ${e.toString()}"));
+    }
+  }
+
+  void navigateToProductDetails(int productId) {
+    emit(HomeState.navigateToProductDetails(productId));
+    loadProducts();
+    loadCategories();
   }
 }
