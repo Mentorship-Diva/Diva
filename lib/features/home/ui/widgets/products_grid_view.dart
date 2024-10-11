@@ -5,7 +5,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProductsGridView extends StatelessWidget {
   final List<Product> products;
-  const ProductsGridView({super.key, required this.products});
+  final Color? heartIconColor;
+  const ProductsGridView(
+      {super.key, required this.products, this.heartIconColor});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +26,10 @@ class ProductsGridView extends StatelessWidget {
         ),
         itemBuilder: (context, index) {
           final product = products[index];
-          return ProductCard(product: product);
+          return ProductCard(
+            product: product,
+            heartIconColor: heartIconColor,
+          );
         },
       ),
     );
