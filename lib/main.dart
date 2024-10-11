@@ -15,7 +15,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  SharedPreferencesHelper.init();
+  await SharedPreferencesHelper.init();
   FirebaseAuth.instance.setSettings(appVerificationDisabledForTesting: true);
   runApp(const MyApp());
 }

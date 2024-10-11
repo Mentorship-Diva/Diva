@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mentorship/core/di/dependency_injection.dart';
 import 'package:mentorship/features/signup/ui/widgets/signup/password_validations.dart';
 import '../../../../../core/helpers/app_regex.dart';
 import '../../../../../core/helpers/text_form_field_validators.dart';
@@ -27,7 +28,14 @@ class _SignupWithEmailFormState extends State<SignupWithEmailForm> {
   @override
   void initState() {
     super.initState();
+    getIt<SignupCubit>().passwordController.addListener(setupPasswordValidationsListener);
     setupPasswordValidationsListener();
+  }
+
+  @override
+  void dispose() {
+    getIt<SignupCubit>().passwordController.removeListener(setupPasswordValidationsListener);
+    super.dispose();
   }
 
   @override
@@ -129,19 +137,18 @@ class _SignupWithEmailFormState extends State<SignupWithEmailForm> {
   }
 
   void setupPasswordValidationsListener() {
-    context.read<SignupCubit>().passwordController.addListener(
-          () {
-        setState(() {
-          hasMinimum8Characters = AppRegex.hasMinLength(
-              context.read<SignupCubit>().passwordController.text);
-          hasOneUpperCharacter = AppRegex.hasUpperCase(
-              context.read<SignupCubit>().passwordController.text);
-          hasOneLowerCharacter = AppRegex.hasLowerCase(
-              context.read<SignupCubit>().passwordController.text);
-          hasOneSpecialCharacter = AppRegex.hasSpecialCharacter(
-              context.read<SignupCubit>().passwordController.text);
-        });
-      },
-    );
+
+
+  if(mounted)  setState(() {
+      hasMinimum8Characters = AppRegex.hasMinLength(
+          context.read<SignupCubit>().passwordController.text);
+      hasOneUpperCharacter = AppRegex.hasUpperCase(
+          context.read<SignupCubit>().passwordController.text);
+      hasOneLowerCharacter = AppRegex.hasLowerCase(
+          context.read<SignupCubit>().passwordController.text);
+      hasOneSpecialCharacter = AppRegex.hasSpecialCharacter(
+          context.read<SignupCubit>().passwordController.text);
+    });
+
   }
 }
