@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
           useMaterial3: true,
         ),
-        initialRoute: Routes.signinScreen,
+        initialRoute: Routes.checkoutScreen,
         onGenerateRoute: AppRouter().generateRoute,
       ),
     );
