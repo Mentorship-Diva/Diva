@@ -8,4 +8,6 @@ class AppAssets {
   static const String verificationIll = 'assets/images/verification_ill.png';
   static const String checkCircle = 'assets/svgs/check_circle.svg';
   static const String signinIll = 'assets/images/signin_ill.png';
+  static const String splashOne = 'assets/svgs/splash_one.svg';
+  static const String splashTwo = 'assets/svgs/splash_two.svg';
 }

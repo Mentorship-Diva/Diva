@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mentorship/core/helpers/extensions.dart';
 import 'package:mentorship/core/routing/routes.dart';
+import 'package:mentorship/core/theming/assets.dart';
 import 'package:mentorship/core/theming/colors.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -64,7 +65,7 @@ class _SplashScreenState extends State<SplashScreen>
               child: Padding(
                 padding: EdgeInsets.only(right: 100.w),
                 child: SvgPicture.asset(
-                  'assets/svgs/splash_one.svg',
+                  AppAssets.splashOne,
                 ),
               ),
             ),
@@ -78,7 +79,7 @@ class _SplashScreenState extends State<SplashScreen>
                       alignment: Alignment.centerLeft,
                       widthFactor: animation.value,
                       child: SvgPicture.asset(
-                        'assets/svgs/splash_two.svg',
+                        AppAssets.splashTwo,
                         width: 100.w,
                       ),
                     ),
