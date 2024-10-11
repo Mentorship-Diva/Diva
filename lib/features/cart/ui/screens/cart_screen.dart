@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/helpers/extensions.dart';
 import 'package:mentorship/core/theming/colors.dart';
-
 import '../../../../core/theming/text_styles.dart';
+import '../widgets/cart_items_list.dart';
 import '../widgets/checkout_total_and_button.dart';
 
 class CartScreen extends StatelessWidget {
@@ -29,18 +30,21 @@ class CartScreen extends StatelessWidget {
           style: AppTextStyles.font24BlackSemiBold,
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(24.0),
-        child: Center(
-          child: Column(
-            children: [
-              Expanded(child: ListView(),),
-              CheckoutTotalAndButton(),
-            ],
+      body: SafeArea(
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 24.w),
+          child: Center(
+            child: Column(
+              children: [
+                Expanded(
+                  child: CartItemsList(),
+                ),
+                CheckoutTotalAndButton(),
+              ],
+            ),
           ),
         ),
       ),
     );
   }
 }
-
