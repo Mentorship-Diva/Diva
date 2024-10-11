@@ -13,6 +13,7 @@ import 'package:mentorship/features/signin/logic/signin_cubit.dart';
 import 'package:mentorship/features/signin/ui/screens/signin_screen.dart';
 import 'package:mentorship/features/signup/ui/screens/signup_screen.dart';
 import 'package:mentorship/features/signup/ui/screens/verification_screen.dart';
+import 'package:mentorship/features/splash/ui/screens/splash_screen.dart';
 
 import '../../features/signup/logic/cubits/signup_cubit.dart';
 
@@ -69,6 +70,10 @@ class AppRouter {
             value: getIt<SigninCubit>(),
             child: const SigninScreen(),
           ),
+        );
+      case Routes.splashScreen:
+        return MaterialPageRoute(
+          builder: (_) => const SplashScreen(),
         );
       default:
         return null;
