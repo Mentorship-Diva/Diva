@@ -10,7 +10,9 @@ class CheckoutAppBar extends StatelessWidget {
     return Row(
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: const Icon(Icons.arrow_back_ios_new, color: Colors.black),
         ),
         SizedBox(width: 80.w),

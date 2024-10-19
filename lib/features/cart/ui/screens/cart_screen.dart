@@ -17,18 +17,19 @@ class CartScreen extends StatelessWidget {
         // To avoid tinted color when screen scrolls.
         backgroundColor: AppColors.backgroundColor,
         surfaceTintColor: AppColors.backgroundColor,
-        leading: IconButton(
-          onPressed: () {
-            context.pop();
-          },
-          icon: Icon(
-            Icons.arrow_back_ios,
-          ),
-        ),
+        // leading: IconButton(
+        //   onPressed: () {
+        //     context.pop();
+        //   },
+        //   icon: Icon(
+        //     Icons.arrow_back_ios,
+        //   ),
+        // ),
         title: Text(
           'Cart',
           style: AppTextStyles.font24BlackSemiBold,
         ),
+        centerTitle: true,
       ),
       body: SafeArea(
         child: Padding(

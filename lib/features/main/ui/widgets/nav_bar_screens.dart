@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mentorship/core/di/dependency_injection.dart';
+import 'package:mentorship/features/cart/ui/screens/cart_screen.dart';
 import 'package:mentorship/features/categories/ui/screens/categories_screen.dart';
 import 'package:mentorship/features/home/logic/home_cubit.dart';
 import 'package:mentorship/features/home/ui/screens/home_screen.dart';
@@ -21,7 +22,7 @@ List<Widget> navBarScreens() {
         ..loadProducts(),
       child: const CategoriesScreen(),
     ),
-    const SizedBox(),
+    CartScreen(),
     BlocProvider(
       create: (context) => getIt<HomeCubit>()
         ..loadCategories()

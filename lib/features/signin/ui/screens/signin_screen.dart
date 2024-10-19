@@ -35,6 +35,9 @@ class _SigninScreenState extends State<SigninScreen> {
             padding: EdgeInsets.symmetric(horizontal: 24.w),
             child: Column(
               children: [
+                SizedBox(
+                  height: 20.h,
+                ),
                 Expanded(
                   child: ListView(
                     children: [
