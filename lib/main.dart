@@ -15,7 +15,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  SharedPreferencesHelper.init();
+  await SharedPreferencesHelper.init();
   FirebaseAuth.instance.setSettings(appVerificationDisabledForTesting: true);
   runApp(const MyApp());
 }
@@ -35,7 +35,7 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
           useMaterial3: true,
         ),
-        initialRoute: Routes.cartScreen,
+        initialRoute: Routes.splashScreen,
         onGenerateRoute: AppRouter().generateRoute,
       ),
     );

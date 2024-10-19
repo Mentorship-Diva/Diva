@@ -5,6 +5,7 @@ import 'package:mentorship/core/routing/routes.dart';
 import 'package:mentorship/features/add_product/logic/cubits/add_product_cubit.dart';
 import 'package:mentorship/features/add_product/ui/screens/add_product_screen.dart';
 import 'package:mentorship/features/cart/ui/screens/cart_screen.dart';
+import 'package:mentorship/features/checkout/ui/screens/checkout_screen.dart';
 import 'package:mentorship/features/home/logic/home_cubit.dart';
 import 'package:mentorship/features/home/ui/screens/home_screen.dart';
 import 'package:mentorship/features/home/ui/screens/product_details_screen.dart';
@@ -14,6 +15,7 @@ import 'package:mentorship/features/signin/logic/signin_cubit.dart';
 import 'package:mentorship/features/signin/ui/screens/signin_screen.dart';
 import 'package:mentorship/features/signup/ui/screens/signup_screen.dart';
 import 'package:mentorship/features/signup/ui/screens/verification_screen.dart';
+import 'package:mentorship/features/splash/ui/screens/splash_screen.dart';
 
 import '../../features/signup/logic/cubits/signup_cubit.dart';
 
@@ -74,6 +76,13 @@ class AppRouter {
       case Routes.cartScreen:
         return MaterialPageRoute(
           builder: (_) => const CartScreen(),
+      case Routes.checkoutScreen:
+        return MaterialPageRoute(
+          builder: (_) => const CheckoutScreen(),
+
+      case Routes.splashScreen:
+        return MaterialPageRoute(
+          builder: (_) => const SplashScreen(),
         );
       default:
         return null;

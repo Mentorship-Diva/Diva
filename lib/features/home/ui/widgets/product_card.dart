@@ -8,8 +8,9 @@ import 'package:mentorship/features/home/logic/home_cubit.dart';
 
 class ProductCard extends StatelessWidget {
   final Product product;
+  final Color? heartIconColor;
 
-  const ProductCard({super.key, required this.product});
+  const ProductCard({super.key, required this.product, this.heartIconColor});
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +75,9 @@ class ProductCard extends StatelessWidget {
             child: CircleAvatar(
               backgroundColor: Colors.white.withOpacity(0.8),
               child: IconButton(
-                icon: const Icon(Icons.favorite_border),
+                icon: heartIconColor != null
+                    ? Icon(Icons.favorite, color: heartIconColor)
+                    : const Icon(Icons.favorite_border),
                 color: Colors.black,
                 onPressed: () {
                   // Add favorite functionality
