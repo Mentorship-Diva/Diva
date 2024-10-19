@@ -4,6 +4,7 @@ import 'package:mentorship/core/di/dependency_injection.dart';
 import 'package:mentorship/core/routing/routes.dart';
 import 'package:mentorship/features/add_product/logic/cubits/add_product_cubit.dart';
 import 'package:mentorship/features/add_product/ui/screens/add_product_screen.dart';
+import 'package:mentorship/features/checkout/ui/screens/checkout_screen.dart';
 import 'package:mentorship/features/home/logic/home_cubit.dart';
 import 'package:mentorship/features/home/ui/screens/home_screen.dart';
 import 'package:mentorship/features/home/ui/screens/product_details_screen.dart';
@@ -71,6 +72,10 @@ class AppRouter {
             child: const SigninScreen(),
           ),
         );
+      case Routes.checkoutScreen:
+        return MaterialPageRoute(
+          builder: (_) => const CheckoutScreen(),
+
       case Routes.splashScreen:
         return MaterialPageRoute(
           builder: (_) => const SplashScreen(),

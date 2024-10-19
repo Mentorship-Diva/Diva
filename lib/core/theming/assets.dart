@@ -8,6 +8,11 @@ class AppAssets {
   static const String verificationIll = 'assets/images/verification_ill.png';
   static const String checkCircle = 'assets/svgs/check_circle.svg';
   static const String signinIll = 'assets/images/signin_ill.png';
+  static const String map = 'assets/images/map.png';
+  static const String orderItem = 'assets/images/order_item.png';
+  static const String masterCard = 'assets/images/master_card.png';
+  static const String applePay = 'assets/images/apple_pay.png';
+  static const String cashPay = 'assets/images/cash_pay.png';
   static const String splashOne = 'assets/svgs/splash_one.svg';
   static const String splashTwo = 'assets/svgs/splash_two.svg';
 }

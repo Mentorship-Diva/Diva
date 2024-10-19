@@ -22,6 +22,8 @@ class AppTextFormField extends StatefulWidget {
   final int? minLines;
   final int? maxLines;
   final bool? readOnly;
+  final Widget? prefixIcon;
+  
 
   const AppTextFormField({
     super.key,
@@ -43,6 +45,7 @@ class AppTextFormField extends StatefulWidget {
     this.minLines,
     this.maxLines,
     this.readOnly,
+    this.prefixIcon
   });
 
   @override
@@ -82,6 +85,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
       cursorHeight: 17,
       cursorWidth: 1.5,
       decoration: InputDecoration(
+        prefixIcon: widget.prefixIcon,
         hintText: widget.hintText,
         helperText: widget.helperText,
         suffixIcon: widget.suffixIcon,
