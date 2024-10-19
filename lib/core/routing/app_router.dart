@@ -76,10 +76,11 @@ class AppRouter {
       case Routes.cartScreen:
         return MaterialPageRoute(
           builder: (_) => const CartScreen(),
+        );
       case Routes.checkoutScreen:
         return MaterialPageRoute(
           builder: (_) => const CheckoutScreen(),
-
+        );
       case Routes.splashScreen:
         return MaterialPageRoute(
           builder: (_) => const SplashScreen(),
