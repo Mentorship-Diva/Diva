@@ -13,4 +13,6 @@ class AppAssets {
   static const String masterCard = 'assets/images/master_card.png';
   static const String applePay = 'assets/images/apple_pay.png';
   static const String cashPay = 'assets/images/cash_pay.png';
+  static const String splashOne = 'assets/svgs/splash_one.svg';
+  static const String splashTwo = 'assets/svgs/splash_two.svg';
 }

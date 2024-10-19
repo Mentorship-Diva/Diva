@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mentorship/core/helpers/extensions.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 
 class ProfileAppBar extends StatelessWidget {
@@ -10,7 +11,9 @@ class ProfileAppBar extends StatelessWidget {
       CircleAvatar(
           backgroundColor: Colors.white,
           child: IconButton(
-              onPressed: () {},
+              onPressed: () {
+                context.pop();
+              },
               icon: const Icon(Icons.arrow_back_ios_new, color: Colors.black))),
       Text('Profile', style: AppTextStyles.font24BlackSemiBold),
       CircleAvatar(
