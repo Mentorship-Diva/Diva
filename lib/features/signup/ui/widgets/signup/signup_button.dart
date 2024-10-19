@@ -28,6 +28,7 @@ class _SignupButtonState extends State<SignupButton> {
             context.pop();
             debugPrint(userCredential.toString());
             showToast(message: 'Signup successfully');
+            context.pushReplacementNamed(Routes.mainScreen);
           },
           signupFail: (error) {
             context.pop();

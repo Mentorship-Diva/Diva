@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:mentorship/core/helpers/extensions.dart';
+import 'package:mentorship/core/routing/routes.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_state.dart';
 import '../../../../../core/theming/assets.dart';
@@ -21,6 +23,7 @@ class SocialAccounts extends StatelessWidget {
           signupGoogleSuccess: (userModel) {
             showToast(message: 'Welcome ${userModel.displayName}');
             // TODO: Navigate to Home screen
+            context.pushReplacementNamed(Routes.mainScreen);
           },
           signupGoogleFail: (error) {
             showToast(message: error);
