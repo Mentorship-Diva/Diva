@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mentorship/core/helpers/extensions.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import '../../../../core/theming/text_styles.dart';
+import '../widgets/cart_item.dart';
 import '../widgets/cart_items_list.dart';
 import '../widgets/checkout_total_and_button.dart';
 
 class CartScreen extends StatelessWidget {
-  const CartScreen({super.key});
+  CartScreen({super.key});
+
+  final List<CartItem> cartItems = List.generate(5, (index) => CartItem());
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +19,6 @@ class CartScreen extends StatelessWidget {
         // To avoid tinted color when screen scrolls.
         backgroundColor: AppColors.backgroundColor,
         surfaceTintColor: AppColors.backgroundColor,
-        // leading: IconButton(
-        //   onPressed: () {
-        //     context.pop();
-        //   },
-        //   icon: Icon(
-        //     Icons.arrow_back_ios,
-        //   ),
-        // ),
         title: Text(
           'Cart',
           style: AppTextStyles.font24BlackSemiBold,
@@ -38,7 +32,9 @@ class CartScreen extends StatelessWidget {
             child: Column(
               children: [
                 Expanded(
-                  child: CartItemsList(),
+                  child: CartItemsList(
+                    cartItems: cartItems,
+                  ),
                 ),
                 CheckoutTotalAndButton(),
               ],
