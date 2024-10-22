@@ -8,6 +8,7 @@ import 'package:mentorship/core/routing/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'core/di/dependency_injection.dart';
 import 'firebase_options.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,6 +18,7 @@ void main() async {
   );
   await SharedPreferencesHelper.init();
   FirebaseAuth.instance.setSettings(appVerificationDisabledForTesting: true);
+  FlutterNativeSplash.remove();
   runApp(const MyApp());
 }
 
@@ -35,7 +37,7 @@ class MyApp extends StatelessWidget {
           textTheme: GoogleFonts.robotoTextTheme(Theme.of(context).textTheme),
           useMaterial3: true,
         ),
-        initialRoute: Routes.splashScreen,
+        initialRoute: Routes.mainScreen,
         onGenerateRoute: AppRouter().generateRoute,
       ),
     );
