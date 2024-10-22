@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "account": MessageLookupByLibrary.simpleMessage("Account"),
         "addOne": MessageLookupByLibrary.simpleMessage("Add one"),
         "addProduct": MessageLookupByLibrary.simpleMessage("Add Product"),
         "alreadyHaveAnAccount":
@@ -62,9 +63,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "generalInfo": MessageLookupByLibrary.simpleMessage("General Info"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "homeLocation": MessageLookupByLibrary.simpleMessage("Home"),
+        "language": MessageLookupByLibrary.simpleMessage("Language"),
+        "logout": MessageLookupByLibrary.simpleMessage("Logout"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobile"),
         "noVariantsYet":
             MessageLookupByLibrary.simpleMessage("No variants yet"),
+        "notifications": MessageLookupByLibrary.simpleMessage("Notifications"),
         "office": MessageLookupByLibrary.simpleMessage("Office"),
         "oneLowerCharacter":
             MessageLookupByLibrary.simpleMessage("1 Lower Character"),
@@ -80,6 +84,10 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordIsRequired":
             MessageLookupByLibrary.simpleMessage("Password is required"),
         "payWith": MessageLookupByLibrary.simpleMessage("Pay With"),
+        "paymentMethods":
+            MessageLookupByLibrary.simpleMessage("Payment Methods"),
+        "personalInformation":
+            MessageLookupByLibrary.simpleMessage("Personal Information"),
         "phoneIsNotValid":
             MessageLookupByLibrary.simpleMessage("Phone is not valid"),
         "phoneIsRequired":
@@ -98,6 +106,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Product Description"),
         "productImages": MessageLookupByLibrary.simpleMessage("Product Images"),
         "productName": MessageLookupByLibrary.simpleMessage("Product Name"),
+        "profile": MessageLookupByLibrary.simpleMessage("Profile"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Remember me"),
         "resendCodeIn": MessageLookupByLibrary.simpleMessage("Resend CodeIn"),
         "reviews": MessageLookupByLibrary.simpleMessage("reviews"),
@@ -106,6 +115,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "seconds": MessageLookupByLibrary.simpleMessage(" s "),
         "selectPaymentMethod":
             MessageLookupByLibrary.simpleMessage("Select your payment method"),
+        "setting": MessageLookupByLibrary.simpleMessage("Setting"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "size": MessageLookupByLibrary.simpleMessage("Size: "),

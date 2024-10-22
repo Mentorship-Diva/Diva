@@ -67,5 +67,13 @@
   "stock": "المخزون",
   "variants": "الخيارات",
   "addOne": "أضف واحد",
-  "noVariantsYet": "لا يوجد خيارات حتى الآن"
+  "noVariantsYet": "لا يوجد خيارات حتى الآن",
+  "profile": "الملف الشخصي",
+  "account": "الحساب",
+  "personalInformation": "المعلومات الشخصية",
+  "paymentMethods": "طرق الدفع",
+  "notifications": "الإشعارات",
+  "setting": "الإعدادات",
+  "language": "اللغة",
+  "logout": "تسجيل الخروج"
 }

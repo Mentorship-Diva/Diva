@@ -67,5 +67,13 @@
   "stock": "Stock",
   "variants": "Variants",
   "addOne": "Add one",
-  "noVariantsYet": "No variants yet"
+  "noVariantsYet": "No variants yet",
+  "profile": "Profile",
+  "account": "Account",
+  "personalInformation": "Personal Information",
+  "paymentMethods": "Payment Methods",
+  "notifications": "Notifications",
+  "setting": "Setting",
+  "language": "Language",
+  "logout": "Logout"
 }

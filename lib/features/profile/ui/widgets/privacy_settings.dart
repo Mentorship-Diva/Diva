@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/features/profile/ui/widgets/custom_settings_list_tile.dart';
+
+import '../../../../generated/l10n.dart';
 
 class PrivacySettings extends StatelessWidget {
   const PrivacySettings({super.key});
@@ -15,34 +16,34 @@ class PrivacySettings extends StatelessWidget {
             borderRadius: BorderRadius.all(Radius.circular(10)),
             color: Colors.white),
         child: Column(children: [
+          // CustomSettingsListTile(
+          //     onTap: () {},
+          //     title: 'Orders',
+          //     leading: Icons.shopping_cart_outlined),
+          // const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
+          // CustomSettingsListTile(
+          //     onTap: () {},
+          //     title: 'Security',
+          //     leading: Icons.security_outlined),
+          // const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
+          // CustomSettingsListTile(
+          //     onTap: () {},
+          //     title: 'Privacy & Cookies Policy',
+          //     leading: Icons.privacy_tip_outlined),
+          // const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
+          // CustomSettingsListTile(
+          //     onTap: () {},
+          //     title: 'Terms & Conditions',
+          //     leading: Icons.rate_review_outlined),
+          // const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
+          // CustomSettingsListTile(
+          //     onTap: () {},
+          //     title: 'Ratings & Feedback',
+          //     leading: Icons.star_outline_rounded),
+          // const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
           CustomSettingsListTile(
               onTap: () {},
-              title: 'Orders',
-              leading: Icons.shopping_cart_outlined),
-          const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
-          CustomSettingsListTile(
-              onTap: () {},
-              title: 'Security',
-              leading: Icons.security_outlined),
-          const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
-          CustomSettingsListTile(
-              onTap: () {},
-              title: 'Privacy & Cookies Policy',
-              leading: Icons.privacy_tip_outlined),
-          const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
-          CustomSettingsListTile(
-              onTap: () {},
-              title: 'Terms & Conditions',
-              leading: Icons.rate_review_outlined),
-          const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
-          CustomSettingsListTile(
-              onTap: () {},
-              title: 'Ratings & Feedback',
-              leading: Icons.star_outline_rounded),
-          const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
-          CustomSettingsListTile(
-              onTap: () {},
-              title: 'Switch Account',
+              title: S.of(context).logout,
               leading: Icons.switch_account_outlined),
         ]),
       ),

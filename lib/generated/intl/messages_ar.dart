@@ -22,6 +22,7 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "account": MessageLookupByLibrary.simpleMessage("الحساب"),
         "addOne": MessageLookupByLibrary.simpleMessage("أضف واحد"),
         "addProduct": MessageLookupByLibrary.simpleMessage("إضافة منتج"),
         "alreadyHaveAnAccount":
@@ -62,9 +63,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "generalInfo": MessageLookupByLibrary.simpleMessage("المعلومات العامة"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "homeLocation": MessageLookupByLibrary.simpleMessage("المنزل"),
+        "language": MessageLookupByLibrary.simpleMessage("اللغة"),
+        "logout": MessageLookupByLibrary.simpleMessage("تسجيل الخروج"),
         "mobile": MessageLookupByLibrary.simpleMessage("رقم الموبايل"),
         "noVariantsYet":
             MessageLookupByLibrary.simpleMessage("لا يوجد خيارات حتى الآن"),
+        "notifications": MessageLookupByLibrary.simpleMessage("الإشعارات"),
         "office": MessageLookupByLibrary.simpleMessage("العمل"),
         "oneLowerCharacter": MessageLookupByLibrary.simpleMessage("١ حرف صغير"),
         "oneSpecialCharacter": MessageLookupByLibrary.simpleMessage("١ رمز"),
@@ -77,6 +81,9 @@ class MessageLookup extends MessageLookupByLibrary {
         "passwordIsRequired":
             MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة"),
         "payWith": MessageLookupByLibrary.simpleMessage("ادفع باستخدام"),
+        "paymentMethods": MessageLookupByLibrary.simpleMessage("طرق الدفع"),
+        "personalInformation":
+            MessageLookupByLibrary.simpleMessage("المعلومات الشخصية"),
         "phoneIsNotValid":
             MessageLookupByLibrary.simpleMessage("رقم الموبايل غير صالح"),
         "phoneIsRequired":
@@ -95,6 +102,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("وصف المنتج"),
         "productImages": MessageLookupByLibrary.simpleMessage("صور المنتج"),
         "productName": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
+        "profile": MessageLookupByLibrary.simpleMessage("الملف الشخصي"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "resendCodeIn":
             MessageLookupByLibrary.simpleMessage("سيتم إرسال الرمز خلال "),
@@ -104,6 +112,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "seconds": MessageLookupByLibrary.simpleMessage(" ث "),
         "selectPaymentMethod":
             MessageLookupByLibrary.simpleMessage("اختر طريقة الدفع"),
+        "setting": MessageLookupByLibrary.simpleMessage("الإعدادات"),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "size": MessageLookupByLibrary.simpleMessage("المقاس: "),
