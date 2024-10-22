@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addOne": MessageLookupByLibrary.simpleMessage("أضف واحد"),
+        "addProduct": MessageLookupByLibrary.simpleMessage("إضافة منتج"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل؟ "),
         "buyNow": MessageLookupByLibrary.simpleMessage("شراء"),
@@ -30,6 +32,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cart": MessageLookupByLibrary.simpleMessage("السلة"),
         "categories": MessageLookupByLibrary.simpleMessage("الأقسام"),
         "checkout": MessageLookupByLibrary.simpleMessage("إتمام الدفع"),
+        "clickToUploadImage":
+            MessageLookupByLibrary.simpleMessage("اضغط للتحميل"),
         "color": MessageLookupByLibrary.simpleMessage("اللون: "),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
@@ -55,9 +59,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("أدخل كود القسيمة"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "generalInfo": MessageLookupByLibrary.simpleMessage("المعلومات العامة"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "homeLocation": MessageLookupByLibrary.simpleMessage("المنزل"),
         "mobile": MessageLookupByLibrary.simpleMessage("رقم الموبايل"),
+        "noVariantsYet":
+            MessageLookupByLibrary.simpleMessage("لا يوجد خيارات حتى الآن"),
         "office": MessageLookupByLibrary.simpleMessage("العمل"),
         "oneLowerCharacter": MessageLookupByLibrary.simpleMessage("١ حرف صغير"),
         "oneSpecialCharacter": MessageLookupByLibrary.simpleMessage("١ رمز"),
@@ -74,7 +81,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("رقم الموبايل غير صالح"),
         "phoneIsRequired":
             MessageLookupByLibrary.simpleMessage("رقم الموبايل مطلوب"),
+        "pickAvailableCategories":
+            MessageLookupByLibrary.simpleMessage("اختر القسم المتاح"),
+        "pickAvailableColor":
+            MessageLookupByLibrary.simpleMessage("اختر اللون المتاح"),
+        "pickAvailableSize":
+            MessageLookupByLibrary.simpleMessage("اختر المقاس المتاح"),
         "placeOrder": MessageLookupByLibrary.simpleMessage("تأكيد الطلب"),
+        "pricing": MessageLookupByLibrary.simpleMessage("السعر"),
+        "pricingAndStock":
+            MessageLookupByLibrary.simpleMessage("السعر والمخزون"),
+        "productDescription":
+            MessageLookupByLibrary.simpleMessage("وصف المنتج"),
+        "productImages": MessageLookupByLibrary.simpleMessage("صور المنتج"),
+        "productName": MessageLookupByLibrary.simpleMessage("اسم المنتج"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "resendCodeIn":
             MessageLookupByLibrary.simpleMessage("سيتم إرسال الرمز خلال "),
@@ -87,10 +107,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "size": MessageLookupByLibrary.simpleMessage("المقاس: "),
+        "stock": MessageLookupByLibrary.simpleMessage("المخزون"),
         "subtotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
         "theCodeWillBeSentTo":
             MessageLookupByLibrary.simpleMessage("سيتم إرسال الرمز إلى"),
         "total": MessageLookupByLibrary.simpleMessage("الإجمالي"),
+        "variants": MessageLookupByLibrary.simpleMessage("الخيارات"),
         "verificationCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
         "welcome": MessageLookupByLibrary.simpleMessage("أهلاً، "),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("أهلاً بك"),

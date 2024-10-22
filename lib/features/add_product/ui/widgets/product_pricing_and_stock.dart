@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/widgets/app_text_form_field.dart';
 import '../../../../core/theming/text_styles.dart';
+import '../../../../generated/l10n.dart';
 import '../../logic/cubits/add_product_cubit.dart';
 
 class ProductPricingAndStock extends StatefulWidget {
@@ -19,14 +20,14 @@ class _ProductPricingAndStockState extends State<ProductPricingAndStock> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Pricing & stock',
+          S.of(context).pricingAndStock,
           style: AppTextStyles.font24BlackSemiBold,
         ),
         SizedBox(
           height: 4,
         ),
         Text(
-          'Pricing',
+          S.of(context).pricing,
           style: AppTextStyles.font16BlackSemiBold,
         ),
         SizedBox(
@@ -45,7 +46,7 @@ class _ProductPricingAndStockState extends State<ProductPricingAndStock> {
           height: 4,
         ),
         Text(
-          'Stock',
+          S.of(context).stock,
           style: AppTextStyles.font16BlackSemiBold,
         ),
         SizedBox(

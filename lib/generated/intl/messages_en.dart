@@ -22,6 +22,8 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "addOne": MessageLookupByLibrary.simpleMessage("Add one"),
+        "addProduct": MessageLookupByLibrary.simpleMessage("Add Product"),
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account? "),
         "buyNow": MessageLookupByLibrary.simpleMessage("Buy Now"),
@@ -30,6 +32,8 @@ class MessageLookup extends MessageLookupByLibrary {
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
         "checkout": MessageLookupByLibrary.simpleMessage("Checkout"),
+        "clickToUploadImage":
+            MessageLookupByLibrary.simpleMessage("Click to Upload"),
         "color": MessageLookupByLibrary.simpleMessage("Color: "),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
@@ -55,9 +59,12 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Enter your voucher code"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "generalInfo": MessageLookupByLibrary.simpleMessage("General Info"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
         "homeLocation": MessageLookupByLibrary.simpleMessage("Home"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobile"),
+        "noVariantsYet":
+            MessageLookupByLibrary.simpleMessage("No variants yet"),
         "office": MessageLookupByLibrary.simpleMessage("Office"),
         "oneLowerCharacter":
             MessageLookupByLibrary.simpleMessage("1 Lower Character"),
@@ -77,7 +84,20 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Phone is not valid"),
         "phoneIsRequired":
             MessageLookupByLibrary.simpleMessage("Phone is required"),
+        "pickAvailableCategories":
+            MessageLookupByLibrary.simpleMessage("Pick Available categories"),
+        "pickAvailableColor":
+            MessageLookupByLibrary.simpleMessage("Pick Available color"),
+        "pickAvailableSize":
+            MessageLookupByLibrary.simpleMessage("Pick Available Size"),
         "placeOrder": MessageLookupByLibrary.simpleMessage("Place Order"),
+        "pricing": MessageLookupByLibrary.simpleMessage("Pricing"),
+        "pricingAndStock":
+            MessageLookupByLibrary.simpleMessage("Pricing & Stock"),
+        "productDescription":
+            MessageLookupByLibrary.simpleMessage("Product Description"),
+        "productImages": MessageLookupByLibrary.simpleMessage("Product Images"),
+        "productName": MessageLookupByLibrary.simpleMessage("Product Name"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Remember me"),
         "resendCodeIn": MessageLookupByLibrary.simpleMessage("Resend CodeIn"),
         "reviews": MessageLookupByLibrary.simpleMessage("reviews"),
@@ -89,10 +109,12 @@ class MessageLookup extends MessageLookupByLibrary {
         "signIn": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "size": MessageLookupByLibrary.simpleMessage("Size: "),
+        "stock": MessageLookupByLibrary.simpleMessage("Stock"),
         "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "theCodeWillBeSentTo":
             MessageLookupByLibrary.simpleMessage("The Code Will Be Sent to "),
         "total": MessageLookupByLibrary.simpleMessage("TOTAL"),
+        "variants": MessageLookupByLibrary.simpleMessage("Variants"),
         "verificationCode":
             MessageLookupByLibrary.simpleMessage("Verification Code"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome, "),

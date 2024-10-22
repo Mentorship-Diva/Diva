@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
                     .textTheme),
                 useMaterial3: true,
               ),
-              initialRoute: Routes.mainScreen,
+              initialRoute: Routes.addProductScreen,
               onGenerateRoute: AppRouter().generateRoute,
             );
           },

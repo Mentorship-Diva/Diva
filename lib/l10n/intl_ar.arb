@@ -52,5 +52,20 @@
   "deliveryFee": "رسوم التوصيل",
   "placeOrder": "تأكيد الطلب",
   "homeLocation": "المنزل",
-  "office": "العمل"
+  "office": "العمل",
+  "addProduct": "إضافة منتج",
+  "productImages": "صور المنتج",
+  "clickToUploadImage": "اضغط للتحميل",
+  "generalInfo": "المعلومات العامة",
+  "productName": "اسم المنتج",
+  "productDescription": "وصف المنتج",
+  "pickAvailableSize": "اختر المقاس المتاح",
+  "pickAvailableColor": "اختر اللون المتاح",
+  "pickAvailableCategories": "اختر القسم المتاح",
+  "pricingAndStock": "السعر والمخزون",
+  "pricing": "السعر",
+  "stock": "المخزون",
+  "variants": "الخيارات",
+  "addOne": "أضف واحد",
+  "noVariantsYet": "لا يوجد خيارات حتى الآن"
 }

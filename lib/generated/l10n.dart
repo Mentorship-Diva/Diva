@@ -589,6 +589,156 @@ class S {
       args: [],
     );
   }
+
+  /// `Add Product`
+  String get addProduct {
+    return Intl.message(
+      'Add Product',
+      name: 'addProduct',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Images`
+  String get productImages {
+    return Intl.message(
+      'Product Images',
+      name: 'productImages',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Click to Upload`
+  String get clickToUploadImage {
+    return Intl.message(
+      'Click to Upload',
+      name: 'clickToUploadImage',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `General Info`
+  String get generalInfo {
+    return Intl.message(
+      'General Info',
+      name: 'generalInfo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Name`
+  String get productName {
+    return Intl.message(
+      'Product Name',
+      name: 'productName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Product Description`
+  String get productDescription {
+    return Intl.message(
+      'Product Description',
+      name: 'productDescription',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick Available Size`
+  String get pickAvailableSize {
+    return Intl.message(
+      'Pick Available Size',
+      name: 'pickAvailableSize',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick Available color`
+  String get pickAvailableColor {
+    return Intl.message(
+      'Pick Available color',
+      name: 'pickAvailableColor',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pick Available categories`
+  String get pickAvailableCategories {
+    return Intl.message(
+      'Pick Available categories',
+      name: 'pickAvailableCategories',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pricing & Stock`
+  String get pricingAndStock {
+    return Intl.message(
+      'Pricing & Stock',
+      name: 'pricingAndStock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pricing`
+  String get pricing {
+    return Intl.message(
+      'Pricing',
+      name: 'pricing',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stock`
+  String get stock {
+    return Intl.message(
+      'Stock',
+      name: 'stock',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Variants`
+  String get variants {
+    return Intl.message(
+      'Variants',
+      name: 'variants',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Add one`
+  String get addOne {
+    return Intl.message(
+      'Add one',
+      name: 'addOne',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No variants yet`
+  String get noVariantsYet {
+    return Intl.message(
+      'No variants yet',
+      name: 'noVariantsYet',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

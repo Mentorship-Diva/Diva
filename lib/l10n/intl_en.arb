@@ -52,5 +52,20 @@
   "deliveryFee": "Delivery Fee",
   "placeOrder": "Place Order",
   "homeLocation": "Home",
-  "office": "Office"
+  "office": "Office",
+  "addProduct": "Add Product",
+  "productImages": "Product Images",
+  "clickToUploadImage": "Click to Upload",
+  "generalInfo": "General Info",
+  "productName": "Product Name",
+  "productDescription": "Product Description",
+  "pickAvailableSize": "Pick Available Size",
+  "pickAvailableColor": "Pick Available color",
+  "pickAvailableCategories": "Pick Available categories",
+  "pricingAndStock": "Pricing & Stock",
+  "pricing": "Pricing",
+  "stock": "Stock",
+  "variants": "Variants",
+  "addOne": "Add one",
+  "noVariantsYet": "No variants yet"
 }
