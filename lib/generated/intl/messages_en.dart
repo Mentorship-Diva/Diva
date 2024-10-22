@@ -24,6 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account? "),
+        "buyNow": MessageLookupByLibrary.simpleMessage("Buy Now"),
+        "cart": MessageLookupByLibrary.simpleMessage("Cart"),
+        "categories": MessageLookupByLibrary.simpleMessage("Categories"),
+        "color": MessageLookupByLibrary.simpleMessage("Color: "),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
         "confirmPasswordIsNotValid": MessageLookupByLibrary.simpleMessage(
@@ -43,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email is required"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "home": MessageLookupByLibrary.simpleMessage("Home"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobile"),
         "oneLowerCharacter":
             MessageLookupByLibrary.simpleMessage("1 Lower Character"),
@@ -62,13 +67,19 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Phone is required"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Remember me"),
         "resendCodeIn": MessageLookupByLibrary.simpleMessage("Resend CodeIn"),
+        "reviews": MessageLookupByLibrary.simpleMessage("reviews"),
         "seconds": MessageLookupByLibrary.simpleMessage(" s "),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+        "size": MessageLookupByLibrary.simpleMessage("Size: "),
         "theCodeWillBeSentTo":
             MessageLookupByLibrary.simpleMessage("The Code Will Be Sent to "),
         "verificationCode":
             MessageLookupByLibrary.simpleMessage("Verification Code"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back")
+        "welcome": MessageLookupByLibrary.simpleMessage("Welcome, "),
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back"),
+        "wishlist": MessageLookupByLibrary.simpleMessage("Wishlist"),
+        "youMightAlsoLike":
+            MessageLookupByLibrary.simpleMessage("you might also like: ")
       };
 }

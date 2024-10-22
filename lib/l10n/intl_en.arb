@@ -27,5 +27,15 @@
   "theCodeWillBeSentTo": "The Code Will Be Sent to ",
   "resendCodeIn": "Resend CodeIn",
   "didNotYouReceiveTheCode": "Did not you receive receive the code? Resend code",
-  "seconds": " s "
+  "seconds": " s ",
+  "home": "Home",
+  "categories": "Categories",
+  "cart": "Cart",
+  "wishlist": "Wishlist",
+  "welcome": "Welcome, ",
+  "youMightAlsoLike": "you might also like: ",
+  "reviews": "reviews",
+  "color": "Color: ",
+  "size": "Size: ",
+  "buyNow": "Buy Now"
 }

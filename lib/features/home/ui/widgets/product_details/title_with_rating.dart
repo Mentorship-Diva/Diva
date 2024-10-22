@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/features/home/data/models/product_details_model.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class TitleWithRating extends StatelessWidget {
   const TitleWithRating({
     super.key,
@@ -26,7 +28,7 @@ class TitleWithRating extends StatelessWidget {
         Row(
           children: [
             Icon(Icons.star, color: Colors.amber),
-            Text('${product.rating.rate} (${product.rating.count} reviews)'),
+            Text('${product.rating.rate} (${product.rating.count} ${S.of(context).reviews})'),
           ],
         ),
       ],

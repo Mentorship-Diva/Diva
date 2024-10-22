@@ -27,5 +27,15 @@
   "theCodeWillBeSentTo": "سيتم إرسال الرمز إلى",
   "resendCodeIn": "سيتم إرسال الرمز خلال ",
   "didNotYouReceiveTheCode": "لم يصلك الكود؟ إرسال الكود",
-  "seconds": " ث "
+  "seconds": " ث ",
+  "home": "الرئيسية",
+  "categories": "الأقسام",
+  "cart": "السلة",
+  "wishlist": "المفضلات",
+  "welcome": "أهلاً، ",
+  "youMightAlsoLike": "يمكن أن يعجبك أيضًا: ",
+  "reviews": "أراء",
+  "color": "اللون: ",
+  "size": "المقاس: ",
+  "buyNow": "شراء"
 }

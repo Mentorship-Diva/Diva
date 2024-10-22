@@ -24,6 +24,10 @@ class MessageLookup extends MessageLookupByLibrary {
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل؟ "),
+        "buyNow": MessageLookupByLibrary.simpleMessage("شراء"),
+        "cart": MessageLookupByLibrary.simpleMessage("السلة"),
+        "categories": MessageLookupByLibrary.simpleMessage("الأقسام"),
+        "color": MessageLookupByLibrary.simpleMessage("اللون: "),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
         "confirmPasswordIsNotValid":
@@ -43,6 +47,7 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
         "mobile": MessageLookupByLibrary.simpleMessage("رقم الموبايل"),
         "oneLowerCharacter": MessageLookupByLibrary.simpleMessage("١ حرف صغير"),
         "oneSpecialCharacter": MessageLookupByLibrary.simpleMessage("١ رمز"),
@@ -60,12 +65,18 @@ class MessageLookup extends MessageLookupByLibrary {
         "rememberMe": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "resendCodeIn":
             MessageLookupByLibrary.simpleMessage("سيتم إرسال الرمز خلال "),
+        "reviews": MessageLookupByLibrary.simpleMessage("أراء"),
         "seconds": MessageLookupByLibrary.simpleMessage(" ث "),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+        "size": MessageLookupByLibrary.simpleMessage("المقاس: "),
         "theCodeWillBeSentTo":
             MessageLookupByLibrary.simpleMessage("سيتم إرسال الرمز إلى"),
         "verificationCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
-        "welcomeBack": MessageLookupByLibrary.simpleMessage("أهلاً بك")
+        "welcome": MessageLookupByLibrary.simpleMessage("أهلاً، "),
+        "welcomeBack": MessageLookupByLibrary.simpleMessage("أهلاً بك"),
+        "wishlist": MessageLookupByLibrary.simpleMessage("المفضلات"),
+        "youMightAlsoLike":
+            MessageLookupByLibrary.simpleMessage("يمكن أن يعجبك أيضًا: ")
       };
 }

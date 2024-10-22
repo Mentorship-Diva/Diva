@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/di/dependency_injection.dart';
 import 'package:mentorship/core/theming/assets.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
-import '../../../../core/Localization/localization_cubit.dart';
 import '../../../../core/theming/colors.dart';
 import '../../../../generated/l10n.dart';
 import '../widgets/signup/already_have_an_account.dart';
@@ -35,26 +34,6 @@ class SignupScreen extends StatelessWidget {
                   Expanded(
                     child: ListView(
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            GestureDetector(
-                              onTap: (){
-                                getIt<LocalizationCubit>().chooseEnglishLanguage();
-                                // context.pushAndRemoveUtilsNamed(Routes.splashScreen);
-                              },
-                              child: Text('ENGLISH'),
-                            ),
-                            GestureDetector(
-                              onTap: (){
-                                getIt<LocalizationCubit>().chooseArabicLanguage();
-                                // context.pushAndRemoveUtilsNamed(Routes.splashScreen);
-                              },
-                              child: Text('ARABIC'),
-                            ),
-                          ],
-                        ),
-
                         AuthTitleAndImage(
                           title: S.of(context).signUp,
                           image: AppAssets.signupIll,
