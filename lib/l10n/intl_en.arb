@@ -37,5 +37,20 @@
   "reviews": "reviews",
   "color": "Color: ",
   "size": "Size: ",
-  "buyNow": "Buy Now"
+  "buyNow": "Buy Now",
+  "total": "TOTAL",
+  "checkout": "Checkout",
+  "edit": "Edit",
+  "orderItems": "Order Items",
+  "saveOnYourItems": "Save On Your Items",
+  "payWith": "Pay With",
+  "enterYourVoucherCode": "Enter your voucher code",
+  "selectPaymentMethod": "Select your payment method",
+  "calculatingCoast": "Calculating Coast",
+  "subtotal": "Subtotal",
+  "discount": "Discount",
+  "deliveryFee": "Delivery Fee",
+  "placeOrder": "Place Order",
+  "homeLocation": "Home",
+  "office": "Office"
 }

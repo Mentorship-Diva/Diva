@@ -37,5 +37,20 @@
   "reviews": "أراء",
   "color": "اللون: ",
   "size": "المقاس: ",
-  "buyNow": "شراء"
+  "buyNow": "شراء",
+  "total": "الإجمالي",
+  "checkout": "إتمام الدفع",
+  "edit": "تعديل",
+  "orderItems": "المنتجات المطلوبة",
+  "saveOnYourItems": "احصل على خصم في منتجاتك",
+  "payWith": "ادفع باستخدام",
+  "enterYourVoucherCode": "أدخل كود القسيمة",
+  "selectPaymentMethod": "اختر طريقة الدفع",
+  "calculatingCoast": "حساب التكلفة",
+  "subtotal": "المجموع الفرعي",
+  "discount": "الخصم",
+  "deliveryFee": "رسوم التوصيل",
+  "placeOrder": "تأكيد الطلب",
+  "homeLocation": "المنزل",
+  "office": "العمل"
 }

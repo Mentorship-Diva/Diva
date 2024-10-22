@@ -439,6 +439,156 @@ class S {
       args: [],
     );
   }
+
+  /// `TOTAL`
+  String get total {
+    return Intl.message(
+      'TOTAL',
+      name: 'total',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Checkout`
+  String get checkout {
+    return Intl.message(
+      'Checkout',
+      name: 'checkout',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit`
+  String get edit {
+    return Intl.message(
+      'Edit',
+      name: 'edit',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Order Items`
+  String get orderItems {
+    return Intl.message(
+      'Order Items',
+      name: 'orderItems',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Save On Your Items`
+  String get saveOnYourItems {
+    return Intl.message(
+      'Save On Your Items',
+      name: 'saveOnYourItems',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Pay With`
+  String get payWith {
+    return Intl.message(
+      'Pay With',
+      name: 'payWith',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Enter your voucher code`
+  String get enterYourVoucherCode {
+    return Intl.message(
+      'Enter your voucher code',
+      name: 'enterYourVoucherCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Select your payment method`
+  String get selectPaymentMethod {
+    return Intl.message(
+      'Select your payment method',
+      name: 'selectPaymentMethod',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Calculating Coast`
+  String get calculatingCoast {
+    return Intl.message(
+      'Calculating Coast',
+      name: 'calculatingCoast',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Subtotal`
+  String get subtotal {
+    return Intl.message(
+      'Subtotal',
+      name: 'subtotal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Discount`
+  String get discount {
+    return Intl.message(
+      'Discount',
+      name: 'discount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Delivery Fee`
+  String get deliveryFee {
+    return Intl.message(
+      'Delivery Fee',
+      name: 'deliveryFee',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Place Order`
+  String get placeOrder {
+    return Intl.message(
+      'Place Order',
+      name: 'placeOrder',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Home`
+  String get homeLocation {
+    return Intl.message(
+      'Home',
+      name: 'homeLocation',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Office`
+  String get office {
+    return Intl.message(
+      'Office',
+      name: 'office',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

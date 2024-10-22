@@ -25,8 +25,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Already have an account? "),
         "buyNow": MessageLookupByLibrary.simpleMessage("Buy Now"),
+        "calculatingCoast":
+            MessageLookupByLibrary.simpleMessage("Calculating Coast"),
         "cart": MessageLookupByLibrary.simpleMessage("Cart"),
         "categories": MessageLookupByLibrary.simpleMessage("Categories"),
+        "checkout": MessageLookupByLibrary.simpleMessage("Checkout"),
         "color": MessageLookupByLibrary.simpleMessage("Color: "),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("Confirm Password"),
@@ -34,10 +37,13 @@ class MessageLookup extends MessageLookupByLibrary {
             "Confirm Password is not valid"),
         "confirmPasswordIsRequired": MessageLookupByLibrary.simpleMessage(
             "Confirm Password is required"),
+        "deliveryFee": MessageLookupByLibrary.simpleMessage("Delivery Fee"),
         "didNotYouReceiveTheCode": MessageLookupByLibrary.simpleMessage(
             "Did not you receive receive the code? Resend code"),
+        "discount": MessageLookupByLibrary.simpleMessage("Discount"),
         "donotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
+        "edit": MessageLookupByLibrary.simpleMessage("Edit"),
         "eightCharactersMinimum":
             MessageLookupByLibrary.simpleMessage("8 Characters Minimum"),
         "email": MessageLookupByLibrary.simpleMessage("E-mail"),
@@ -45,10 +51,14 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("Email is not valid"),
         "emailIsRequired":
             MessageLookupByLibrary.simpleMessage("Email is required"),
+        "enterYourVoucherCode":
+            MessageLookupByLibrary.simpleMessage("Enter your voucher code"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
         "home": MessageLookupByLibrary.simpleMessage("Home"),
+        "homeLocation": MessageLookupByLibrary.simpleMessage("Home"),
         "mobile": MessageLookupByLibrary.simpleMessage("Mobile"),
+        "office": MessageLookupByLibrary.simpleMessage("Office"),
         "oneLowerCharacter":
             MessageLookupByLibrary.simpleMessage("1 Lower Character"),
         "oneSpecialCharacter":
@@ -56,24 +66,33 @@ class MessageLookup extends MessageLookupByLibrary {
         "oneUpperCharacter":
             MessageLookupByLibrary.simpleMessage("1 Upper Character"),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
+        "orderItems": MessageLookupByLibrary.simpleMessage("Order Items"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
         "passwordIsNotValid":
             MessageLookupByLibrary.simpleMessage("Password is not Valid"),
         "passwordIsRequired":
             MessageLookupByLibrary.simpleMessage("Password is required"),
+        "payWith": MessageLookupByLibrary.simpleMessage("Pay With"),
         "phoneIsNotValid":
             MessageLookupByLibrary.simpleMessage("Phone is not valid"),
         "phoneIsRequired":
             MessageLookupByLibrary.simpleMessage("Phone is required"),
+        "placeOrder": MessageLookupByLibrary.simpleMessage("Place Order"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Remember me"),
         "resendCodeIn": MessageLookupByLibrary.simpleMessage("Resend CodeIn"),
         "reviews": MessageLookupByLibrary.simpleMessage("reviews"),
+        "saveOnYourItems":
+            MessageLookupByLibrary.simpleMessage("Save On Your Items"),
         "seconds": MessageLookupByLibrary.simpleMessage(" s "),
+        "selectPaymentMethod":
+            MessageLookupByLibrary.simpleMessage("Select your payment method"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
         "size": MessageLookupByLibrary.simpleMessage("Size: "),
+        "subtotal": MessageLookupByLibrary.simpleMessage("Subtotal"),
         "theCodeWillBeSentTo":
             MessageLookupByLibrary.simpleMessage("The Code Will Be Sent to "),
+        "total": MessageLookupByLibrary.simpleMessage("TOTAL"),
         "verificationCode":
             MessageLookupByLibrary.simpleMessage("Verification Code"),
         "welcome": MessageLookupByLibrary.simpleMessage("Welcome, "),

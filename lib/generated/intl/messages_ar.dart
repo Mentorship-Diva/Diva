@@ -25,8 +25,11 @@ class MessageLookup extends MessageLookupByLibrary {
         "alreadyHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل؟ "),
         "buyNow": MessageLookupByLibrary.simpleMessage("شراء"),
+        "calculatingCoast":
+            MessageLookupByLibrary.simpleMessage("حساب التكلفة"),
         "cart": MessageLookupByLibrary.simpleMessage("السلة"),
         "categories": MessageLookupByLibrary.simpleMessage("الأقسام"),
+        "checkout": MessageLookupByLibrary.simpleMessage("إتمام الدفع"),
         "color": MessageLookupByLibrary.simpleMessage("اللون: "),
         "confirmPassword":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
@@ -34,10 +37,13 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور غير صالح"),
         "confirmPasswordIsRequired":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور مطلوب"),
+        "deliveryFee": MessageLookupByLibrary.simpleMessage("رسوم التوصيل"),
         "didNotYouReceiveTheCode":
             MessageLookupByLibrary.simpleMessage("لم يصلك الكود؟ إرسال الكود"),
+        "discount": MessageLookupByLibrary.simpleMessage("الخصم"),
         "donotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ "),
+        "edit": MessageLookupByLibrary.simpleMessage("تعديل"),
         "eightCharactersMinimum":
             MessageLookupByLibrary.simpleMessage("٨ أحرف على الأقل"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
@@ -45,33 +51,46 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني غير صالح"),
         "emailIsRequired":
             MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب"),
+        "enterYourVoucherCode":
+            MessageLookupByLibrary.simpleMessage("أدخل كود القسيمة"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
         "home": MessageLookupByLibrary.simpleMessage("الرئيسية"),
+        "homeLocation": MessageLookupByLibrary.simpleMessage("المنزل"),
         "mobile": MessageLookupByLibrary.simpleMessage("رقم الموبايل"),
+        "office": MessageLookupByLibrary.simpleMessage("العمل"),
         "oneLowerCharacter": MessageLookupByLibrary.simpleMessage("١ حرف صغير"),
         "oneSpecialCharacter": MessageLookupByLibrary.simpleMessage("١ رمز"),
         "oneUpperCharacter": MessageLookupByLibrary.simpleMessage("١ حرف كبير"),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
+        "orderItems": MessageLookupByLibrary.simpleMessage("المنتجات المطلوبة"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
         "passwordIsNotValid":
             MessageLookupByLibrary.simpleMessage("كلمة المرور غير صالحة"),
         "passwordIsRequired":
             MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة"),
+        "payWith": MessageLookupByLibrary.simpleMessage("ادفع باستخدام"),
         "phoneIsNotValid":
             MessageLookupByLibrary.simpleMessage("رقم الموبايل غير صالح"),
         "phoneIsRequired":
             MessageLookupByLibrary.simpleMessage("رقم الموبايل مطلوب"),
+        "placeOrder": MessageLookupByLibrary.simpleMessage("تأكيد الطلب"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "resendCodeIn":
             MessageLookupByLibrary.simpleMessage("سيتم إرسال الرمز خلال "),
         "reviews": MessageLookupByLibrary.simpleMessage("أراء"),
+        "saveOnYourItems":
+            MessageLookupByLibrary.simpleMessage("احصل على خصم في منتجاتك"),
         "seconds": MessageLookupByLibrary.simpleMessage(" ث "),
+        "selectPaymentMethod":
+            MessageLookupByLibrary.simpleMessage("اختر طريقة الدفع"),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
         "size": MessageLookupByLibrary.simpleMessage("المقاس: "),
+        "subtotal": MessageLookupByLibrary.simpleMessage("المجموع الفرعي"),
         "theCodeWillBeSentTo":
             MessageLookupByLibrary.simpleMessage("سيتم إرسال الرمز إلى"),
+        "total": MessageLookupByLibrary.simpleMessage("الإجمالي"),
         "verificationCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
         "welcome": MessageLookupByLibrary.simpleMessage("أهلاً، "),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("أهلاً بك"),

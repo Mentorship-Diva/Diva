@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mentorship/core/routing/routes.dart';
 import 'package:mentorship/features/checkout/ui/screens/checkout_screen.dart';
 import '../../../../core/theming/text_styles.dart';
 import '../../../../core/widgets/app_main_button.dart';
+import '../../../../generated/l10n.dart';
 
 class CheckoutTotalAndButton extends StatelessWidget {
   const CheckoutTotalAndButton({super.key});
@@ -16,7 +16,7 @@ class CheckoutTotalAndButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'TOTAL',
+              S.of(context).total,
               style: AppTextStyles.font14Black500,
             ),
             Text(
@@ -34,7 +34,7 @@ class CheckoutTotalAndButton extends StatelessWidget {
                 MaterialPageRoute(
                     builder: (context) => const CheckoutScreen()));
           },
-          title: 'Checkout',
+          title: S.of(context).checkout,
         ),
       ],
     );
