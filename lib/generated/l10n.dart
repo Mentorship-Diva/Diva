@@ -289,6 +289,56 @@ class S {
       args: [],
     );
   }
+
+  /// `Verification Code`
+  String get verificationCode {
+    return Intl.message(
+      'Verification Code',
+      name: 'verificationCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The Code Will Be Sent to `
+  String get theCodeWillBeSentTo {
+    return Intl.message(
+      'The Code Will Be Sent to ',
+      name: 'theCodeWillBeSentTo',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Resend CodeIn`
+  String get resendCodeIn {
+    return Intl.message(
+      'Resend CodeIn',
+      name: 'resendCodeIn',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Did not you receive receive the code? Resend code`
+  String get didNotYouReceiveTheCode {
+    return Intl.message(
+      'Did not you receive receive the code? Resend code',
+      name: 'didNotYouReceiveTheCode',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// ` s `
+  String get seconds {
+    return Intl.message(
+      ' s ',
+      name: 'seconds',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

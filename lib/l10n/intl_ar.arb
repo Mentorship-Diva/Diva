@@ -22,5 +22,10 @@
   "eightCharactersMinimum": "٨ أحرف على الأقل",
   "oneUpperCharacter": "١ حرف كبير",
   "oneLowerCharacter": "١ حرف صغير",
-  "oneSpecialCharacter": "١ رمز"
+  "oneSpecialCharacter": "١ رمز",
+  "verificationCode": "رمز التحقق",
+  "theCodeWillBeSentTo": "سيتم إرسال الرمز إلى",
+  "resendCodeIn": "سيتم إرسال الرمز خلال ",
+  "didNotYouReceiveTheCode": "لم يصلك الكود؟ إرسال الكود",
+  "seconds": " ث "
 }

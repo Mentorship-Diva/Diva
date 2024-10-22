@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
             "Confirm Password is not valid"),
         "confirmPasswordIsRequired": MessageLookupByLibrary.simpleMessage(
             "Confirm Password is required"),
+        "didNotYouReceiveTheCode": MessageLookupByLibrary.simpleMessage(
+            "Did not you receive receive the code? Resend code"),
         "donotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
         "eightCharactersMinimum":
@@ -59,8 +61,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneIsRequired":
             MessageLookupByLibrary.simpleMessage("Phone is required"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Remember me"),
+        "resendCodeIn": MessageLookupByLibrary.simpleMessage("Resend CodeIn"),
+        "seconds": MessageLookupByLibrary.simpleMessage(" s "),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),
+        "theCodeWillBeSentTo":
+            MessageLookupByLibrary.simpleMessage("The Code Will Be Sent to "),
+        "verificationCode":
+            MessageLookupByLibrary.simpleMessage("Verification Code"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("Welcome back")
       };
 }

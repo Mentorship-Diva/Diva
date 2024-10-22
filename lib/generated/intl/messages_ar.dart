@@ -30,6 +30,8 @@ class MessageLookup extends MessageLookupByLibrary {
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور غير صالح"),
         "confirmPasswordIsRequired":
             MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور مطلوب"),
+        "didNotYouReceiveTheCode":
+            MessageLookupByLibrary.simpleMessage("لم يصلك الكود؟ إرسال الكود"),
         "donotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ "),
         "eightCharactersMinimum":
@@ -56,8 +58,14 @@ class MessageLookup extends MessageLookupByLibrary {
         "phoneIsRequired":
             MessageLookupByLibrary.simpleMessage("رقم الموبايل مطلوب"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("تذكرني"),
+        "resendCodeIn":
+            MessageLookupByLibrary.simpleMessage("سيتم إرسال الرمز خلال "),
+        "seconds": MessageLookupByLibrary.simpleMessage(" ث "),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),
+        "theCodeWillBeSentTo":
+            MessageLookupByLibrary.simpleMessage("سيتم إرسال الرمز إلى"),
+        "verificationCode": MessageLookupByLibrary.simpleMessage("رمز التحقق"),
         "welcomeBack": MessageLookupByLibrary.simpleMessage("أهلاً بك")
       };
 }

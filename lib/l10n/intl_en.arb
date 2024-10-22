@@ -22,5 +22,10 @@
   "eightCharactersMinimum": "8 Characters Minimum",
   "oneUpperCharacter": "1 Upper Character",
   "oneLowerCharacter": "1 Lower Character",
-  "oneSpecialCharacter": "1 Special Character"
+  "oneSpecialCharacter": "1 Special Character",
+  "verificationCode": "Verification Code",
+  "theCodeWillBeSentTo": "The Code Will Be Sent to ",
+  "resendCodeIn": "Resend CodeIn",
+  "didNotYouReceiveTheCode": "Did not you receive receive the code? Resend code",
+  "seconds": " s "
 }
