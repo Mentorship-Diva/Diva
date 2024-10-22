@@ -10,6 +10,7 @@ import 'package:mentorship/core/theming/assets.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/features/add_product/logic/cubits/add_product_cubit.dart';
 import '../../../../core/theming/text_styles.dart';
+import '../../../../generated/l10n.dart';
 
 class ProductImagesSection extends StatefulWidget {
   const ProductImagesSection({super.key});
@@ -28,7 +29,7 @@ class _ProductImagesSectionState extends State<ProductImagesSection> {
         Row(
           children: [
             Text(
-              'Product Images',
+              S.of(context).productImages,
               style: AppTextStyles.font24BlackSemiBold,
             ),
             SizedBox(
@@ -82,7 +83,7 @@ class _ProductImagesSectionState extends State<ProductImagesSection> {
                                   height: 4.h,
                                 ),
                                 Text(
-                                  'Click to upload',
+                                  S.of(context).clickToUploadImage,
                                   style: AppTextStyles.font12Blue400UnderLine,
                                 ),
                               ],

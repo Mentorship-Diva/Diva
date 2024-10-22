@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mentorship/core/helpers/extensions.dart';
 
 import '../../../../../core/theming/text_styles.dart';
+import '../../../../../generated/l10n.dart';
 
 class AlreadyHaveAnAccount extends StatelessWidget {
   const AlreadyHaveAnAccount({super.key});
@@ -12,7 +13,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Already have an account? ',
+          S.of(context).alreadyHaveAnAccount,
           style: AppTextStyles.font18Black400,
         ),
         GestureDetector(
@@ -20,7 +21,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
             context.pop();
           },
           child: Text(
-            'Sign In',
+            S.of(context).signIn,
             style: AppTextStyles.font18Pink400,
           ),
         ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/theming/text_styles.dart';
+import '../../../../../generated/l10n.dart';
 import '../../../logic/cubits/signup_cubit.dart';
 
 class CodeWillBeSentToNumber extends StatelessWidget {
@@ -11,11 +12,14 @@ class CodeWillBeSentToNumber extends StatelessWidget {
     return Row(
       children: [
         Text(
-          'The code will be sent to ',
+          S.of(context).theCodeWillBeSentTo,
         ),
-        Text(
-          '+2${context.read<SignupCubit>().phoneNumberController.text}',
-          style: AppTextStyles.font14Pink400,
+        Directionality(
+          textDirection: TextDirection.ltr,
+          child: Text(
+            '+2${context.read<SignupCubit>().phoneNumberController.text} ',
+            style: AppTextStyles.font14Pink400,
+          ),
         )
       ],
     );

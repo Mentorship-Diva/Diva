@@ -5,6 +5,8 @@ import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/core/widgets/app_text_form_field.dart';
 import 'package:mentorship/features/add_product/logic/cubits/add_product_cubit.dart';
 
+import '../../../../generated/l10n.dart';
+
 class ProductNameAndDescription extends StatefulWidget {
   const ProductNameAndDescription({super.key});
 
@@ -21,7 +23,7 @@ class _ProductNameAndDescriptionState extends State<ProductNameAndDescription> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Product name',
+          S.of(context).productName,
           style: AppTextStyles.font16BlackSemiBold,
         ),
         SizedBox(
@@ -42,7 +44,7 @@ class _ProductNameAndDescriptionState extends State<ProductNameAndDescription> {
           height: 12.h,
         ),
         Text(
-          'Product description',
+          S.of(context).productDescription,
           style: AppTextStyles.font16BlackSemiBold,
         ),
         SizedBox(

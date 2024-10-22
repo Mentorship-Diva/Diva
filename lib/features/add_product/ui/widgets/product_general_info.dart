@@ -5,6 +5,7 @@ import 'package:mentorship/features/add_product/ui/widgets/product_color.dart';
 import 'package:mentorship/features/add_product/ui/widgets/product_name_and_description.dart';
 import 'package:mentorship/features/add_product/ui/widgets/product_size.dart';
 import '../../../../core/theming/text_styles.dart';
+import '../../../../generated/l10n.dart';
 
 class ProductGeneralInfo extends StatelessWidget {
   const ProductGeneralInfo({super.key});
@@ -15,7 +16,7 @@ class ProductGeneralInfo extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'General info',
+          S.of(context).generalInfo,
           style: AppTextStyles.font24BlackSemiBold,
         ),
         SizedBox(
@@ -29,7 +30,6 @@ class ProductGeneralInfo extends StatelessWidget {
         SizedBox(
           height: 16.h,
         ),
-        // TODO: SIZE CATEGORY
         ProductColor(),
         SizedBox(
           height: 16.h,

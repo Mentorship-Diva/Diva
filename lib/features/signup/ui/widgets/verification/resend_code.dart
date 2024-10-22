@@ -7,6 +7,7 @@ import 'package:mentorship/core/widgets/toast.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_state.dart';
 import '../../../../../core/theming/text_styles.dart';
+import '../../../../../generated/l10n.dart';
 
 class ResendCode extends StatefulWidget {
   const ResendCode({super.key});
@@ -28,7 +29,7 @@ class _ResendCodeState extends State<ResendCode> {
     );
     return isTimerDone
         ? Align(
-            alignment: Alignment.topLeft,
+            alignment: AlignmentDirectional.centerStart,
             child: BlocListener<SignupCubit, SignupState>(
               listener: (context, state) {
                 state.whenOrNull(
@@ -58,7 +59,7 @@ class _ResendCodeState extends State<ResendCode> {
                   context.read<SignupCubit>().otpController.clear();
                 },
                 child: Text(
-                  'Didn\'t you receive the code? Resend code',
+                  S.of(context).didNotYouReceiveTheCode,
                   style: AppTextStyles.font14Blue400UnderLine.copyWith(
                     decoration: TextDecoration.none,
                   ),
@@ -70,7 +71,7 @@ class _ResendCodeState extends State<ResendCode> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Text(
-                'Resend Code in ',
+                S.of(context).resendCodeIn,
                 style: AppTextStyles.font14Black400,
               ),
               Directionality(
@@ -89,7 +90,7 @@ class _ResendCodeState extends State<ResendCode> {
                 ),
               ),
               Text(
-                's',
+                S.of(context).seconds,
                 style: AppTextStyles.font14Black400,
               ),
             ],

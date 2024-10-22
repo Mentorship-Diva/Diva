@@ -7,6 +7,7 @@ import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_state.dart';
 import '../../../../../core/routing/routes.dart';
 import '../../../../../core/widgets/app_main_button.dart';
+import '../../../../../generated/l10n.dart';
 
 class SignupButton extends StatefulWidget {
   SignupButton({super.key});
@@ -51,7 +52,6 @@ class _SignupButtonState extends State<SignupButton> {
       child: AppMainButton(
         onPressed: () {
           if (context.read<SignupCubit>().isEmailForm) {
-            print('email');
             if (context
                 .read<SignupCubit>()
                 .emailFormKey
@@ -60,13 +60,11 @@ class _SignupButtonState extends State<SignupButton> {
               context.read<SignupCubit>().signup();
             }
           } else {
-            print('phone');
             if (context
                 .read<SignupCubit>()
                 .phoneFormKey
                 .currentState!
                 .validate()) {
-              print('VALID');
               context.read<SignupCubit>().sendOtp(
                     phoneNumber:
                         '+2${context.read<SignupCubit>().phoneNumberController.text}',
@@ -74,7 +72,7 @@ class _SignupButtonState extends State<SignupButton> {
             }
           }
         },
-        title: 'Sign Up',
+        title: S.of(context).signUp,
       ),
     );
   }

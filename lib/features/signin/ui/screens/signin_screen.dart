@@ -11,6 +11,8 @@ import 'package:mentorship/features/signin/ui/widgets/signin_with_email_form.dar
 import 'package:mentorship/features/signup/ui/widgets/signup/auth_title_and_image.dart';
 import 'package:mentorship/features/signup/ui/widgets/signup/or_text_with_horizontal_divider.dart';
 
+import '../../../../generated/l10n.dart';
+
 class SigninScreen extends StatefulWidget {
   const SigninScreen({super.key});
 
@@ -41,8 +43,8 @@ class _SigninScreenState extends State<SigninScreen> {
                 Expanded(
                   child: ListView(
                     children: [
-                      const AuthTitleAndImage(
-                        title: 'Welcome Back',
+                    AuthTitleAndImage(
+                        title: S.of(context).welcomeBack,
                         image: AppAssets.signinIll,
                       ),
                       const SigninWithEmailForm(),

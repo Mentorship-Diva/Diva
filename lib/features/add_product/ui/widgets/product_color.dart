@@ -7,6 +7,8 @@ import 'package:mentorship/core/widgets/app_text_form_field.dart';
 import 'package:mentorship/features/add_product/logic/cubits/add_product_cubit.dart';
 import 'package:mentorship/features/add_product/ui/widgets/product_details_title_and_description.dart';
 
+import '../../../../generated/l10n.dart';
+
 class ProductColor extends StatefulWidget {
   const ProductColor({super.key});
 
@@ -21,8 +23,8 @@ class _ProductColorState extends State<ProductColor> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ProductDetailsTitleAndDescription(
-          title: 'Color',
-          description: 'Pick available color',
+          title: S.of(context).color,
+          description: S.of(context).pickAvailableColor,
         ),
         AppTextFormField(
           controller: context.read<AddProductCubit>().productColorController,

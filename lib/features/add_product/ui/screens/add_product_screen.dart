@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/helpers/extensions.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
+import '../../../../generated/l10n.dart';
 import '../../logic/cubits/add_product_cubit.dart';
 import '../widgets/add_product_button.dart';
 import '../widgets/product_general_info.dart';
@@ -51,7 +52,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
           ),
         ),
         title: Text(
-          'Add Product',
+          S.of(context).addProduct,
           style: AppTextStyles.font24BlackSemiBold,
         ),
       ),
@@ -64,6 +65,9 @@ class _AddProductScreenState extends State<AddProductScreen> {
                 shrinkWrap: true,
                 children: [
                   ProductImagesSection(),
+                  SizedBox(
+                    height: 8.h,
+                  ),
                   ProductGeneralInfo(),
                   Padding(
                     padding: EdgeInsets.symmetric(vertical: 16.h),

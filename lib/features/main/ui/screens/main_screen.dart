@@ -30,12 +30,13 @@ class MainScreen extends StatelessWidget {
             context,
             controller: _controller,
             screens: navBarScreens(),
-            items: navBarItems(_controller.index),
+            items: navBarItems(_controller.index, context),
             navBarHeight: 70,
             backgroundColor: Colors.white, // Default background color
             handleAndroidBackButtonPress: true, // Back button handling
             resizeToAvoidBottomInset: true,
             navBarStyle: NavBarStyle.style7,
+
 
             onItemSelected: (index) {
               context.read<MainCubit>().changeTab(index);

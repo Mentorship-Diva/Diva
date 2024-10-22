@@ -8,6 +8,8 @@ import 'package:mentorship/features/home/ui/widgets/product_details/image_with_b
 import 'package:mentorship/features/home/ui/widgets/product_details/random_products_bloc_builder.dart';
 import 'package:mentorship/features/home/ui/widgets/product_details/title_with_rating.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class ProductDetailsBody extends StatelessWidget {
   const ProductDetailsBody({
     super.key,
@@ -44,7 +46,7 @@ class ProductDetailsBody extends StatelessWidget {
                     BuildSizePicker(),
                     SizedBox(height: 30),
                     Text(
-                      'You might also like:',
+                      S.of(context).youMightAlsoLike,
                       style: AppTextStyles.font18Black400,
                     ),
                     SizedBox(height: 20),

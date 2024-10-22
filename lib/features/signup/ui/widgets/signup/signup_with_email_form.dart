@@ -7,6 +7,7 @@ import '../../../../../core/helpers/app_regex.dart';
 import '../../../../../core/helpers/text_form_field_validators.dart';
 import '../../../../../core/helpers/text_selection_options.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
+import '../../../../../generated/l10n.dart';
 import '../../../logic/cubits/signup_cubit.dart';
 
 class SignupWithEmailForm extends StatefulWidget {
@@ -48,7 +49,7 @@ class _SignupWithEmailFormState extends State<SignupWithEmailForm> {
             padding: EdgeInsets.only(bottom: 16.h),
             child: AppTextFormField(
               controller: context.read<SignupCubit>().emailController,
-              hintText: 'E-mail',
+              hintText: S.of(context).email,
               keyboardType: TextInputType.emailAddress,
               textInputAction: TextInputAction.next,
               contextMenuBuilder:
@@ -59,7 +60,7 @@ class _SignupWithEmailFormState extends State<SignupWithEmailForm> {
           ),
           AppTextFormField(
             controller: context.read<SignupCubit>().passwordController,
-            hintText: 'Password',
+            hintText: S.of(context).password,
             keyboardType: TextInputType.visiblePassword,
             textInputAction: TextInputAction.next,
             contextMenuBuilder:
@@ -101,20 +102,20 @@ class _SignupWithEmailFormState extends State<SignupWithEmailForm> {
             padding: EdgeInsets.only(top: 16.h),
             child: AppTextFormField(
               controller: context.read<SignupCubit>().confirmPasswordController,
-              hintText: 'Confirm Password',
+              hintText: S.of(context).confirmPassword,
               keyboardType: TextInputType.visiblePassword,
               textInputAction: TextInputAction.done,
               contextMenuBuilder:
               TextSelectionOptions.passwordTextSelectionOptions,
               validator: (value) {
                 if (value!.isEmpty) {
-                  return 'Confirm Password is required';
+                  return S.of(context).confirmPasswordIsRequired;
                 } else if (context
                     .read<SignupCubit>()
                     .confirmPasswordController
                     .text !=
                     context.read<SignupCubit>().passwordController.text) {
-                  return 'Password does\'t match';
+                  return S.of(context).confirmPasswordIsNotValid;
                 }
                 return null;
               },

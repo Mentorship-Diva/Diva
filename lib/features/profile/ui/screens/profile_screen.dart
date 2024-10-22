@@ -4,7 +4,9 @@ import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/features/profile/ui/widgets/account_settings.dart';
 import 'package:mentorship/features/profile/ui/widgets/privacy_settings.dart';
 import 'package:mentorship/features/profile/ui/widgets/profile_app_bar.dart';
+import 'package:mentorship/features/profile/ui/widgets/switch_language_button.dart';
 import 'package:mentorship/features/profile/ui/widgets/user_account_info.dart';
+import '../../../../generated/l10n.dart';
 
 class ProfileScreen extends StatelessWidget {
   const ProfileScreen({super.key});
@@ -18,15 +20,22 @@ class ProfileScreen extends StatelessWidget {
           const ProfileAppBar(),
           const UserAccountInfo(),
           Padding(
-              padding: EdgeInsets.symmetric(vertical: 10.h),
-              child:
-                  Text("Account", style: AppTextStyles.font18PrimaryColorBold)),
+            padding: EdgeInsets.symmetric(vertical: 10.h),
+            child: Text(
+              S.of(context).account,
+              style: AppTextStyles.font18PrimaryColorBold,
+            ),
+          ),
           const AccountSettings(),
           Padding(
-              padding: EdgeInsets.symmetric(vertical: 10.h),
-              child:
-                  Text("Privacy", style: AppTextStyles.font18PrimaryColorBold)),
+            padding: EdgeInsets.symmetric(vertical: 10.h),
+            child: Text(
+              S.of(context).setting,
+              style: AppTextStyles.font18PrimaryColorBold,
+            ),
+          ),
           const PrivacySettings(),
+          SwitchLanguageButton(),
         ]),
       ),
     );

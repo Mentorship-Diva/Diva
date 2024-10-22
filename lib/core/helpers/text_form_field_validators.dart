@@ -1,31 +1,33 @@
 import 'package:mentorship/core/helpers/app_regex.dart';
 
+import '../../generated/l10n.dart';
+
 class TextFormFieldValidators {
   static emailValidator(value, context) {
     if (value!.isEmpty) {
-      return 'E-mail is required';
+      return S.of(context).emailIsRequired;
     } else if (!AppRegex.isEmailValid(value)) {
-      return 'E-mail is not valid';
+      return S.of(context).emailIsNotValid;
     } else if (value.contains(' ')) {
-      return 'E-mail is not valid';
+      return S.of(context).emailIsNotValid;
     }
     return null;
   }
 
   static passwordValidator(value, context) {
     if (value!.isEmpty) {
-      return 'Password is required';
+      return S.of(context).passwordIsRequired;
     } else if (!AppRegex.isPasswordValid(value)) {
-      return 'Password is not valid';
+      return S.of(context).passwordIsNotValid;
     }
     return null;
   }
 
   static phoneNumberValidator(value, context) {
     if (value!.isEmpty) {
-      return 'Phone number is required';
+      return S.of(context).phoneIsRequired;
     } else if (!AppRegex.isPhoneNumberValid(value)) {
-      return 'Phone number is not valid';
+      return S.of(context).phoneIsNotValid;
     }
     return null;
   }

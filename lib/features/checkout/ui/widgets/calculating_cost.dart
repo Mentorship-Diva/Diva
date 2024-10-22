@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 
+import '../../../../generated/l10n.dart';
+
 class CalculatingCost extends StatelessWidget {
   const CalculatingCost({Key? key}) : super(key: key);
 
@@ -16,7 +18,7 @@ class CalculatingCost extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("Subtotal", style: AppTextStyles.font18Grey400),
+              Text(S.of(context).subtotal, style: AppTextStyles.font18Grey400),
               Text("1,250 L.E", style: AppTextStyles.font18Grey400),
             ],
           ),
@@ -25,7 +27,7 @@ class CalculatingCost extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Discount",
+                S.of(context).discount,
                 style: AppTextStyles.font18Grey400,
               ),
               Text(
@@ -39,7 +41,7 @@ class CalculatingCost extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Delivery fee",
+                S.of(context).deliveryFee,
                 style: AppTextStyles.font18Grey400,
               ),
               Text(
@@ -54,7 +56,7 @@ class CalculatingCost extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text("TOTAL", style: AppTextStyles.font18BlackBold,),
+              Text(S.of(context).total, style: AppTextStyles.font18BlackBold,),
               Text("1,050 L.E", style: AppTextStyles.font18BlackBold,),
             ],
           ),

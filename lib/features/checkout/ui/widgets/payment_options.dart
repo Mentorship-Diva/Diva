@@ -5,6 +5,8 @@ import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/core/widgets/app_text_form_field.dart';
 
+import '../../../../generated/l10n.dart';
+
 class PaymentOptions extends StatefulWidget {
   const PaymentOptions({super.key});
 
@@ -45,7 +47,7 @@ class _PaymentOptionsState extends State<PaymentOptions> {
           ),
           child: DropdownButton<String>(
             value: selectedPaymentMethod,
-            hint: Text("Select Payment Method"),
+            hint: Text(S.of(context).selectPaymentMethod),
             isExpanded: true,
             underline: SizedBox(), 
             icon: Icon(Icons.arrow_drop_down),

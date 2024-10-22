@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
 import '../../../../core/theming/colors.dart';
 import 'package:mentorship/core/theming/assets.dart';
+import '../../../../generated/l10n.dart';
 import '../widgets/signup/auth_title_and_image.dart';
 import '../widgets/verification/code_will_be_sent_to_number.dart';
 import '../widgets/verification/pin_code_form.dart';
@@ -36,8 +37,8 @@ class _VerificationScreenState extends State<VerificationScreen> {
                 Expanded(
                   child: ListView(
                     children: [
-                      const AuthTitleAndImage(
-                        title: 'Verification Code',
+                       AuthTitleAndImage(
+                        title: S.of(context).verificationCode,
                         image: AppAssets.verificationIll,
                       ),
                       const CodeWillBeSentToNumber(),
