@@ -11,6 +11,8 @@ import 'package:mentorship/features/signin/logic/signin_cubit.dart';
 import 'package:mentorship/features/signin/logic/signin_state.dart';
 import 'package:mentorship/features/signup/ui/widgets/signup/password_validations.dart';
 
+import '../../../../generated/l10n.dart';
+
 class SigninWithEmailForm extends StatefulWidget {
   const SigninWithEmailForm({super.key});
 
@@ -43,7 +45,7 @@ class _SigninWithEmailFormState extends State<SigninWithEmailForm> {
             padding: EdgeInsets.only(bottom: 16.h),
             child: AppTextFormField(
               controller: context.read<SigninCubit>().emailController,
-              hintText: 'E-mail',
+              hintText: S.of(context).email,
               keyboardType: TextInputType.emailAddress,
               textInputAction: TextInputAction.next,
               contextMenuBuilder:
@@ -54,7 +56,7 @@ class _SigninWithEmailFormState extends State<SigninWithEmailForm> {
           ),
           AppTextFormField(
             controller: context.read<SigninCubit>().passwordController,
-            hintText: 'Password',
+            hintText: S.of(context).password,
             keyboardType: TextInputType.visiblePassword,
             textInputAction: TextInputAction.next,
             contextMenuBuilder:
@@ -92,11 +94,14 @@ class _SigninWithEmailFormState extends State<SigninWithEmailForm> {
               hasOneSpecialCharacter: hasOneSpecialCharacter,
             ),
           ),
+          SizedBox(
+            height: 8,
+          ),
           GestureDetector(
             onTap: () {},
             child: Align(
-              alignment: Alignment.centerRight,
-              child: Text("Forgot password?",
+              alignment: AlignmentDirectional.centerEnd,
+              child: Text(S.of(context).forgetPassword,
                   style: AppTextStyles.font14PinkRegular),
             ),
           ),
@@ -110,16 +115,17 @@ class _SigninWithEmailFormState extends State<SigninWithEmailForm> {
                     },
                   );
                   return Checkbox(
+                    shape: CircleBorder(),
                     activeColor: AppColors.mainPinkColor,
                     value: context.read<SigninCubit>().rememberMe,
                     onChanged: (value) {
-                      context.read<SigninCubit>().setRememberMe(value!); 
+                      context.read<SigninCubit>().setRememberMe(value!);
                     },
                   );
                 },
               ),
               Text(
-                "Remember me",
+                S.of(context).rememberMe,
                 style: AppTextStyles.font14Black400,
               ),
             ],

@@ -1,0 +1,11 @@
+{
+  "welcomeBack": "أهلاً بك",
+  "email": "البريد الإلكتروني",
+  "password": "كلمة المرور",
+  "rememberMe": "تذكرني",
+  "signIn": "تسجيل الدخول",
+  "signUp": "إنشاء حساب",
+  "forgetPassword": "نسيت كلمة المرور؟",
+  "or": "أو",
+  "donotHaveAnAccount": "ليس لديك حساب؟ "
+}

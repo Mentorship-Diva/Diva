@@ -1,0 +1,11 @@
+{
+  "welcomeBack": "Welcome back",
+  "email": "E-mail",
+  "password": "Password",
+  "rememberMe": "Remember me",
+  "signIn": "Sign in",
+  "signUp": "Sign Up",
+  "forgetPassword": "Forgot password?",
+  "or": "Or",
+  "donotHaveAnAccount": "Don't have an account? "
+}

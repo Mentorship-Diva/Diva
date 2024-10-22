@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/theming/colors.dart';
 import '../../../../../core/theming/text_styles.dart';
+import '../../../../../generated/l10n.dart';
 
 class OrTextWithHorizontalDivider extends StatelessWidget {
   const OrTextWithHorizontalDivider({super.key});
@@ -21,7 +22,7 @@ class OrTextWithHorizontalDivider extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: 8.w),
           child: Text(
-            'OR',
+            S.of(context).or,
             style: AppTextStyles.font18LightGrey400,
           ),
         ),
