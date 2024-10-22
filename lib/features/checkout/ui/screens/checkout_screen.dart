@@ -46,7 +46,7 @@ class CheckoutScreen extends StatelessWidget {
             SizedBox(height: 8.h),
             AppMainButton(
                 onPressed: () {
-                  showToast(message: "Sccesssful Order");
+                  showToast(message: "Successful Order");
                 },
                 title: "Place Order"),
             SizedBox(height: 8.h),
