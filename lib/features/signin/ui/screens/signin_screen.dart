@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mentorship/core/Localization/localization_cubit.dart';
-import 'package:mentorship/core/di/dependency_injection.dart';
-import 'package:mentorship/core/helpers/extensions.dart';
-import 'package:mentorship/core/routing/routes.dart';
 import 'package:mentorship/core/theming/assets.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/features/signin/logic/signin_cubit.dart';
@@ -47,26 +43,7 @@ class _SigninScreenState extends State<SigninScreen> {
                 Expanded(
                   child: ListView(
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          GestureDetector(
-                            onTap: (){
-                              getIt<LocalizationCubit>().chooseEnglishLanguage();
-                              // context.pushAndRemoveUtilsNamed(Routes.splashScreen);
-                            },
-                            child: Text('ENGLISH'),
-                          ),
-                          GestureDetector(
-                            onTap: (){
-                              getIt<LocalizationCubit>().chooseArabicLanguage();
-                              // context.pushAndRemoveUtilsNamed(Routes.splashScreen);
-                            },
-                            child: Text('ARABIC'),
-                          ),
-                        ],
-                      ),
-                      AuthTitleAndImage(
+                    AuthTitleAndImage(
                         title: S.of(context).welcomeBack,
                         image: AppAssets.signinIll,
                       ),

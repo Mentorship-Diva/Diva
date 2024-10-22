@@ -22,13 +22,39 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "alreadyHaveAnAccount":
+            MessageLookupByLibrary.simpleMessage("لديك حساب بالفعل؟ "),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور"),
+        "confirmPasswordIsNotValid":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور غير صالح"),
+        "confirmPasswordIsRequired":
+            MessageLookupByLibrary.simpleMessage("تأكيد كلمة المرور مطلوب"),
         "donotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("ليس لديك حساب؟ "),
+        "eightCharactersMinimum":
+            MessageLookupByLibrary.simpleMessage("٨ أحرف على الأقل"),
         "email": MessageLookupByLibrary.simpleMessage("البريد الإلكتروني"),
+        "emailIsNotValid":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني غير صالح"),
+        "emailIsRequired":
+            MessageLookupByLibrary.simpleMessage("البريد الإلكتروني مطلوب"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("نسيت كلمة المرور؟"),
+        "mobile": MessageLookupByLibrary.simpleMessage("رقم الموبايل"),
+        "oneLowerCharacter": MessageLookupByLibrary.simpleMessage("١ حرف صغير"),
+        "oneSpecialCharacter": MessageLookupByLibrary.simpleMessage("١ رمز"),
+        "oneUpperCharacter": MessageLookupByLibrary.simpleMessage("١ حرف كبير"),
         "or": MessageLookupByLibrary.simpleMessage("أو"),
         "password": MessageLookupByLibrary.simpleMessage("كلمة المرور"),
+        "passwordIsNotValid":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور غير صالحة"),
+        "passwordIsRequired":
+            MessageLookupByLibrary.simpleMessage("كلمة المرور مطلوبة"),
+        "phoneIsNotValid":
+            MessageLookupByLibrary.simpleMessage("رقم الموبايل غير صالح"),
+        "phoneIsRequired":
+            MessageLookupByLibrary.simpleMessage("رقم الموبايل مطلوب"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("تذكرني"),
         "signIn": MessageLookupByLibrary.simpleMessage("تسجيل الدخول"),
         "signUp": MessageLookupByLibrary.simpleMessage("إنشاء حساب"),

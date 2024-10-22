@@ -22,13 +22,42 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+        "alreadyHaveAnAccount":
+            MessageLookupByLibrary.simpleMessage("Already have an account? "),
+        "confirmPassword":
+            MessageLookupByLibrary.simpleMessage("Confirm Password"),
+        "confirmPasswordIsNotValid": MessageLookupByLibrary.simpleMessage(
+            "Confirm Password is not valid"),
+        "confirmPasswordIsRequired": MessageLookupByLibrary.simpleMessage(
+            "Confirm Password is required"),
         "donotHaveAnAccount":
             MessageLookupByLibrary.simpleMessage("Don\'t have an account? "),
+        "eightCharactersMinimum":
+            MessageLookupByLibrary.simpleMessage("8 Characters Minimum"),
         "email": MessageLookupByLibrary.simpleMessage("E-mail"),
+        "emailIsNotValid":
+            MessageLookupByLibrary.simpleMessage("Email is not valid"),
+        "emailIsRequired":
+            MessageLookupByLibrary.simpleMessage("Email is required"),
         "forgetPassword":
             MessageLookupByLibrary.simpleMessage("Forgot password?"),
+        "mobile": MessageLookupByLibrary.simpleMessage("Mobile"),
+        "oneLowerCharacter":
+            MessageLookupByLibrary.simpleMessage("1 Lower Character"),
+        "oneSpecialCharacter":
+            MessageLookupByLibrary.simpleMessage("1 Special Character"),
+        "oneUpperCharacter":
+            MessageLookupByLibrary.simpleMessage("1 Upper Character"),
         "or": MessageLookupByLibrary.simpleMessage("Or"),
         "password": MessageLookupByLibrary.simpleMessage("Password"),
+        "passwordIsNotValid":
+            MessageLookupByLibrary.simpleMessage("Password is not Valid"),
+        "passwordIsRequired":
+            MessageLookupByLibrary.simpleMessage("Password is required"),
+        "phoneIsNotValid":
+            MessageLookupByLibrary.simpleMessage("Phone is not valid"),
+        "phoneIsRequired":
+            MessageLookupByLibrary.simpleMessage("Phone is required"),
         "rememberMe": MessageLookupByLibrary.simpleMessage("Remember me"),
         "signIn": MessageLookupByLibrary.simpleMessage("Sign in"),
         "signUp": MessageLookupByLibrary.simpleMessage("Sign Up"),

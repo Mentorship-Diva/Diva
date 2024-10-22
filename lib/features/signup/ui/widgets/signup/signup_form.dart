@@ -8,6 +8,8 @@ import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
 import 'package:mentorship/features/signup/ui/widgets/signup/signup_with_email_form.dart';
 import 'package:mentorship/features/signup/ui/widgets/signup/signup_with_number_form.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class SignupForm extends StatefulWidget {
   const SignupForm({super.key});
 
@@ -53,7 +55,7 @@ class _SignupFormState extends State<SignupForm>
                 flip();
               },
               child: Text(
-                'E-mail',
+                S.of(context).email,
                 style: AppTextStyles.font14Black400.copyWith(
                   color: context.read<SignupCubit>().isEmailForm
                       ? AppColors.mainColor
@@ -75,7 +77,7 @@ class _SignupFormState extends State<SignupForm>
                 flip();
               },
               child: Text(
-                'Mobile',
+                S.of(context).mobile,
                 style: AppTextStyles.font14Black400.copyWith(
                   color: !context.read<SignupCubit>().isEmailForm
                       ? AppColors.mainColor

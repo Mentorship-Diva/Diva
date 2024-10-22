@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/features/signup/ui/widgets/signup/password_validator_item.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class PasswordValidations extends StatelessWidget {
   const PasswordValidations({
     super.key,
@@ -24,19 +26,19 @@ class PasswordValidations extends StatelessWidget {
         children: [
           PasswordValidatorItem(
             isValidate: hasMinimum8Characters,
-            title: '8 Characters Minimum',
+            title: S.of(context).eightCharactersMinimum,
           ),
           PasswordValidatorItem(
             isValidate: hasOneUpperCharacter,
-            title: '1 Upper Character',
+            title: S.of(context).oneUpperCharacter,
           ),
           PasswordValidatorItem(
             isValidate: hasOneLowerCharacter,
-            title: '1 Lower Character',
+            title: S.of(context).oneLowerCharacter,
           ),
           PasswordValidatorItem(
             isValidate: hasOneSpecialCharacter,
-            title: '1 Special Character',
+            title: S.of(context).oneSpecialCharacter,
           ),
         ],
       ),

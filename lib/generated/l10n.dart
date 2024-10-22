@@ -80,6 +80,16 @@ class S {
     );
   }
 
+  /// `Confirm Password`
+  String get confirmPassword {
+    return Intl.message(
+      'Confirm Password',
+      name: 'confirmPassword',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Remember me`
   String get rememberMe {
     return Intl.message(
@@ -135,6 +145,146 @@ class S {
     return Intl.message(
       'Don\'t have an account? ',
       name: 'donotHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Already have an account? `
+  String get alreadyHaveAnAccount {
+    return Intl.message(
+      'Already have an account? ',
+      name: 'alreadyHaveAnAccount',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Mobile`
+  String get mobile {
+    return Intl.message(
+      'Mobile',
+      name: 'mobile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email is required`
+  String get emailIsRequired {
+    return Intl.message(
+      'Email is required',
+      name: 'emailIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Email is not valid`
+  String get emailIsNotValid {
+    return Intl.message(
+      'Email is not valid',
+      name: 'emailIsNotValid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password is required`
+  String get passwordIsRequired {
+    return Intl.message(
+      'Password is required',
+      name: 'passwordIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Password is not Valid`
+  String get passwordIsNotValid {
+    return Intl.message(
+      'Password is not Valid',
+      name: 'passwordIsNotValid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password is required`
+  String get confirmPasswordIsRequired {
+    return Intl.message(
+      'Confirm Password is required',
+      name: 'confirmPasswordIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Confirm Password is not valid`
+  String get confirmPasswordIsNotValid {
+    return Intl.message(
+      'Confirm Password is not valid',
+      name: 'confirmPasswordIsNotValid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone is required`
+  String get phoneIsRequired {
+    return Intl.message(
+      'Phone is required',
+      name: 'phoneIsRequired',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Phone is not valid`
+  String get phoneIsNotValid {
+    return Intl.message(
+      'Phone is not valid',
+      name: 'phoneIsNotValid',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `8 Characters Minimum`
+  String get eightCharactersMinimum {
+    return Intl.message(
+      '8 Characters Minimum',
+      name: 'eightCharactersMinimum',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1 Upper Character`
+  String get oneUpperCharacter {
+    return Intl.message(
+      '1 Upper Character',
+      name: 'oneUpperCharacter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1 Lower Character`
+  String get oneLowerCharacter {
+    return Intl.message(
+      '1 Lower Character',
+      name: 'oneLowerCharacter',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `1 Special Character`
+  String get oneSpecialCharacter {
+    return Intl.message(
+      '1 Special Character',
+      name: 'oneSpecialCharacter',
       desc: '',
       args: [],
     );
