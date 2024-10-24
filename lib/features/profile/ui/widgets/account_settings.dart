@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mentorship/core/helpers/extensions.dart';
 import 'package:mentorship/core/theming/colors.dart';
+import 'package:mentorship/features/profile/ui/screens/personal_information_screen.dart';
 import 'package:mentorship/features/profile/ui/widgets/custom_settings_list_tile.dart';
 
 class AccountSettings extends StatelessWidget {
@@ -13,7 +15,9 @@ class AccountSettings extends StatelessWidget {
           color: Colors.white),
       child: Column(children: [
         CustomSettingsListTile(
-            onTap: () {},
+            onTap: () {
+              context.push(PersonalInformationScreen());
+            },
             title: 'Personal information',
             leading: Icons.person_outline),
         const Divider(color: AppColors.lightGreyColor, thickness: 0.3),

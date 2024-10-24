@@ -29,4 +29,8 @@ class AppRegex {
   static bool hasMinLength(String password) {
     return RegExp(r'^(?=.{8,})').hasMatch(password);
   }
+
+  static bool isNameValid(String value) {
+    return RegExp(r'^[a-zA-Z\u0600-\u06FF\s]+$').hasMatch(value);
+  }
 }

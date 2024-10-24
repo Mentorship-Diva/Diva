@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mentorship/core/di/dependency_injection.dart';
 import 'package:mentorship/core/theming/assets.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/features/signin/logic/signin_cubit.dart';
@@ -21,7 +22,7 @@ class SigninScreen extends StatefulWidget {
 class _SigninScreenState extends State<SigninScreen> {
   @override
   void initState() {
-    context.read<SigninCubit>().autoLogin();
+    // context.read<SigninCubit>().autoLogin();
     super.initState();
   }
 
@@ -29,37 +30,40 @@ class _SigninScreenState extends State<SigninScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
-      body: SafeArea(
-        child: Center(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 24.w),
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 20.h,
-                ),
-                Expanded(
-                  child: ListView(
-                    children: [
-                      const AuthTitleAndImage(
-                        title: 'Welcome Back',
-                        image: AppAssets.signinIll,
-                      ),
-                      const SigninWithEmailForm(),
-                      Padding(
-                        padding: EdgeInsets.symmetric(vertical: 10.h),
-                        child: SigninButton(),
-                      ),
-                      const OrTextWithHorizontalDivider(),
-                      Padding(
-                        padding: EdgeInsets.symmetric(vertical: 15.h),
-                        child: const GoogleAccount(),
-                      ),
-                      const DoNotHaveAccount(),
-                    ],
+      body: BlocProvider.value(
+        value: getIt<SigninCubit>()..autoLogin(),
+        child: SafeArea(
+          child: Center(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.w),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 20.h,
                   ),
-                ),
-              ],
+                  Expanded(
+                    child: ListView(
+                      children: [
+                        const AuthTitleAndImage(
+                          title: 'Welcome Back',
+                          image: AppAssets.signinIll,
+                        ),
+                        const SigninWithEmailForm(),
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 10.h),
+                          child: SigninButton(),
+                        ),
+                        const OrTextWithHorizontalDivider(),
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 15.h),
+                          child: const GoogleAccount(),
+                        ),
+                        const DoNotHaveAccount(),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),
