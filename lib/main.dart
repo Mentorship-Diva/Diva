@@ -37,6 +37,7 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: Routes.splashScreen,
         onGenerateRoute: AppRouter().generateRoute,
+        onUnknownRoute: AppRouter().unknownRoute,
       ),
     );
   }

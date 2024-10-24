@@ -11,6 +11,7 @@ import 'package:mentorship/features/home/ui/screens/home_screen.dart';
 import 'package:mentorship/features/home/ui/screens/product_details_screen.dart';
 import 'package:mentorship/features/main/logic/cubit/main_cubit.dart';
 import 'package:mentorship/features/main/ui/screens/main_screen.dart';
+import 'package:mentorship/features/profile/logic/profile_cubit.dart';
 import 'package:mentorship/features/signin/logic/signin_cubit.dart';
 import 'package:mentorship/features/signin/ui/screens/signin_screen.dart';
 import 'package:mentorship/features/signup/ui/screens/signup_screen.dart';
@@ -27,8 +28,15 @@ class AppRouter {
     switch (settings.name) {
       case Routes.mainScreen:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => MainCubit(),
+          builder: (_) => MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => MainCubit(),
+              ),
+              BlocProvider.value(
+                value: getIt<ProfileCubit>()..getCachedUserData(),
+              ),
+            ],
             child: MainScreen(),
           ),
         );
@@ -88,5 +96,10 @@ class AppRouter {
       default:
         return null;
     }
+  }
+
+  Route? unknownRoute(RouteSettings setting) {
+    // TODO: Put error screen ..
+    return MaterialPageRoute(builder: (_) => const SplashScreen());
   }
 }

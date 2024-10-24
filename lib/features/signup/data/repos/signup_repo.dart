@@ -20,7 +20,7 @@ class SignupRepo {
       debugPrint('Sign up failed with code: ${error.code}, message: ${error.message}');
       return FirebaseResult.fail(
         FirebaseErrorModel(
-          message: error.message!,
+          message: error.message ?? 'An unknown error occurred',
           code: error.code,
         ),
       );

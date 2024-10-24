@@ -6,6 +6,8 @@ import 'package:mentorship/core/routing/routes.dart';
 import 'package:mentorship/core/theming/assets.dart';
 import 'package:mentorship/core/theming/colors.dart';
 
+import '../../../../core/helpers/shared_prefrances_helper.dart';
+
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -43,12 +45,29 @@ class _SplashScreenState extends State<SplashScreen>
     }).then((_) {
       Future.delayed(const Duration(milliseconds: 1000), () {
         setState(() {
-          controller.forward().then((_) {
-            context.pushReplacementNamed(Routes.signinScreen);
+          controller.forward().then((_) async {
+           await afterAnimationNavigate();
           });
         });
       });
     });
+  }
+
+
+  Future<void> afterAnimationNavigate() async {
+    bool isLoggedIn = await checkIfUserLoggedIn();
+    if(isLoggedIn) {
+      debugPrint('LOGGED IN');
+      context.pushAndRemoveUtilsNamed(Routes.mainScreen);
+    } else {
+      debugPrint('NOT LOGGED IN');
+      context.pushReplacementNamed(Routes.signinScreen);
+    }
+  }
+
+  Future<bool> checkIfUserLoggedIn() async {
+    String? userId =  await SharedPreferencesHelper.getData('userID');
+    return userId != null && userId.isNotEmpty;
   }
 
   @override
