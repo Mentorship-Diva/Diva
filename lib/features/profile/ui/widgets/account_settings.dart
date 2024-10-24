@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/features/profile/ui/widgets/custom_settings_list_tile.dart';
+import '../../../notifications/ui/screens/notifications_screen.dart';
 
 class AccountSettings extends StatelessWidget {
   const AccountSettings({super.key});
@@ -29,7 +30,12 @@ class AccountSettings extends StatelessWidget {
             onTap: () {}, title: 'Measurements', leading: Icons.height_rounded),
         const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
         CustomSettingsListTile(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return NotificationsScreen();
+              }));
+            },
             title: 'Notifications',
             leading: Icons.notifications_outlined),
       ]),

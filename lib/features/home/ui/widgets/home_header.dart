@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mentorship/core/helpers/extensions.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
+import 'package:mentorship/features/notifications/ui/screens/notifications_screen.dart';
 import 'package:mentorship/features/profile/ui/screens/profile_screen.dart';
-import 'package:mentorship/features/signup/ui/widgets/verification/pin_code_form.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -39,9 +39,14 @@ class HomeHeader extends StatelessWidget {
         ),
         Row(
           children: [
-            SvgPicture.asset(
-              "assets/svgs/notification.svg",
-              width: 28.w,
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) { return NotificationsScreen(); }));
+              },
+              child: SvgPicture.asset(
+                "assets/svgs/notification.svg",
+                width: 28.w,
+              ),
             ),
           ],
         )
