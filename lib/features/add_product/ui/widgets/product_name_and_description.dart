@@ -22,7 +22,7 @@ class _ProductNameAndDescriptionState extends State<ProductNameAndDescription> {
       children: [
         Text(
           'Product name',
-          style: AppTextStyles.font16BlackSemiBold,
+          style: AppTextStyles.font16BlackSemiBold(context),
         ),
         SizedBox(
           height: 4.h,
@@ -43,7 +43,7 @@ class _ProductNameAndDescriptionState extends State<ProductNameAndDescription> {
         ),
         Text(
           'Product description',
-          style: AppTextStyles.font16BlackSemiBold,
+          style: AppTextStyles.font16BlackSemiBold(context),
         ),
         SizedBox(
           height: 4.h,

@@ -13,7 +13,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
       children: [
         Text(
           'Already have an account? ',
-          style: AppTextStyles.font18Black400,
+          style: AppTextStyles.font18Black400(context),
         ),
         GestureDetector(
           onTap: () {
@@ -21,7 +21,7 @@ class AlreadyHaveAnAccount extends StatelessWidget {
           },
           child: Text(
             'Sign In',
-            style: AppTextStyles.font18Pink400,
+            style: AppTextStyles.font18Pink400(context),
           ),
         ),
       ],

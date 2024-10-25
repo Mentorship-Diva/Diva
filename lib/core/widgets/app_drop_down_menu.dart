@@ -62,7 +62,7 @@ class AppDropDownMenu extends StatelessWidget {
               value: index,
               child: Text(
                 values[index],
-                style: AppTextStyles.font12DarkGrey400,
+                style: AppTextStyles.font12DarkGrey400(context),
               ),
             );
           },

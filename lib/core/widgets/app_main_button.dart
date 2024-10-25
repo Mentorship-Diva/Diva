@@ -39,7 +39,7 @@ class AppMainButton extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: AppTextStyles.font20White500.copyWith(
+            style: AppTextStyles.font20White500(context).copyWith(
               color: textColor ?? AppColors.whiteColor,
             ),
           ),

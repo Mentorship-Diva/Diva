@@ -22,7 +22,7 @@ class OrTextWithHorizontalDivider extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 8.w),
           child: Text(
             'OR',
-            style: AppTextStyles.font18LightGrey400,
+            style: AppTextStyles.font18LightGrey400(context),
           ),
         ),
         Expanded(

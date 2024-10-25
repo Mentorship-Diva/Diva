@@ -12,14 +12,14 @@ class ProductVariants extends StatelessWidget {
       children: [
         Text(
           'Variants',
-          style: AppTextStyles.font24BlackSemiBold,
+          style: AppTextStyles.font24BlackSemiBold(context),
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
               'No variants yes',
-              style: AppTextStyles.font14WeightBoldBlack,
+              style: AppTextStyles.font14WeightBoldBlack(context),
             ),
             GestureDetector(
               onTap: (){
@@ -27,7 +27,7 @@ class ProductVariants extends StatelessWidget {
               },
               child: Text(
                 'Add one',
-                style: AppTextStyles.font14Pink400UnderLine,
+                style: AppTextStyles.font14Pink400UnderLine(context),
               ),
             ),
           ],

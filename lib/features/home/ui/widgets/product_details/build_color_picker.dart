@@ -30,10 +30,10 @@ class _BuildColorPickerState extends State<BuildColorPicker> {
           children: [
             Text(
               'Color: ',
-              style: AppTextStyles.font16BlackSemiBold,
+              style: AppTextStyles.font16BlackSemiBold(context),
             ),
             Text(colors[selectedColorIndex], // Display the selected color name
-                style: AppTextStyles.font16BlackWeight400),
+                style: AppTextStyles.font16BlackWeight400(context)),
           ],
         ),
         SizedBox(height: 10),

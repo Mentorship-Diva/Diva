@@ -59,7 +59,7 @@ class _ResendCodeState extends State<ResendCode> {
                 },
                 child: Text(
                   'Didn\'t you receive the code? Resend code',
-                  style: AppTextStyles.font14Blue400UnderLine.copyWith(
+                  style: AppTextStyles.font14Blue400UnderLine(context).copyWith(
                     decoration: TextDecoration.none,
                   ),
                 ),
@@ -71,12 +71,12 @@ class _ResendCodeState extends State<ResendCode> {
             children: [
               Text(
                 'Resend Code in ',
-                style: AppTextStyles.font14Black400,
+                style: AppTextStyles.font14Black400(context),
               ),
               Directionality(
                 textDirection: TextDirection.ltr,
                 child: TimerCountdown(
-                  timeTextStyle: AppTextStyles.font14Black400,
+                  timeTextStyle: AppTextStyles.font14Black400(context),
                   onEnd: () {
                     setState(() {
                       isTimerDone = true;
@@ -90,7 +90,7 @@ class _ResendCodeState extends State<ResendCode> {
               ),
               Text(
                 's',
-                style: AppTextStyles.font14Black400,
+                style: AppTextStyles.font14Black400(context),
               ),
             ],
           );

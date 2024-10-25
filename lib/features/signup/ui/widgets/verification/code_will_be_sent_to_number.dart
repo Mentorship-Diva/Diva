@@ -15,7 +15,7 @@ class CodeWillBeSentToNumber extends StatelessWidget {
         ),
         Text(
           '+2${context.read<SignupCubit>().phoneNumberController.text}',
-          style: AppTextStyles.font14Pink400,
+          style: AppTextStyles.font14Pink400(context),
         )
       ],
     );

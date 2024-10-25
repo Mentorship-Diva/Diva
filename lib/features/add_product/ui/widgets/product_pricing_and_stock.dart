@@ -20,14 +20,14 @@ class _ProductPricingAndStockState extends State<ProductPricingAndStock> {
       children: [
         Text(
           'Pricing & stock',
-          style: AppTextStyles.font24BlackSemiBold,
+          style: AppTextStyles.font24BlackSemiBold(context),
         ),
         SizedBox(
           height: 4,
         ),
         Text(
           'Pricing',
-          style: AppTextStyles.font16BlackSemiBold,
+          style: AppTextStyles.font16BlackSemiBold(context),
         ),
         SizedBox(
           height: 4.h,
@@ -46,7 +46,7 @@ class _ProductPricingAndStockState extends State<ProductPricingAndStock> {
         ),
         Text(
           'Stock',
-          style: AppTextStyles.font16BlackSemiBold,
+          style: AppTextStyles.font16BlackSemiBold(context),
         ),
         SizedBox(
           height: 4.h,

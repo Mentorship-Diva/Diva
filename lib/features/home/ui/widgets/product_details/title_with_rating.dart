@@ -19,7 +19,7 @@ class TitleWithRating extends StatelessWidget {
           width: MediaQuery.of(context).size.width / 1.8,
           child: Text(
             product.title,
-            style: AppTextStyles.font16BlackWeight400,
+            style: AppTextStyles.font16BlackWeight400(context),
             maxLines: 1,
           ),
         ),

@@ -52,7 +52,7 @@ class _ProductSizeState extends State<ProductSize> {
                   child: Center(
                     child: Text(
                       context.read<AddProductCubit>().sizes[index],
-                      style: AppTextStyles.font16Pink400.copyWith(
+                      style: AppTextStyles.font16Pink400(context).copyWith(
                         color: context
                                 .read<AddProductCubit>()
                                 .selectedSizes

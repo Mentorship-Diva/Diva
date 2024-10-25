@@ -11,9 +11,9 @@ class PrivacySettings extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(bottom: 15.h),
       child: Container(
-        decoration: const BoxDecoration(
+        decoration:  BoxDecoration(
             borderRadius: BorderRadius.all(Radius.circular(10)),
-            color: Colors.white),
+            color: Theme.of(context).brightness == Brightness.dark ? Colors.black: Colors.white),
         child: Column(children: [
           CustomSettingsListTile(
               onTap: () {},

@@ -36,7 +36,7 @@ class ProductCard extends StatelessWidget {
               // Product Name
               Text(
                 product.title,
-                style: AppTextStyles.font14Weight400Grey,
+                style: AppTextStyles.font14Weight400Grey(context),
                 maxLines: 1,
                 overflow: TextOverflow.ellipsis,
               ),
@@ -48,7 +48,7 @@ class ProductCard extends StatelessWidget {
                 children: [
                   Text(
                     '\$${product.price.toStringAsFixed(2)}',
-                    style: AppTextStyles.font14WeightBoldBlack,
+                    style: AppTextStyles.font14WeightBoldBlack(context),
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -58,7 +58,7 @@ class ProductCard extends StatelessWidget {
                       SizedBox(width: 3.w),
                       Text(
                         product.rating.rate.toString(),
-                        style: AppTextStyles.font14Weight400FadedBlack,
+                        style: AppTextStyles.font14Weight400FadedBlack(context),
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
                       ),

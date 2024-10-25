@@ -34,7 +34,7 @@ class ProductDetailsBody extends StatelessWidget {
                     SizedBox(height: 10),
                     Text(
                       "\$${product.price}",
-                      style: AppTextStyles.font24BlackWeight600,
+                      style: AppTextStyles.font24BlackWeight600(context),
                     ),
                     SizedBox(height: 10),
                     Text(product.description),
@@ -45,7 +45,7 @@ class ProductDetailsBody extends StatelessWidget {
                     SizedBox(height: 30),
                     Text(
                       'You might also like:',
-                      style: AppTextStyles.font18Black400,
+                      style: AppTextStyles.font18Black400(context),
                     ),
                     SizedBox(height: 20),
                     RandomProductsBlocBuilder(),

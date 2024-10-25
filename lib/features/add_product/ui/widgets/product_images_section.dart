@@ -29,7 +29,7 @@ class _ProductImagesSectionState extends State<ProductImagesSection> {
           children: [
             Text(
               'Product Images',
-              style: AppTextStyles.font24BlackSemiBold,
+              style: AppTextStyles.font24BlackSemiBold(context),
             ),
             SizedBox(
               width: 8,
@@ -83,7 +83,7 @@ class _ProductImagesSectionState extends State<ProductImagesSection> {
                                 ),
                                 Text(
                                   'Click to upload',
-                                  style: AppTextStyles.font12Blue400UnderLine,
+                                  style: AppTextStyles.font12Blue400UnderLine(context),
                                 ),
                               ],
                             ))

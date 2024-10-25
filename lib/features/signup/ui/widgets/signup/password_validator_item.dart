@@ -27,7 +27,7 @@ class PasswordValidatorItem extends StatelessWidget {
         ),
         Text(
           title,
-          style: AppTextStyles.font14Black400.copyWith(
+          style: AppTextStyles.font14Black400(context).copyWith(
             color: isValidate ? AppColors.greenColor : AppColors.redColor,
           ),
         )

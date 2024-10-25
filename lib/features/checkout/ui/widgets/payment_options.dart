@@ -56,7 +56,7 @@ class _PaymentOptionsState extends State<PaymentOptions> {
                   children: [
                     Image.asset(method['icon']!, width: 25.w, height: 25.h),
                     SizedBox(width: 10.w),
-                    Text(method['label']!, style: AppTextStyles.font14Black400),
+                    Text(method['label']!, style: AppTextStyles.font14Black400(context)),
                   ],
                 ),
               );

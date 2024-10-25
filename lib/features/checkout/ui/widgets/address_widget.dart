@@ -51,17 +51,17 @@ class _AddressWidgetState extends State<AddressWidget> {
                   child: Row(
                     children: [
                       Icon(Icons.location_on_outlined,
-                          size: 40, color: Colors.black),
+                          size: 40, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
                       SizedBox(width: 16.w),
                       Expanded(
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text('Home',
-                                style: AppTextStyles.font18LightGrey400),
+                                style: AppTextStyles.font18LightGrey400(context)),
                             Text(
                               '33 Othman Ibn Affan st, Apt8...',
-                              style: AppTextStyles.font14Black400,
+                              style: AppTextStyles.font14Black400(  context),
                             ),
                           ],
                         ),
@@ -69,7 +69,7 @@ class _AddressWidgetState extends State<AddressWidget> {
                       TextButton(
                         onPressed: () {},
                         child: Text('Edit',
-                            style: AppTextStyles.font14Pink400UnderLine),
+                            style: AppTextStyles.font14Pink400UnderLine(  context)),
                       ),
                     ],
                   ),
@@ -99,17 +99,17 @@ class _AddressWidgetState extends State<AddressWidget> {
             child: Row(
               children: [
                 Icon(Icons.location_on_outlined,
-                    size: 40, color: Colors.black),
+                    size: 40, color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black),
                 SizedBox(width: 16),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('Office',
-                          style: AppTextStyles.font18LightGrey400),
+                          style: AppTextStyles.font18LightGrey400(context)),
                       Text(
                         '77 Mohamed Ali st, Apt22...',
-                        style: AppTextStyles.font14Black400,
+                        style: AppTextStyles.font14Black400(context),
                       ),
                     ],
                   ),
@@ -117,7 +117,7 @@ class _AddressWidgetState extends State<AddressWidget> {
                 TextButton(
                   onPressed: () {},
                   child: Text('Edit',
-                      style: AppTextStyles.font14Pink400UnderLine),
+                      style: AppTextStyles.font14Pink400UnderLine(  context)),
                 ),
               ],
             ),

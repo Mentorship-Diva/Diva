@@ -95,7 +95,7 @@ class _CartItemState extends State<CartItem> {
                                   const EdgeInsets.symmetric(horizontal: 6),
                               child: Text(
                                 count.toString(),
-                                style: AppTextStyles.font14WhiteSemiBold,
+                                style: AppTextStyles.font14WhiteSemiBold(context),
                               ),
                             ),
                             GestureDetector(
@@ -139,7 +139,7 @@ class _CartItemState extends State<CartItem> {
                   ),
                   Text(
                     'Edit',
-                    style: AppTextStyles.font14Pink400UnderLine,
+                    style: AppTextStyles.font14Pink400UnderLine(context),
                   ),
                 ],
               ),
