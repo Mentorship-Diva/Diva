@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/theming/assets.dart';
-import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/features/signin/logic/signin_cubit.dart';
 import 'package:mentorship/features/signin/ui/widgets/do_not_have_account.dart';
 import 'package:mentorship/features/signin/ui/widgets/google_signin.dart';
@@ -28,7 +27,6 @@ class _SigninScreenState extends State<SigninScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
       body: SafeArea(
         child: Center(
           child: Padding(

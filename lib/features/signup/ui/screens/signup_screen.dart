@@ -4,7 +4,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/di/dependency_injection.dart';
 import 'package:mentorship/core/theming/assets.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
-import '../../../../core/theming/colors.dart';
 import '../widgets/signup/already_have_an_account.dart';
 import '../widgets/signup/auth_title_and_image.dart';
 import '../widgets/signup/or_text_with_horizontal_divider.dart';
@@ -20,7 +19,7 @@ class SignupScreen extends StatelessWidget {
     return BlocProvider(
       create: (context) => getIt<SignupCubit>(),
       child: Scaffold(
-        backgroundColor: AppColors.backgroundColor,
+        // backgroundColor: AppColors.backgroundColor,
         body: SafeArea(
           child: Center(
             child: Padding(

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
-import '../../../../core/theming/colors.dart';
 import 'package:mentorship/core/theming/assets.dart';
 import '../widgets/signup/auth_title_and_image.dart';
 import '../widgets/verification/code_will_be_sent_to_number.dart';
@@ -26,7 +25,7 @@ class _VerificationScreenState extends State<VerificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
+      // backgroundColor: AppColors.backgroundColor,
       body: SafeArea(
         child: Center(
           child: Padding(

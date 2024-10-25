@@ -20,11 +20,11 @@ class ProductDetailsTitleAndDescription extends StatelessWidget {
       children: [
         Text(
           title,
-          style: AppTextStyles.font16BlackSemiBold,
+          style: AppTextStyles.font16BlackSemiBold(context),
         ),
         Text(
           description,
-          style: AppTextStyles.font12DarkGrey400,
+          style: AppTextStyles.font12DarkGrey400(context),
         ),
         SizedBox(
           height: 6.h,

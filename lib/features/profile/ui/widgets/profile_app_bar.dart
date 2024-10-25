@@ -15,7 +15,7 @@ class ProfileAppBar extends StatelessWidget {
                 context.pop();
               },
               icon: const Icon(Icons.arrow_back_ios_new, color: Colors.black))),
-      Text('Profile', style: AppTextStyles.font24BlackSemiBold),
+      Text('Profile', style: AppTextStyles.font24BlackSemiBold(context)),
       CircleAvatar(
         backgroundColor: Colors.white,
         child: IconButton(

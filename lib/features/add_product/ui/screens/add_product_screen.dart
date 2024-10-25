@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/helpers/extensions.dart';
-import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 import '../../logic/cubits/add_product_cubit.dart';
 import '../widgets/add_product_button.dart';
@@ -37,11 +36,11 @@ class _AddProductScreenState extends State<AddProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.backgroundColor,
+      // backgroundColor: AppColors.backgroundColor,
       appBar: AppBar(
         // To avoid tinted color when screen scrolls.
-        backgroundColor: AppColors.backgroundColor,
-        surfaceTintColor: AppColors.backgroundColor,
+        // backgroundColor: AppColors.backgroundColor,
+        // surfaceTintColor: AppColors.backgroundColor,
         leading: IconButton(
           onPressed: () {
             context.pop();
@@ -52,7 +51,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
         ),
         title: Text(
           'Add Product',
-          style: AppTextStyles.font24BlackSemiBold,
+          style: AppTextStyles.font24BlackSemiBold(context),
         ),
       ),
       body: Padding(

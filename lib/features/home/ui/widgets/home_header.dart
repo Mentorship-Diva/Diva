@@ -4,7 +4,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mentorship/core/helpers/extensions.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/features/profile/ui/screens/profile_screen.dart';
-import 'package:mentorship/features/signup/ui/widgets/verification/pin_code_form.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -17,7 +16,7 @@ class HomeHeader extends StatelessWidget {
       padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 15.w),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         GestureDetector(
-          onTap: (){
+          onTap: () {
             context.push(const ProfileScreen());
           },
           child: Row(
@@ -32,7 +31,7 @@ class HomeHeader extends StatelessWidget {
               SizedBox(width: 10.w),
               Text(
                 "Welcome, Ahmed",
-                style: AppTextStyles.font14Weight400Black,
+                style: AppTextStyles.font14Weight400Black(context),
               ),
             ],
           ),
@@ -41,6 +40,9 @@ class HomeHeader extends StatelessWidget {
           children: [
             SvgPicture.asset(
               "assets/svgs/notification.svg",
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? Colors.white
+                  : Colors.black,
               width: 28.w,
             ),
           ],

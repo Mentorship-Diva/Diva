@@ -16,7 +16,7 @@ class ProductGeneralInfo extends StatelessWidget {
       children: [
         Text(
           'General info',
-          style: AppTextStyles.font24BlackSemiBold,
+          style: AppTextStyles.font24BlackSemiBold(context),
         ),
         SizedBox(
           height: 4.h,

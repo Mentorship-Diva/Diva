@@ -97,7 +97,7 @@ class _SigninWithEmailFormState extends State<SigninWithEmailForm> {
             child: Align(
               alignment: Alignment.centerRight,
               child: Text("Forgot password?",
-                  style: AppTextStyles.font14PinkRegular),
+                  style: AppTextStyles.font14PinkRegular(context)),
             ),
           ),
           Row(
@@ -120,7 +120,7 @@ class _SigninWithEmailFormState extends State<SigninWithEmailForm> {
               ),
               Text(
                 "Remember me",
-                style: AppTextStyles.font14Black400,
+                style: AppTextStyles.font14Black400(context),
               ),
             ],
           )

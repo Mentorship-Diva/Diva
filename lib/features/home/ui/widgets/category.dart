@@ -23,7 +23,7 @@ class Category extends StatelessWidget {
       child: Center(
         child: Text(
           category,
-          style: AppTextStyles.font14Weight400Black.copyWith(
+          style: AppTextStyles.font14Weight400Black(context).copyWith(
             color: isSelected ? Colors.white : Colors.pink,
             fontWeight: FontWeight.bold,
           ),

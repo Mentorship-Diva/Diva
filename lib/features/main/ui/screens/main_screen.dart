@@ -15,6 +15,8 @@ class MainScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var isDarkTheme = Theme.of(context).brightness == Brightness.dark;
+
     return MultiBlocProvider(
       providers: [
         BlocProvider<MainCubit>(
@@ -30,9 +32,9 @@ class MainScreen extends StatelessWidget {
             context,
             controller: _controller,
             screens: navBarScreens(),
-            items: navBarItems(_controller.index),
+            items: navBarItems( isDarkTheme,_controller.index),
             navBarHeight: 70,
-            backgroundColor: Colors.white, // Default background color
+            backgroundColor: isDarkTheme ? Color(0xFF151515) : Colors.white, 
             handleAndroidBackButtonPress: true, // Back button handling
             resizeToAvoidBottomInset: true,
             navBarStyle: NavBarStyle.style7,

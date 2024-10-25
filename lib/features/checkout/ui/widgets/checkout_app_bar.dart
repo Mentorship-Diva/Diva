@@ -13,10 +13,13 @@ class CheckoutAppBar extends StatelessWidget {
           onPressed: () {
             Navigator.pop(context);
           },
-          icon: const Icon(Icons.arrow_back_ios_new, color: Colors.black),
+          icon: Icon(Icons.arrow_back_ios_new,
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? Colors.white
+                  : Colors.black),
         ),
         SizedBox(width: 80.w),
-        Text('Checkout', style: AppTextStyles.font24BlackSemiBold),
+        Text('Checkout', style: AppTextStyles.font24BlackSemiBold(context)),
       ],
     );
   }

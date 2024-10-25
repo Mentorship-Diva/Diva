@@ -29,7 +29,7 @@ class OrderItems extends StatelessWidget {
                   SizedBox(height: 8),
                   Text(
                     "580 L.E",
-                    style: AppTextStyles.font16BlackSemiBold,
+                    style: AppTextStyles.font16BlackSemiBold(context),
                   )
                 ],
               ),

@@ -32,7 +32,7 @@ class SearchBarWithFilter extends StatelessWidget {
                 ),
                 prefixIconConstraints: BoxConstraints(minWidth: 30.w),
                 hintText: 'Search here',
-                hintStyle: AppTextStyles.font14Weight400FadedBlack,
+                hintStyle: AppTextStyles.font14Weight400FadedBlack(context),
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(30.0),
                   borderSide: const BorderSide(width: 2),

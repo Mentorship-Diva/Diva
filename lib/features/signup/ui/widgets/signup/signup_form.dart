@@ -54,7 +54,7 @@ class _SignupFormState extends State<SignupForm>
               },
               child: Text(
                 'E-mail',
-                style: AppTextStyles.font14Black400.copyWith(
+                style: AppTextStyles.font14Black400(context).copyWith(
                   color: context.read<SignupCubit>().isEmailForm
                       ? AppColors.mainColor
                       : AppColors.lightGreyColor,
@@ -76,7 +76,7 @@ class _SignupFormState extends State<SignupForm>
               },
               child: Text(
                 'Mobile',
-                style: AppTextStyles.font14Black400.copyWith(
+                style: AppTextStyles.font14Black400(context).copyWith(
                   color: !context.read<SignupCubit>().isEmailForm
                       ? AppColors.mainColor
                       : AppColors.lightGreyColor,

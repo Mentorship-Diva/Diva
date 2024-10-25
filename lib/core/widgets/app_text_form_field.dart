@@ -78,8 +78,8 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
       onEditingComplete: () {
         widget.onEditingComplete != null ? widget.onEditingComplete!() : null;
       },
-      style: const TextStyle(
-        color: AppColors.blackColor,
+      style:  TextStyle(
+        color: Theme.of(context).brightness == Brightness.dark ? Colors.white : Colors.black,
       ),
       cursorColor: AppColors.lightGreyColor,
       cursorHeight: 17,
