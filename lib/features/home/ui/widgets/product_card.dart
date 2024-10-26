@@ -118,7 +118,7 @@ class ProductCard extends StatelessWidget {
           ),
           // Add to Cart Icon (bottom-right)
           Positioned(
-            bottom: 73.h,
+            bottom: 86.h,
             right: 10,
             child: CircleAvatar(
               backgroundColor: Colors.white.withOpacity(0.8),
