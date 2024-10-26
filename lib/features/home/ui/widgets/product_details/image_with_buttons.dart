@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:mentorship/core/routing/routes.dart';
 import 'package:mentorship/features/home/data/models/product_details_model.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -32,7 +33,7 @@ class ImageWithButtons extends StatelessWidget {
             child: IconButton(
               icon: Icon(Icons.arrow_back),
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.pushReplacementNamed(context, Routes.mainScreen);
               },
             ),
           ),

@@ -14,7 +14,7 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
-    return const Scaffold(
+    return Scaffold(
       body: SafeArea(
         bottom: false,
         child: SingleChildScrollView(
@@ -23,8 +23,17 @@ class _HomeScreenState extends State<HomeScreen> {
             children: [
               HomeHeader(),
               SearchBarWithFilter(),
+              SizedBox(
+                height: 16,
+              ),
               BannersSection(),
+              SizedBox(
+                height: 12,
+              ),
               BuildCategoriesList(),
+              SizedBox(
+                height: 16,
+              ),
               BuildProductsGridView()
             ],
           ),

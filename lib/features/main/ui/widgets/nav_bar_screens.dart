@@ -23,11 +23,6 @@ List<Widget> navBarScreens() {
       child: const CategoriesScreen(),
     ),
     CartScreen(),
-    BlocProvider(
-      create: (context) => getIt<HomeCubit>()
-        ..loadCategories()
-        ..loadProducts(),
-      child: const WishlistScreen(),
-    ),
+    const WishlistScreen(),
   ];
 }

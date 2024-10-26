@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class BannersSection extends StatefulWidget {
@@ -17,26 +18,30 @@ class _BannersSectionState extends State<BannersSection> {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 160.0, // Set height for the list
-      child: ListView.builder(
-        scrollDirection: Axis.horizontal, // Horizontal scrolling
-        padding: const EdgeInsets.only(left: 20.0), // Padding on the left side
-        itemCount: imagePaths.length,
-        itemBuilder: (context, index) {
-          return Container(
-            width:
-                MediaQuery.of(context).size.width * 0.87, // Width of each item
-            margin: const EdgeInsets.only(right: 15.0), // Spacing between items
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30), // Rounded corners
-              image: DecorationImage(
-                image: AssetImage(imagePaths[index]),
-                fit: BoxFit.fill, // Ensure image covers the container
+    return CarouselSlider(
+      items: imagePaths.map((path) {
+        return Builder(
+          builder: (BuildContext context) {
+            return Container(
+              margin: const EdgeInsets.symmetric(horizontal: 8.0),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                image: DecorationImage(
+                  image: AssetImage(path),
+                  fit: BoxFit.cover,
+                ),
               ),
-            ),
-          );
-        },
+            );
+          },
+        );
+      }).toList(),
+      options: CarouselOptions(
+        height: 160.0,
+        autoPlay: true,
+        autoPlayInterval: const Duration(seconds: 3),
+        enlargeCenterPage: true,
+        viewportFraction: 0.87,
+        enableInfiniteScroll: true,
       ),
     );
   }
