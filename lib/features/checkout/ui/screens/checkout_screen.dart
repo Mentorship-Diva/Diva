@@ -5,6 +5,7 @@ import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/core/widgets/app_main_button.dart';
 import 'package:mentorship/core/widgets/app_text_form_field.dart';
 import 'package:mentorship/core/widgets/toast.dart';
+import 'package:mentorship/features/checkout/ui/screens/payment_screen.dart';
 import 'package:mentorship/features/checkout/ui/widgets/address_widget.dart';
 import 'package:mentorship/features/checkout/ui/widgets/calculating_cost.dart';
 import 'package:mentorship/features/checkout/ui/widgets/checkout_app_bar.dart';
@@ -46,9 +47,11 @@ class CheckoutScreen extends StatelessWidget {
             SizedBox(height: 8.h),
             AppMainButton(
                 onPressed: () {
-                  showToast(message: "Sccesssful Order");
+                  Navigator.push(context, MaterialPageRoute(builder: (context) {
+                    return PaymentScreen();
+                  }));
                 },
-                title: "Place Order"),
+                title: "Pay Now"),
             SizedBox(height: 8.h),
           ],
         ),
