@@ -17,4 +17,7 @@ class AppAssets {
   static const String splashOne = 'assets/svgs/splash_one.svg';
   static const String splashTwo = 'assets/svgs/splash_two.svg';
   static const String womanAvatar = 'assets/images/woman_avatar.png';
+  static const String en = 'assets/images/en.png';
+  static const String ar = 'assets/images/ar.png';
+  static const String addProduct = 'assets/images/add_product.png';
 }

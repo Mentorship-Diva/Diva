@@ -11,6 +11,8 @@ import 'package:mentorship/features/checkout/ui/widgets/checkout_app_bar.dart';
 import 'package:mentorship/features/checkout/ui/widgets/order_items.dart';
 import 'package:mentorship/features/checkout/ui/widgets/payment_options.dart';
 
+import '../../../../generated/l10n.dart';
+
 class CheckoutScreen extends StatelessWidget {
   const CheckoutScreen({super.key});
 
@@ -25,12 +27,12 @@ class CheckoutScreen extends StatelessWidget {
             SizedBox(height: 8.h),
             AddressWidget(),
             SizedBox(height: 8.h),
-            Text("Order Items", style: AppTextStyles.font18BlackBold),
+            Text(S.of(context).orderItems, style: AppTextStyles.font18BlackBold),
             OrderItems(),
             SizedBox(height: 8.h),
-            Text("Save on your order", style: AppTextStyles.font18BlackBold),
+            Text(S.of(context).saveOnYourItems, style: AppTextStyles.font18BlackBold),
             AppTextFormField(
-              hintText: "Enter your voucher code",
+              hintText: S.of(context).enterYourVoucherCode,
               borderRadius: 12.r,
               prefixIcon: Icon(
                 Icons.local_offer_outlined,
@@ -38,17 +40,17 @@ class CheckoutScreen extends StatelessWidget {
               ),
             ),
             SizedBox(height: 16.h),
-            Text("Pay with", style: AppTextStyles.font18BlackBold),
+            Text(S.of(context).payWith, style: AppTextStyles.font18BlackBold),
             PaymentOptions(),
             SizedBox(height: 8.h),
-            Text("Calculating cost", style: AppTextStyles.font18BlackBold),
+            Text(S.of(context).calculatingCoast, style: AppTextStyles.font18BlackBold),
             CalculatingCost(),
             SizedBox(height: 8.h),
             AppMainButton(
                 onPressed: () {
-                  showToast(message: "Sccesssful Order");
+                  showToast(message: "Successful Order");
                 },
-                title: "Place Order"),
+                title: S.of(context).placeOrder),
             SizedBox(height: 8.h),
           ],
         ),

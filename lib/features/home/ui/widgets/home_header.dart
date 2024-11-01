@@ -7,6 +7,9 @@ import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/features/profile/logic/profile_cubit.dart';
 import 'package:mentorship/features/profile/logic/profile_state.dart';
 import 'package:mentorship/features/profile/ui/screens/profile_screen.dart';
+import 'package:mentorship/features/notifications/ui/screens/notifications_screen.dart';
+import 'package:mentorship/features/profile/ui/screens/profile_screen.dart';
+import '../../../../generated/l10n.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -55,6 +58,28 @@ class HomeHeader extends StatelessWidget {
           );
         },
       ),
+              SizedBox(width: 10.w),
+              Text(
+                "${S.of(context).welcome}Ahmed",
+                style: AppTextStyles.font14Weight400Black,
+              ),
+            ],
+          ),
+        ),
+        Row(
+          children: [
+            GestureDetector(
+              onTap: (){
+                Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) { return NotificationsScreen(); }));
+              },
+              child: SvgPicture.asset(
+                "assets/svgs/notification.svg",
+                width: 28.w,
+              ),
+            ),
+          ],
+        )
+      ]),
     );
   }
 }

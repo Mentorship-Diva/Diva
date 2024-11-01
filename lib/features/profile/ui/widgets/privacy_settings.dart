@@ -10,6 +10,8 @@ import 'package:mentorship/features/signin/ui/screens/signin_screen.dart';
 import '../../logic/profile_cubit.dart';
 import '../../logic/profile_state.dart';
 
+import '../../../../generated/l10n.dart';
+
 class PrivacySettings extends StatelessWidget {
   const PrivacySettings({super.key});
 
@@ -74,6 +76,37 @@ class PrivacySettings extends StatelessWidget {
             ),
           ],
         ),
+        child: Column(children: [
+          // CustomSettingsListTile(
+          //     onTap: () {},
+          //     title: 'Orders',
+          //     leading: Icons.shopping_cart_outlined),
+          // const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
+          // CustomSettingsListTile(
+          //     onTap: () {},
+          //     title: 'Security',
+          //     leading: Icons.security_outlined),
+          // const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
+          // CustomSettingsListTile(
+          //     onTap: () {},
+          //     title: 'Privacy & Cookies Policy',
+          //     leading: Icons.privacy_tip_outlined),
+          // const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
+          // CustomSettingsListTile(
+          //     onTap: () {},
+          //     title: 'Terms & Conditions',
+          //     leading: Icons.rate_review_outlined),
+          // const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
+          // CustomSettingsListTile(
+          //     onTap: () {},
+          //     title: 'Ratings & Feedback',
+          //     leading: Icons.star_outline_rounded),
+          // const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
+          CustomSettingsListTile(
+              onTap: () {},
+              title: S.of(context).logout,
+              leading: Icons.switch_account_outlined),
+        ]),
       ),
     );
   }

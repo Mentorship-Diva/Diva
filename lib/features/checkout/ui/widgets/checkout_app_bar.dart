@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 
+import '../../../../generated/l10n.dart';
+
 class CheckoutAppBar extends StatelessWidget {
   const CheckoutAppBar({super.key});
 
@@ -16,7 +18,7 @@ class CheckoutAppBar extends StatelessWidget {
           icon: const Icon(Icons.arrow_back_ios_new, color: Colors.black),
         ),
         SizedBox(width: 80.w),
-        Text('Checkout', style: AppTextStyles.font24BlackSemiBold),
+        Text(S.of(context).checkout, style: AppTextStyles.font24BlackSemiBold),
       ],
     );
   }

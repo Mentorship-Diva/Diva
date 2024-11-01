@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mentorship/core/theming/colors.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class BuildSizePicker extends StatefulWidget {
   @override
   _BuildSizePickerState createState() => _BuildSizePickerState();
@@ -21,7 +23,7 @@ class _BuildSizePickerState extends State<BuildSizePicker> {
         Row(
           children: [
             Text(
-              'Size: ',
+              S.of(context).size,
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
             Text(

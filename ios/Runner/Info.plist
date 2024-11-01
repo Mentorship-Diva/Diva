@@ -75,5 +75,10 @@
       <string>remote-notification</string>
     </array>
     <!-- End of the Google Sign-in Section -->
+    <key>CFBundleLocalizations</key>
+    <array>
+        <string>en</string>
+        <string>ar</string>
+    </array>
 </dict>
 </plist>
