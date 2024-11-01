@@ -49,6 +49,7 @@ dependencies:
   pin_code_fields:
   flutter_timer_countdown:
   flutter_shakemywidget:
+  cloud_firestore:
   flutter_local_notifications:
   timezone:
   # View Toast to user

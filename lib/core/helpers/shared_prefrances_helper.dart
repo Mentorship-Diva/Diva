@@ -15,7 +15,7 @@ class SharedPreferencesHelper {
   }
   
   /// get data from shared preferences using [key]
-  static Future<String?> getData(String key) async {
+  static Future getData(String key) async {
     return await sharedPreferences.getString(key);
   }
 

@@ -71,6 +71,7 @@ class MyApp extends StatelessWidget {
         ),
         initialRoute: Routes.mainScreen,
         onGenerateRoute: AppRouter().generateRoute,
+        onUnknownRoute: AppRouter().unknownRoute,
       ),
     );
   }

@@ -31,4 +31,13 @@ class TextFormFieldValidators {
     }
     return null;
   }
+
+  static nameValidator(value, context) {
+    if (value!.isEmpty) {
+      return 'Name is required';
+    } else if (!AppRegex.isNameValid(value)) {
+      return 'Name is not valid';
+    }
+    return null;
+  }
 }
