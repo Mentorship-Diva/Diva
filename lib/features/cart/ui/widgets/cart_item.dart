@@ -4,8 +4,15 @@ import 'package:mentorship/core/theming/assets.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 
+import '../../data/cart_item_model.dart';
+
 class CartItem extends StatefulWidget {
-  const CartItem({super.key});
+  const CartItem({
+    super.key,
+    required this.cartItemModel,
+  });
+
+  final CartItemModel cartItemModel;
 
   @override
   State<CartItem> createState() => _CartItemState();
@@ -44,7 +51,7 @@ class _CartItemState extends State<CartItem> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset(
-                  AppAssets.cartGirl,
+                  widget.cartItemModel.image ?? AppAssets.cartGirl,
                 ),
                 SizedBox(
                   width: 8,
@@ -59,7 +66,7 @@ class _CartItemState extends State<CartItem> {
                         'Elegant wrapped dress',
                       ),
                       Text(
-                        '550 L.E',
+                        widget.cartItemModel.price ?? '550 L.E',
                       ),
                       Container(
                         decoration: BoxDecoration(
@@ -79,7 +86,7 @@ class _CartItemState extends State<CartItem> {
                             GestureDetector(
                               onTap: () {
                                 setState(() {
-                                  if (count > 0) {
+                                  if (count > 1) {
                                     count--;
                                   }
                                 });

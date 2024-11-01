@@ -4,6 +4,7 @@ import 'package:mentorship/core/di/dependency_injection.dart';
 import 'package:mentorship/core/routing/routes.dart';
 import 'package:mentorship/features/add_product/logic/cubits/add_product_cubit.dart';
 import 'package:mentorship/features/add_product/ui/screens/add_product_screen.dart';
+import 'package:mentorship/features/cart/logic/cart_cubit.dart';
 import 'package:mentorship/features/cart/ui/screens/cart_screen.dart';
 import 'package:mentorship/features/checkout/ui/screens/checkout_screen.dart';
 import 'package:mentorship/features/home/logic/home_cubit.dart';
@@ -27,8 +28,15 @@ class AppRouter {
     switch (settings.name) {
       case Routes.mainScreen:
         return MaterialPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) => MainCubit(),
+          builder: (_) => MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => MainCubit(),
+              ),
+              BlocProvider.value(
+                value:  getIt<CartCubit>(),
+              ),
+            ],
             child: MainScreen(),
           ),
         );
@@ -75,11 +83,13 @@ class AppRouter {
         );
       case Routes.cartScreen:
         return MaterialPageRoute(
-          builder: (_) => const CartScreen(),
+          builder: (_) => BlocProvider.value(
+              value: getIt<CartCubit>(), child: CartScreen()),
         );
       case Routes.checkoutScreen:
         return MaterialPageRoute(
-          builder: (_) => const CheckoutScreen(),
+          builder: (_) => BlocProvider.value(
+              value: getIt<CartCubit>(), child: const CheckoutScreen()),
         );
       case Routes.splashScreen:
         return MaterialPageRoute(
