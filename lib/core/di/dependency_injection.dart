@@ -12,6 +12,7 @@ import 'package:mentorship/features/signin/data/repo/signin_repo.dart';
 import 'package:mentorship/features/signin/logic/signin_cubit.dart';
 import 'package:mentorship/features/signup/data/repos/auth_with_google_repo.dart';
 import 'package:mentorship/features/signup/data/repos/signup_with_mobile_repo.dart';
+import 'package:mentorship/features/wishlist/logic/cubit/wishlist_cubit.dart';
 import '../../features/profile/data/repos/logout_repo.dart';
 import '../../features/profile/logic/profile_cubit.dart';
 import '../../features/signup/data/repos/signup_repo.dart';
@@ -44,6 +45,9 @@ Future<void> setupGetIt() async {
   getIt.registerLazySingleton<SignInRepo>(() => SignInRepo());
   getIt.registerFactory<SigninCubit>(
       () => SigninCubit(getIt<SignInRepo>(), getIt<AuthWithGoogleRepo>()));
+
+  // wishlist
+  getIt.registerLazySingleton<WishlistCubit>(() => WishlistCubit());
 
   // Profile
   getIt.registerLazySingleton<LogoutRepo>(() => LogoutRepo());

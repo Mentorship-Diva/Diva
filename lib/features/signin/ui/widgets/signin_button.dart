@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mentorship/core/helpers/dialogs.dart';
 import 'package:mentorship/core/helpers/extensions.dart';
 import 'package:mentorship/core/routing/routes.dart';
 import 'package:mentorship/core/widgets/app_main_button.dart';
@@ -11,7 +12,6 @@ import 'package:mentorship/features/signin/logic/signin_state.dart';
 import '../../../../generated/l10n.dart';
 
 class SigninButton extends StatelessWidget {
-  
   const SigninButton({super.key});
 
   @override
@@ -27,15 +27,23 @@ class SigninButton extends StatelessWidget {
             loadingDialog(context);
           },
           signinSuccess: (userCredential) {
-            showToast(message: 'Signin successfully');
             context.pushNamed(Routes.mainScreen);
+            Dialogs.showSuccessDialog(
+                context, 'Successful Login. Welcome Back');
           },
           signinFail: (error) {
             context.pop();
-            showToast(message: error);
+            Dialogs.showFailureDialog(context, 'Could not signin. $error');
           },
         );
       },
+      child: AppMainButton(
+          onPressed: () {
+            if (context.read<SigninCubit>().formKey.currentState!.validate()) {
+              context.read<SigninCubit>().signin();
+            }
+          },
+          title: 'Sign in'),
       child: AppMainButton(onPressed: () {
         if (context.read<SigninCubit>().formKey.currentState!.validate()) {
           context.read<SigninCubit>().signin();
