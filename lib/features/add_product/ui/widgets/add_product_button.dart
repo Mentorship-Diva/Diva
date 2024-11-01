@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/app_main_button.dart';
+import '../../../../generated/l10n.dart';
 
 class AddProductButton extends StatelessWidget {
   const AddProductButton({super.key});
@@ -10,7 +11,7 @@ class AddProductButton extends StatelessWidget {
     return SafeArea(
       child: AppMainButton(
         onPressed: () {},
-        title: 'Add product',
+        title: S.of(context).addProduct,
       ),
     );
   }

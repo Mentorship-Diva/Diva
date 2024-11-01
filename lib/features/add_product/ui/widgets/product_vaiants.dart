@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../core/theming/text_styles.dart';
+import '../../../../generated/l10n.dart';
 
 class ProductVariants extends StatelessWidget {
   const ProductVariants({super.key});
@@ -11,14 +12,14 @@ class ProductVariants extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Variants',
+          S.of(context).variants,
           style: AppTextStyles.font24BlackSemiBold,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              'No variants yes',
+              S.of(context).noVariantsYet,
               style: AppTextStyles.font14WeightBoldBlack,
             ),
             GestureDetector(
@@ -26,7 +27,7 @@ class ProductVariants extends StatelessWidget {
                 // TODO: Add variants
               },
               child: Text(
-                'Add one',
+                S.of(context).addOne,
                 style: AppTextStyles.font14Pink400UnderLine,
               ),
             ),

@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mentorship/core/Localization/localization_cubit.dart';
+import 'package:mentorship/core/di/dependency_injection.dart';
+import 'package:mentorship/core/helpers/constants.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
+
+import '../../../../../generated/l10n.dart';
 
 class BuildColorPicker extends StatefulWidget {
   const BuildColorPicker({super.key});
@@ -10,7 +15,8 @@ class BuildColorPicker extends StatefulWidget {
 
 class _BuildColorPickerState extends State<BuildColorPicker> {
   // Dummy color names and color options
-  final colors = ['Pink', 'Purple', 'Cyan', 'Yellow', 'Black'];
+  final colors = ['Pink', 'Purple', 'Cyan', 'Gray', 'Black'];
+  final arabicColors = ['بينك', 'بنفسجي', 'ازرق', 'رمادي', 'اسود'];
   final colorOptions = [
     Colors.pink,
     Colors.deepPurple,
@@ -21,6 +27,7 @@ class _BuildColorPickerState extends State<BuildColorPicker> {
 
   // By default, the first color is selected
   int selectedColorIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -29,10 +36,16 @@ class _BuildColorPickerState extends State<BuildColorPicker> {
         Row(
           children: [
             Text(
-              'Color: ',
+              S.of(context).color,
               style: AppTextStyles.font16BlackSemiBold,
             ),
-            Text(colors[selectedColorIndex], // Display the selected color name
+            Text(
+              // Instead of put them in build to use context
+                getIt<LocalizationCubit>().locale ==
+                        SharedPreferencesValues.arabic
+                    ? arabicColors[selectedColorIndex]
+                    : colors[
+                        selectedColorIndex], // Display the selected color name
                 style: AppTextStyles.font16BlackWeight400),
           ],
         ),

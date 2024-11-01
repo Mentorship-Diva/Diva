@@ -8,6 +8,8 @@ import 'package:mentorship/core/widgets/toast.dart';
 import 'package:mentorship/features/signin/logic/signin_cubit.dart';
 import 'package:mentorship/features/signin/logic/signin_state.dart';
 
+import '../../../../generated/l10n.dart';
+
 class SigninButton extends StatelessWidget {
   
   const SigninButton({super.key});
@@ -38,7 +40,7 @@ class SigninButton extends StatelessWidget {
         if (context.read<SigninCubit>().formKey.currentState!.validate()) {
           context.read<SigninCubit>().signin();
         }
-      }, title: 'Sign in'),
+      }, title: S.of(context).signIn),
     );
   }
 }

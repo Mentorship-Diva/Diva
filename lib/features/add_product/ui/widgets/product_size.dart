@@ -5,6 +5,8 @@ import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/features/add_product/logic/cubits/add_product_cubit.dart';
 import 'package:mentorship/features/add_product/ui/widgets/product_details_title_and_description.dart';
 
+import '../../../../generated/l10n.dart';
+
 class ProductSize extends StatefulWidget {
   const ProductSize({super.key});
 
@@ -19,8 +21,8 @@ class _ProductSizeState extends State<ProductSize> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         ProductDetailsTitleAndDescription(
-          title: 'Size',
-          description: 'Pick available size',
+          title: S.of(context).size,
+          description: S.of(context).pickAvailableSize,
         ),
         SizedBox(
           height: 50,

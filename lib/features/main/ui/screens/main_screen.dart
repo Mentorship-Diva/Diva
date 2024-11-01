@@ -32,7 +32,7 @@ class MainScreen extends StatelessWidget {
             context,
             controller: _controller,
             screens: navBarScreens(),
-            items: navBarItems(_controller.index),
+            items: navBarItems(_controller.index, context),
             navBarHeight: 70,
             backgroundColor: Colors.white,
             // Default background color
@@ -40,7 +40,6 @@ class MainScreen extends StatelessWidget {
             // Back button handling
             resizeToAvoidBottomInset: true,
             navBarStyle: NavBarStyle.style7,
-
             floatingActionButton: _controller.index == 0
                 ? Padding(
                   padding: const EdgeInsets.only(bottom: 16),

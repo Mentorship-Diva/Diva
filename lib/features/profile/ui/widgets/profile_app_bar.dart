@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:mentorship/core/helpers/extensions.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 
+import '../../../../generated/l10n.dart';
+
 class ProfileAppBar extends StatelessWidget {
   const ProfileAppBar({super.key});
 
@@ -15,13 +17,13 @@ class ProfileAppBar extends StatelessWidget {
                 context.pop();
               },
               icon: const Icon(Icons.arrow_back_ios_new, color: Colors.black))),
-      Text('Profile', style: AppTextStyles.font24BlackSemiBold),
+      Text(S.of(context).profile, style: AppTextStyles.font24BlackSemiBold),
       CircleAvatar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         child: IconButton(
             onPressed: () {},
             icon:
-                const Icon(Icons.add_shopping_cart_sharp, color: Colors.black)),
+                const Icon(Icons.add_shopping_cart_sharp, color: Colors.transparent)),
       )
     ]);
   }

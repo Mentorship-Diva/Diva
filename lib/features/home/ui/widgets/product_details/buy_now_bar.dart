@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../generated/l10n.dart';
+
 class BuyNowBar extends StatelessWidget {
   const BuyNowBar({
     super.key,
@@ -47,7 +49,7 @@ class BuyNowBar extends StatelessWidget {
                 ),
               ),
               child: Text(
-                'Buy Now',
+                S.of(context).buyNow,
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight

@@ -5,6 +5,7 @@ import 'package:mentorship/core/helpers/extensions.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 import 'package:mentorship/features/notifications/ui/screens/notifications_screen.dart';
 import 'package:mentorship/features/profile/ui/screens/profile_screen.dart';
+import '../../../../generated/l10n.dart';
 
 class HomeHeader extends StatelessWidget {
   const HomeHeader({
@@ -31,7 +32,7 @@ class HomeHeader extends StatelessWidget {
               ),
               SizedBox(width: 10.w),
               Text(
-                "Welcome, Ahmed",
+                "${S.of(context).welcome}Ahmed",
                 style: AppTextStyles.font14Weight400Black,
               ),
             ],
