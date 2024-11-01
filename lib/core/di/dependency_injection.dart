@@ -3,6 +3,7 @@ import 'package:get_it/get_it.dart';
 import 'package:mentorship/core/Localization/localization_cubit.dart';
 import 'package:mentorship/core/networking/dio_factory.dart';
 import 'package:mentorship/features/add_product/logic/cubits/add_product_cubit.dart';
+import 'package:mentorship/features/cart/logic/cart_cubit.dart';
 import 'package:mentorship/features/home/data/apis/home_api_service.dart';
 import 'package:mentorship/features/home/data/repo/home_repo.dart';
 import 'package:mentorship/features/home/logic/home_cubit.dart';
@@ -43,5 +44,6 @@ Future<void> setupGetIt() async {
       () => SigninCubit(getIt<SignInRepo>(), getIt<AuthWithGoogleRepo>()));
 
   getIt.registerLazySingleton<LocalizationCubit>(() => LocalizationCubit());
+  getIt.registerLazySingleton<CartCubit>(() => CartCubit());
 
 }

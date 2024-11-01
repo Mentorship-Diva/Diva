@@ -5,6 +5,9 @@ import 'package:mentorship/core/theming/text_styles.dart';
 
 import '../../../../generated/l10n.dart';
 
+import '../../../../core/di/dependency_injection.dart';
+import '../../../cart/logic/cart_cubit.dart';
+
 class CalculatingCost extends StatelessWidget {
   const CalculatingCost({Key? key}) : super(key: key);
 
@@ -20,6 +23,8 @@ class CalculatingCost extends StatelessWidget {
             children: [
               Text(S.of(context).subtotal, style: AppTextStyles.font18Grey400),
               Text("1,250 L.E", style: AppTextStyles.font18Grey400),
+              Text("Subtotal", style: AppTextStyles.font18Grey400),
+              Text("${getIt<CartCubit>().getTotalPrice()} L.E", style: AppTextStyles.font18Grey400),
             ],
           ),
           SizedBox(height: 8.h),
@@ -31,7 +36,7 @@ class CalculatingCost extends StatelessWidget {
                 style: AppTextStyles.font18Grey400,
               ),
               Text(
-                "-200 L.E",
+                "-${getIt<CartCubit>().discount} L.E",
                 style: AppTextStyles.font18Pink400,
               ),
             ],
@@ -45,7 +50,7 @@ class CalculatingCost extends StatelessWidget {
                 style: AppTextStyles.font18Grey400,
               ),
               Text(
-                "40 L.E",
+                "${getIt<CartCubit>().deliveryFee} L.E",
                 style: AppTextStyles.font18Grey400,
               ),
             ],
@@ -58,6 +63,8 @@ class CalculatingCost extends StatelessWidget {
             children: [
               Text(S.of(context).total, style: AppTextStyles.font18BlackBold,),
               Text("1,050 L.E", style: AppTextStyles.font18BlackBold,),
+              Text("TOTAL", style: AppTextStyles.font18BlackBold,),
+              Text("${getIt<CartCubit>().getTotalPrice() - getIt<CartCubit>().discount + getIt<CartCubit>().deliveryFee}  L.E", style: AppTextStyles.font18BlackBold,),
             ],
           ),
         ],

@@ -12,6 +12,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'core/di/dependency_injection.dart';
 import 'firebase_options.dart';
 import 'generated/l10n.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,6 +22,7 @@ void main() async {
   );
   await SharedPreferencesHelper.init();
   FirebaseAuth.instance.setSettings(appVerificationDisabledForTesting: true);
+  FlutterNativeSplash.remove();
   runApp(const MyApp());
 }
 
