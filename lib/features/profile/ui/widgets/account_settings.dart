@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/features/profile/ui/widgets/custom_settings_list_tile.dart';
+import '../../../notifications/ui/screens/notifications_screen.dart';
 
 import '../../../../generated/l10n.dart';
 
@@ -27,6 +28,22 @@ class AccountSettings extends StatelessWidget {
           ),
           CustomSettingsListTile(
             onTap: () {},
+            title: 'Addresses',
+            leading: Icons.location_on_outlined),
+        const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
+        CustomSettingsListTile(
+            onTap: () {}, title: 'Measurements', leading: Icons.height_rounded),
+        const Divider(color: AppColors.lightGreyColor, thickness: 0.3),
+        CustomSettingsListTile(
+            onTap: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (BuildContext context) {
+                return NotificationsScreen();
+              }));
+            },
+            title: 'Notifications',
+            leading: Icons.notifications_outlined),
+      ]),
             title: S.of(context).paymentMethods,
             leading: Icons.payment,
           ),

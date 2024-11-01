@@ -42,6 +42,15 @@ dependencies:
   # Provide Google fonts
   google_fonts: null
 
+# View Toast to user
+  flex_color_picker:
+  dotted_border:
+  image_picker:
+  pin_code_fields:
+  flutter_timer_countdown:
+  flutter_shakemywidget:
+  flutter_local_notifications:
+  timezone:
   # View Toast to user
   flex_color_picker: null
   dotted_border: null

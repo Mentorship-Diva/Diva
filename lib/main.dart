@@ -10,6 +10,7 @@ import 'package:mentorship/core/routing/app_router.dart';
 import 'package:mentorship/core/routing/routes.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'core/di/dependency_injection.dart';
+import 'features/notifications/logic/local_notifications_manager.dart';
 import 'firebase_options.dart';
 import 'generated/l10n.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
@@ -22,6 +23,14 @@ void main() async {
   );
   await SharedPreferencesHelper.init();
   FirebaseAuth.instance.setSettings(appVerificationDisabledForTesting: true);
+  // Initialize Local Notifications
+  await LocalNotificationsManager().init();
+
+  // Request notification permission before scheduling notifications
+  await LocalNotificationsManager().requestNotificationPermission();
+
+  // Schedule daily notification after ensuring permissions are granted
+  await LocalNotificationsManager().scheduleDailyNotification();
   FlutterNativeSplash.remove();
   runApp(const MyApp());
 }
@@ -60,6 +69,8 @@ class MyApp extends StatelessWidget {
             );
           },
         ),
+        initialRoute: Routes.mainScreen,
+        onGenerateRoute: AppRouter().generateRoute,
       ),
     );
   }
