@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import '../../../../core/theming/text_styles.dart';
+import '../../../../generated/l10n.dart';
 import '../widgets/cart_items_list.dart';
 import '../widgets/checkout_total_and_button.dart';
 
@@ -18,7 +19,7 @@ class CartScreen extends StatelessWidget {
         backgroundColor: AppColors.backgroundColor,
         surfaceTintColor: AppColors.backgroundColor,
         title: Text(
-          'Cart',
+          S.of(context).cart,
           style: AppTextStyles.font24BlackSemiBold,
         ),
         centerTitle: true,

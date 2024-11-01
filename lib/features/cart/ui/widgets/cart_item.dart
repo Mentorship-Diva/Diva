@@ -4,6 +4,7 @@ import 'package:mentorship/core/theming/assets.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 
+import '../../../../generated/l10n.dart';
 import '../../data/cart_item_model.dart';
 
 class CartItem extends StatefulWidget {
@@ -145,7 +146,7 @@ class _CartItemState extends State<CartItem> {
                     height: 15,
                   ),
                   Text(
-                    'Edit',
+                    S.of(context).edit,
                     style: AppTextStyles.font14Pink400UnderLine,
                   ),
                 ],

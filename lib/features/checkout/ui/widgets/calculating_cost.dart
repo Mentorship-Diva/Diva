@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 
+import '../../../../generated/l10n.dart';
+
 import '../../../../core/di/dependency_injection.dart';
 import '../../../cart/logic/cart_cubit.dart';
 
@@ -19,6 +21,8 @@ class CalculatingCost extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              Text(S.of(context).subtotal, style: AppTextStyles.font18Grey400),
+              Text("1,250 L.E", style: AppTextStyles.font18Grey400),
               Text("Subtotal", style: AppTextStyles.font18Grey400),
               Text("${getIt<CartCubit>().getTotalPrice()} L.E", style: AppTextStyles.font18Grey400),
             ],
@@ -28,7 +32,7 @@ class CalculatingCost extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Discount",
+                S.of(context).discount,
                 style: AppTextStyles.font18Grey400,
               ),
               Text(
@@ -42,7 +46,7 @@ class CalculatingCost extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                "Delivery fee",
+                S.of(context).deliveryFee,
                 style: AppTextStyles.font18Grey400,
               ),
               Text(
@@ -57,6 +61,8 @@ class CalculatingCost extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
+              Text(S.of(context).total, style: AppTextStyles.font18BlackBold,),
+              Text("1,050 L.E", style: AppTextStyles.font18BlackBold,),
               Text("TOTAL", style: AppTextStyles.font18BlackBold,),
               Text("${getIt<CartCubit>().getTotalPrice() - getIt<CartCubit>().discount + getIt<CartCubit>().deliveryFee}  L.E", style: AppTextStyles.font18BlackBold,),
             ],

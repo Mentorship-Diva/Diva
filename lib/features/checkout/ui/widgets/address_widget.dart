@@ -4,6 +4,8 @@ import 'package:mentorship/core/theming/assets.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 
+import '../../../../generated/l10n.dart';
+
 class AddressWidget extends StatefulWidget {
   const AddressWidget({super.key});
 
@@ -57,7 +59,7 @@ class _AddressWidgetState extends State<AddressWidget> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text('Home',
+                            Text(S.of(context).homeLocation,
                                 style: AppTextStyles.font18LightGrey400),
                             Text(
                               '33 Othman Ibn Affan st, Apt8...',
@@ -68,7 +70,7 @@ class _AddressWidgetState extends State<AddressWidget> {
                       ),
                       TextButton(
                         onPressed: () {},
-                        child: Text('Edit',
+                        child: Text(S.of(context).edit,
                             style: AppTextStyles.font14Pink400UnderLine),
                       ),
                     ],
@@ -105,7 +107,7 @@ class _AddressWidgetState extends State<AddressWidget> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('Office',
+                      Text(S.of(context).office,
                           style: AppTextStyles.font18LightGrey400),
                       Text(
                         '77 Mohamed Ali st, Apt22...',
@@ -116,7 +118,7 @@ class _AddressWidgetState extends State<AddressWidget> {
                 ),
                 TextButton(
                   onPressed: () {},
-                  child: Text('Edit',
+                  child: Text(S.of(context).edit,
                       style: AppTextStyles.font14Pink400UnderLine),
                 ),
               ],

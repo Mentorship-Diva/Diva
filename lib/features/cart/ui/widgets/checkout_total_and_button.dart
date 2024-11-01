@@ -8,6 +8,7 @@ import 'package:mentorship/features/cart/logic/cart_cubit.dart';
 import 'package:mentorship/features/checkout/ui/screens/checkout_screen.dart';
 import '../../../../core/theming/text_styles.dart';
 import '../../../../core/widgets/app_main_button.dart';
+import '../../../../generated/l10n.dart';
 
 class CheckoutTotalAndButton extends StatelessWidget {
   const CheckoutTotalAndButton({
@@ -20,6 +21,9 @@ class CheckoutTotalAndButton extends StatelessWidget {
       builder: (context, state) {
         return Column(
           children: [
+            Text(
+              S.of(context).total,
+              style: AppTextStyles.font14Black500,
             SizedBox(
               height: 8,
             ),
@@ -58,6 +62,20 @@ class CheckoutTotalAndButton extends StatelessWidget {
               title: 'Checkout',
             ),
           ],
+        ),
+        SizedBox(
+          height: 16.h,
+        ),
+        AppMainButton(
+          onPressed: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => const CheckoutScreen()));
+          },
+          title: S.of(context).checkout,
+        ),
+      ],
         );
       },
     );
