@@ -3,6 +3,8 @@ import 'package:mentorship/core/helpers/extensions.dart';
 import 'package:mentorship/core/routing/routes.dart';
 import 'package:mentorship/core/theming/text_styles.dart';
 
+import '../../../../generated/l10n.dart';
+
 class DoNotHaveAccount extends StatelessWidget {
   const DoNotHaveAccount({super.key});
 
@@ -12,7 +14,7 @@ class DoNotHaveAccount extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Don\'t have an account? ',
+          S.of(context).donotHaveAnAccount,
           style: AppTextStyles.font18Black400,
         ),
         GestureDetector(
@@ -20,7 +22,7 @@ class DoNotHaveAccount extends StatelessWidget {
             context.pushNamed(Routes.signupScreen);
           },
           child: Text(
-            'Sign up',
+            S.of(context).signUp,
             style: AppTextStyles.font18Pink400,
           ),
         ),

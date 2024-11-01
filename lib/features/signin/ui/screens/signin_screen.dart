@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mentorship/core/di/dependency_injection.dart';
 import 'package:mentorship/core/theming/assets.dart';
 import 'package:mentorship/core/theming/colors.dart';
 import 'package:mentorship/features/signin/logic/signin_cubit.dart';
@@ -10,6 +11,8 @@ import 'package:mentorship/features/signin/ui/widgets/signin_button.dart';
 import 'package:mentorship/features/signin/ui/widgets/signin_with_email_form.dart';
 import 'package:mentorship/features/signup/ui/widgets/signup/auth_title_and_image.dart';
 import 'package:mentorship/features/signup/ui/widgets/signup/or_text_with_horizontal_divider.dart';
+
+import '../../../../generated/l10n.dart';
 
 class SigninScreen extends StatefulWidget {
   const SigninScreen({super.key});
@@ -21,7 +24,7 @@ class SigninScreen extends StatefulWidget {
 class _SigninScreenState extends State<SigninScreen> {
   @override
   void initState() {
-    context.read<SigninCubit>().autoLogin();
+    // context.read<SigninCubit>().autoLogin();
     super.initState();
   }
 
@@ -29,6 +32,16 @@ class _SigninScreenState extends State<SigninScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.backgroundColor,
+      body: BlocProvider.value(
+        value: getIt<SigninCubit>()..autoLogin(),
+        child: SafeArea(
+          child: Center(
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24.w),
+              child: Column(
+                children: [
+                  SizedBox(
+                    height: 20.h,
       body: SafeArea(
         child: Center(
           child: Padding(
@@ -41,8 +54,8 @@ class _SigninScreenState extends State<SigninScreen> {
                 Expanded(
                   child: ListView(
                     children: [
-                      const AuthTitleAndImage(
-                        title: 'Welcome Back',
+                    AuthTitleAndImage(
+                        title: S.of(context).welcomeBack,
                         image: AppAssets.signinIll,
                       ),
                       const SigninWithEmailForm(),
@@ -58,8 +71,29 @@ class _SigninScreenState extends State<SigninScreen> {
                       const DoNotHaveAccount(),
                     ],
                   ),
-                ),
-              ],
+                  Expanded(
+                    child: ListView(
+                      children: [
+                        const AuthTitleAndImage(
+                          title: 'Welcome Back',
+                          image: AppAssets.signinIll,
+                        ),
+                        const SigninWithEmailForm(),
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 10.h),
+                          child: SigninButton(),
+                        ),
+                        const OrTextWithHorizontalDivider(),
+                        Padding(
+                          padding: EdgeInsets.symmetric(vertical: 15.h),
+                          child: const GoogleAccount(),
+                        ),
+                        const DoNotHaveAccount(),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         ),

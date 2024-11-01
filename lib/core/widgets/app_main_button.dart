@@ -32,7 +32,7 @@ class AppMainButton extends StatelessWidget {
           borderRadius: BorderRadius.circular(radius ?? 30),
           color: backgroundColor ?? AppColors.mainColor,
           border: Border.all(
-            color: AppColors.mainColor,
+            color: borderColor ?? AppColors.mainColor,
           ),
         ),
         height: height ?? 48.h,

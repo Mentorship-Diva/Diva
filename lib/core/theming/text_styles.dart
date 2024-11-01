@@ -180,4 +180,10 @@ class AppTextStyles {
     fontSize: 18.sp,
     fontWeight: FontWeight.w400,
   );
+
+  static TextStyle font20Pink600 = TextStyle(
+    color: AppColors.mainColor,
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+  );
 }

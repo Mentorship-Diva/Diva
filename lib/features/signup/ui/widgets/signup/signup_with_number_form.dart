@@ -5,6 +5,7 @@ import 'package:mentorship/features/signup/logic/cubits/signup_cubit.dart';
 
 import '../../../../../core/helpers/text_selection_options.dart';
 import '../../../../../core/widgets/app_text_form_field.dart';
+import '../../../../../generated/l10n.dart';
 
 class SignupWithNumberForm extends StatelessWidget {
   const SignupWithNumberForm({super.key});
@@ -17,7 +18,7 @@ class SignupWithNumberForm extends StatelessWidget {
         children: [
           AppTextFormField(
             controller: context.read<SignupCubit>().phoneNumberController,
-            hintText: 'Mobile Number',
+            hintText: S.of(context).mobile,
             textInputAction: TextInputAction.done,
             keyboardType: TextInputType.phone,
             contextMenuBuilder: TextSelectionOptions.emailTextSelectionOptions,
